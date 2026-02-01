@@ -76,12 +76,12 @@
             {
                 "@type": "DataDownload",
                 "encodingFormat": "application/json",
-                "contentUrl": "https://raw.githubusercontent.com/skillsindex-dev/data/main/latest/skills.json"
+                "contentUrl": "https://skillsindex-dev.github.io/skills/skills.json"
             },
             {
                 "@type": "DataDownload",
                 "encodingFormat": "application/x-parquet",
-                "contentUrl": "https://raw.githubusercontent.com/skillsindex-dev/data/main/latest/skills.parquet"
+                "contentUrl": "https://skillsindex-dev.github.io/skills/skills.parquet"
             }
         ],
         "temporalCoverage": "2024/..",
@@ -423,7 +423,7 @@
                         <span class="api-format">JSON</span>
                         <span class="api-size">18 MB</span>
                     </div>
-                    <code class="api-url">https://raw.githubusercontent.com/skillsindex-dev/data/main/latest/skills.json</code>
+                    <code class="api-url">https://skillsindex-dev.github.io/skills/skills.json</code>
                     <p class="api-desc">Full catalog in JSON format. Best for web applications and scripts.</p>
                 </div>
                 <div class="api-card">
@@ -431,7 +431,7 @@
                         <span class="api-format">Parquet</span>
                         <span class="api-size">3.7 MB</span>
                     </div>
-                    <code class="api-url">https://raw.githubusercontent.com/skillsindex-dev/data/main/latest/skills.parquet</code>
+                    <code class="api-url">https://skillsindex-dev.github.io/skills/skills.parquet</code>
                     <p class="api-desc">Compressed columnar format. 5x smaller, ideal for data analysis.</p>
                 </div>
             </div>
@@ -445,7 +445,7 @@
                 <pre class="code-block" id="code-python"><code>import pandas as pd
 
 df = pd.read_parquet(
-    "https://raw.githubusercontent.com/skillsindex-dev/data/main/latest/skills.parquet"
+    "https://skillsindex-dev.github.io/skills/skills.parquet"
 )
 
 # Filter by type
@@ -456,7 +456,7 @@ mcp_servers = df[df["type"] == "mcp"]
 top = df.nlargest(10, "stars")[["name", "type", "stars"]]
 print(top)</code></pre>
                 <pre class="code-block hidden" id="code-javascript"><code>const response = await fetch(
-  "https://raw.githubusercontent.com/skillsindex-dev/data/main/latest/skills.json"
+  "https://skillsindex-dev.github.io/skills/skills.json"
 );
 const data = await response.json();
 

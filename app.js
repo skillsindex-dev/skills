@@ -1,7 +1,8 @@
 // SkillsIndex — Clean Dashboard
 
-const DATA_URL = 'https://raw.githubusercontent.com/skillsindex-dev/data/main/latest/skills.json';
-const STATS_URL = 'https://raw.githubusercontent.com/skillsindex-dev/data/main/latest/stats.json';
+// Data URLs - relative paths for GitHub Pages
+const DATA_URL = './skills.json';
+const STATS_URL = './stats.json';
 
 let allData = [];
 let filteredData = [];
