@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillsIndex — The Largest Claude Ecosystem Catalog</title>
+    <meta name="description" content="Discover 24,000+ Claude Skills, MCP Servers, and A2A Agents. The most comprehensive catalog of AI tools for Claude, updated daily.">
+    <meta name="keywords" content="Claude, Skills, MCP, Model Context Protocol, AI, Anthropic, A2A, Agents">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="SkillsIndex — Claude Ecosystem Catalog">
+    <meta property="og:description" content="24,000+ Skills, MCP Servers & A2A Agents in one place">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">SkillsIndex</span>
+            </a>
+            <div class="nav-links">
+                <a href="#stats">Stats</a>
+                <a href="#top">Top Lists</a>
+                <a href="#explore">Explore</a>
+                <a href="https://github.com/skillsindex-dev/data" class="btn btn-secondary" target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-badge">🚀 Updated daily at 06:00 UTC</div>
+            <h1 class="hero-title">
+                The <span class="gradient-text">Largest</span> Claude<br>
+                Ecosystem Catalog
+            </h1>
+            <p class="hero-subtitle">
+                Discover <strong id="total-count">24,000+</strong> Skills, MCP Servers & A2A Agents.<br>
+                One place. Always up-to-date. Open source.
+            </p>
+            <div class="hero-cta">
+                <a href="#explore" class="btn btn-primary btn-lg">
+                    Explore Catalog
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 10h6m0 0l-3-3m3 3l-3 3"/></svg>
+                </a>
+                <a href="https://raw.githubusercontent.com/skillsindex-dev/data/main/latest/skills.json" class="btn btn-outline btn-lg" target="_blank">
+                    Download JSON
+                </a>
+            </div>
+
+            <!-- Live Stats Counter -->
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-skills">—</div>
+                    <div class="stat-label">Skills</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-mcp">—</div>
+                    <div class="stat-label">MCP Servers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-a2a">—</div>
+                    <div class="stat-label">A2A Agents</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-sources">18</div>
+                    <div class="stat-label">Sources</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Comprehensive</h3>
+                    <p>Aggregates from Smithery.ai, GitHub awesome-lists, official repos, and community collections.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Always Fresh</h3>
+                    <p>Automated daily scraping ensures you always have access to the latest tools and integrations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Rich Metadata</h3>
+                    <p>Stars, categories, tags, descriptions, and source links for every item in the catalog.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🆓</div>
+                    <h3>Open Data</h3>
+                    <p>Free to use. Available as JSON and Parquet. Perfect for building your own tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Dashboard -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <h2 class="section-title">📊 Live Dashboard</h2>
+            <p class="section-subtitle">Real-time statistics from the latest scrape</p>
+
+            <div class="dashboard-grid">
+                <!-- By Type -->
+                <div class="dashboard-card">
+                    <h3>By Type</h3>
+                    <div class="chart-container">
+                        <div class="donut-chart" id="type-chart"></div>
+                        <div class="chart-legend" id="type-legend"></div>
+                    </div>
+                </div>
+
+                <!-- By Source -->
+                <div class="dashboard-card">
+                    <h3>By Source</h3>
+                    <div class="chart-container">
+                        <div class="donut-chart" id="source-chart"></div>
+                        <div class="chart-legend" id="source-legend"></div>
+                    </div>
+                </div>
+
+                <!-- By Category -->
+                <div class="dashboard-card dashboard-card-wide">
+                    <h3>By Category</h3>
+                    <div class="bar-chart" id="category-chart"></div>
+                </div>
+
+                <!-- Quality Metrics -->
+                <div class="dashboard-card">
+                    <h3>Data Quality</h3>
+                    <div class="quality-metrics" id="quality-metrics"></div>
+                </div>
+
+                <!-- Stars Distribution -->
+                <div class="dashboard-card">
+                    <h3>Popularity</h3>
+                    <div class="stats-list" id="stars-stats"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Lists -->
+    <section class="top-section" id="top">
+        <div class="container">
+            <h2 class="section-title">🏆 Top Lists</h2>
+            <p class="section-subtitle">Most popular items by stars and usage</p>
+
+            <div class="tabs">
+                <button class="tab active" data-tab="top-items">Top Items</button>
+                <button class="tab" data-tab="top-repos">Top Repositories</button>
+                <button class="tab" data-tab="top-authors">Top Authors</button>
+            </div>
+
+            <div class="tab-content active" id="top-items">
+                <div class="top-list" id="top-items-list"></div>
+            </div>
+
+            <div class="tab-content" id="top-repos">
+                <div class="top-list" id="top-repos-list"></div>
+            </div>
+
+            <div class="tab-content" id="top-authors">
+                <div class="top-list" id="top-authors-list"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Section -->
+    <section class="explore-section" id="explore">
+        <div class="container">
+            <h2 class="section-title">🔎 Explore Catalog</h2>
+            <p class="section-subtitle">Search and filter through all items</p>
+
+            <div class="search-bar">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="9" r="6"/>
+                    <path d="M13 13l4 4"/>
+                </svg>
+                <input type="text" id="search-input" placeholder="Search skills, MCP servers, agents...">
+            </div>
+
+            <div class="filters">
+                <select id="filter-type">
+                    <option value="">All Types</option>
+                    <option value="skill">Skills</option>
+                    <option value="mcp">MCP Servers</option>
+                    <option value="a2a">A2A Agents</option>
+                </select>
+                <select id="filter-category">
+                    <option value="">All Categories</option>
+                </select>
+                <select id="filter-source">
+                    <option value="">All Sources</option>
+                    <option value="github">GitHub</option>
+                    <option value="smithery">Smithery</option>
+                </select>
+                <select id="filter-sort">
+                    <option value="stars">Sort by Stars</option>
+                    <option value="name">Sort by Name</option>
+                    <option value="recent">Recently Added</option>
+                </select>
+            </div>
+
+            <div class="results-info">
+                Showing <span id="results-count">0</span> items
+            </div>
+
+            <div class="results-grid" id="results-grid">
+                <div class="loading">Loading catalog...</div>
+            </div>
+
+            <div class="load-more-container">
+                <button class="btn btn-secondary" id="load-more">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to supercharge your Claude workflow?</h2>
+            <p>Access the full catalog and build amazing AI applications.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/skillsindex-dev/data" class="btn btn-primary btn-lg" target="_blank">
+                    View on GitHub
+                </a>
+                <a href="https://raw.githubusercontent.com/skillsindex-dev/data/main/latest/skills.parquet" class="btn btn-outline btn-lg" target="_blank">
+                    Download Parquet (3.7 MB)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">SkillsIndex</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/skillsindex-dev/data">Data Repository</a>
+                    <a href="https://github.com/skillsindex-dev/scraper">Scraper Source</a>
+                    <a href="https://smithery.ai">Smithery.ai</a>
+                </div>
+                <div class="footer-info">
+                    <p>Data aggregated from public sources. Updated daily.</p>
+                    <p>Last update: <span id="last-update">—</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
