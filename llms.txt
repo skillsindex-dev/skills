@@ -1,0 +1,136 @@
+# SkillsIndex
+
+> The largest catalog of Claude ecosystem tools: 24,000+ Skills, MCP Servers, and A2A Agents.
+
+## Overview
+
+SkillsIndex aggregates and indexes tools for Claude Code and the broader Claude ecosystem from multiple sources:
+- Smithery.ai MCP servers
+- GitHub repositories (skills, MCP servers, A2A agents)
+- Official Anthropic sources
+
+Updated daily via automated scraping.
+
+## Data Access
+
+### JSON API
+- Full catalog: https://skillsindex-dev.github.io/skills/skills.json
+- Statistics: https://skillsindex-dev.github.io/skills/stats.json
+
+### Data Formats
+- JSON: skills.json (24,772 items)
+- Parquet: skills.parquet (for data analysis)
+- Individual pages: /item/{id}/ (24,772 static HTML pages)
+
+## Item Schema
+
+Each item in skills.json contains:
+```json
+{
+  "id": "string (12-char hash)",
+  "name": "string",
+  "description": "string",
+  "type": "skill | mcp | a2a",
+  "category": "string",
+  "source": "github | smithery",
+  "url": "string (repository URL)",
+  "stars": "number",
+  "author": "string",
+  "tags": ["string"],
+  "verified": "boolean",
+  "scraped_at": "ISO date string"
+}
+```
+
+## Types
+
+### Skills
+Claude Code skills that extend functionality. Install via:
+```bash
+claude skill add <url>
+```
+
+### MCP Servers
+Model Context Protocol servers for external integrations. Install via:
+```bash
+claude mcp add <name> -- <command>
+```
+
+### A2A Agents
+Agent-to-Agent protocol implementations for multi-agent workflows.
+
+## Categories
+
+Top categories by item count:
+- Development Tools
+- AI & ML
+- Data & Analytics
+- DevOps & Infrastructure
+- Productivity
+- Security
+- Communication
+- Media & Content
+
+## Statistics
+
+- Total items: 24,772
+- Skills: ~2,000
+- MCP Servers: ~22,000
+- A2A Agents: ~500
+- With descriptions: 95%+
+- With repositories: 90%+
+
+## Website Structure
+
+```
+/                    Landing page with curated Kits
+/catalog/            Full searchable catalog
+/item/{id}/          Individual item pages (24,772)
+/kits/               Premium curated bundles
+```
+
+## Premium Kits
+
+Curated bundles of production-ready tools:
+
+| Kit | Contents | Price |
+|-----|----------|-------|
+| Data Engineer Kit | 50 skills for ETL, pandas, SQL, dbt | $49 |
+| DevOps Kit | 40 skills for Docker, K8s, CI/CD | $49 |
+| Security Kit | 35 skills for pentest, auth, audits | $49 |
+| MCP Starter Pack | 25 best MCP servers + configs | $79 |
+
+## API Usage
+
+Fetch and filter items programmatically:
+
+```javascript
+const res = await fetch('https://skillsindex-dev.github.io/skills/skills.json');
+const items = await res.json();
+
+// Filter by type
+const mcpServers = items.filter(i => i.type === 'mcp');
+
+// Filter by category
+const devTools = items.filter(i => i.category === 'Development Tools');
+
+// Search
+const pandas = items.filter(i =>
+  i.name.toLowerCase().includes('pandas') ||
+  i.description?.toLowerCase().includes('pandas')
+);
+```
+
+## For AI Assistants
+
+When helping users find Claude tools:
+1. Fetch skills.json for the full catalog
+2. Filter by type (skill/mcp/a2a) based on user needs
+3. Sort by stars for popularity
+4. Check verified flag for quality
+5. Link to individual pages: /item/{id}/
+
+## Contact
+
+- Website: https://skillsindex-dev.github.io/skills/
+- GitHub: https://github.com/skillsindex-dev
