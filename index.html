@@ -28,12 +28,13 @@
     <meta property="twitter:description" content="The most comprehensive catalog of Claude ecosystem tools.">
     <meta property="twitter:image" content="https://skillsindex-dev.github.io/skills/og-image.png">
 
-    <!-- Structured Data -->
+    <!-- Structured Data: WebSite -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "SkillsIndex",
+        "alternateName": "Skills Index",
         "description": "The most comprehensive catalog of Claude Skills, MCP Servers, and A2A Agents",
         "url": "https://skillsindex-dev.github.io/skills/",
         "potentialAction": {
@@ -43,6 +44,190 @@
         }
     }
     </script>
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SkillsIndex",
+        "url": "https://skillsindex-dev.github.io/skills/",
+        "logo": "https://skillsindex-dev.github.io/skills/logo.png",
+        "sameAs": [
+            "https://github.com/skillsindex-dev"
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: Dataset -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "Claude Ecosystem Catalog",
+        "description": "Aggregated catalog of 24,000+ Claude Skills, MCP Servers, and A2A Agents from Smithery.ai, GitHub, and official Anthropic sources",
+        "url": "https://skillsindex-dev.github.io/skills/",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "creator": {
+            "@type": "Organization",
+            "name": "SkillsIndex"
+        },
+        "distribution": [
+            {
+                "@type": "DataDownload",
+                "encodingFormat": "application/json",
+                "contentUrl": "https://raw.githubusercontent.com/skillsindex-dev/data/main/latest/skills.json"
+            },
+            {
+                "@type": "DataDownload",
+                "encodingFormat": "application/x-parquet",
+                "contentUrl": "https://raw.githubusercontent.com/skillsindex-dev/data/main/latest/skills.parquet"
+            }
+        ],
+        "temporalCoverage": "2024/..",
+        "keywords": ["Claude", "Skills", "MCP", "Model Context Protocol", "A2A", "AI Agents", "Anthropic"]
+    }
+    </script>
+
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What are Claude Skills?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Claude Skills are reusable prompts and instructions that extend Claude's capabilities for specific tasks. They can be installed in Claude Code to add new slash commands, workflows, and specialized behaviors. The SkillsIndex catalogs over 21,000 skills from various sources including Smithery.ai and GitHub."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is MCP (Model Context Protocol)?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "MCP (Model Context Protocol) is an open protocol developed by Anthropic that allows AI assistants like Claude to connect with external data sources and tools. MCP Servers provide capabilities like file system access, database connections, API integrations, web browsing, and more. SkillsIndex tracks over 2,800 MCP servers from the ecosystem."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are A2A Agents?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A2A (Agent-to-Agent) is Google's open protocol for AI agents to communicate and collaborate with each other. A2A Agents can delegate tasks, share context, and work together on complex problems across different AI platforms. The catalog tracks emerging A2A agent implementations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How often is the SkillsIndex data updated?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The SkillsIndex catalog is updated daily at 06:00 UTC via automated scraping from 18 different sources including Smithery.ai, GitHub awesome-lists, NPM registry, and official Anthropic repositories. Historical archives are maintained for research purposes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the SkillsIndex data free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all SkillsIndex data is freely available under CC0 license. Download in JSON (18 MB) or compressed Parquet (3.7 MB) formats. Use it for building applications, research, analysis, or any other purpose without restrictions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I install a Claude Skill?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To install a Claude Skill, use the Claude Code CLI command: claude skill add <skill-name>. You can also add skills by URL or from the Smithery registry. Skills add new slash commands and capabilities to your Claude Code installation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I add an MCP Server to Claude?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "MCP Servers can be added to Claude Desktop or Claude Code through configuration files. Edit claude_desktop_config.json (Desktop) or use 'claude mcp add' command (Code). Each server provides specific capabilities like database access, file operations, or API integrations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between Skills and MCP Servers?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Skills are prompt-based instructions that define how Claude should behave for specific tasks - they're like custom commands or workflows. MCP Servers are actual code that runs alongside Claude, providing real-time access to external systems, databases, and APIs. Skills customize Claude's responses; MCP Servers extend its capabilities."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What sources does SkillsIndex aggregate from?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SkillsIndex aggregates from 18 sources: Smithery.ai registry, official Anthropic repositories, GitHub awesome-mcp-servers, awesome-claude-code, awesome-a2a lists, NPM @anthropic packages, PyPI MCP packages, and community contributions. Each source is scraped daily for updates."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I submit my own skill or MCP server to SkillsIndex?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! Submit your skill or MCP server by adding it to one of our tracked sources: publish to Smithery.ai, add to an awesome-list on GitHub, or publish to NPM/PyPI with appropriate tags. SkillsIndex will automatically discover and index it during the next daily update."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://skillsindex-dev.github.io/skills/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Browse Catalog",
+                "item": "https://skillsindex-dev.github.io/skills/#browse"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "API & Downloads",
+                "item": "https://skillsindex-dev.github.io/skills/#api"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: SoftwareSourceCode -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "SkillsIndex Data",
+        "description": "Open-source catalog of Claude ecosystem tools including Skills, MCP Servers, and A2A Agents",
+        "codeRepository": "https://github.com/skillsindex-dev/data",
+        "programmingLanguage": ["Python", "JSON"],
+        "runtimePlatform": "Claude Code, Claude Desktop",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+    </script>
+
+    <!-- Additional AI-focused meta tags -->
+    <meta name="ai-summary" content="SkillsIndex is a comprehensive catalog of 24,000+ Claude AI tools: Skills (prompt extensions), MCP Servers (external integrations), and A2A Agents (inter-agent communication). Updated daily from 18 sources.">
+    <meta name="topic" content="Claude AI, Anthropic, MCP Protocol, AI Tools, Developer Tools">
+    <meta name="classification" content="AI Tools Directory">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+    <meta name="revisit-after" content="1 day">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -293,6 +478,148 @@ curl -s ".../skills.json" | jq '[.[] | select(.type == "mcp")]'
 
 # Top 10 by stars
 curl -s ".../skills.json" | jq 'sort_by(-.stars) | .[0:10]'</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-alt" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">Everything you need to know about the Claude ecosystem</p>
+            </div>
+
+            <div class="faq-list">
+                <details class="faq-item" open>
+                    <summary class="faq-question">What are Claude Skills?</summary>
+                    <div class="faq-answer">
+                        <p>Claude Skills are reusable prompts and instructions that extend Claude's capabilities for specific tasks. They can be installed in Claude Code to add new slash commands, workflows, and specialized behaviors.</p>
+                        <p>Skills are defined in <code>.md</code> files with YAML frontmatter and can include system prompts, examples, and structured instructions. The SkillsIndex catalogs over <strong>21,000 skills</strong> from official Anthropic sources, Smithery.ai, and community repositories.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">What is MCP (Model Context Protocol)?</summary>
+                    <div class="faq-answer">
+                        <p>MCP (Model Context Protocol) is an open protocol developed by Anthropic that allows AI assistants like Claude to connect with external data sources and tools securely.</p>
+                        <p>MCP Servers provide capabilities like:</p>
+                        <ul>
+                            <li>File system access and management</li>
+                            <li>Database connections (PostgreSQL, SQLite, etc.)</li>
+                            <li>API integrations (GitHub, Slack, etc.)</li>
+                            <li>Browser automation and web scraping</li>
+                            <li>Code execution environments</li>
+                        </ul>
+                        <p>SkillsIndex tracks over <strong>2,800 MCP servers</strong> from the official repository and community sources.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">What are A2A Agents?</summary>
+                    <div class="faq-answer">
+                        <p>A2A (Agent-to-Agent) is an emerging protocol for AI agents to communicate and collaborate with each other. A2A enables:</p>
+                        <ul>
+                            <li>Task delegation between specialized agents</li>
+                            <li>Context sharing across agent boundaries</li>
+                            <li>Multi-agent workflows and orchestration</li>
+                        </ul>
+                        <p>The catalog currently includes early A2A agent implementations as the ecosystem develops.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">How often is the data updated?</summary>
+                    <div class="faq-answer">
+                        <p>The SkillsIndex catalog is updated <strong>daily at 06:00 UTC</strong> via automated GitHub Actions. The scraper collects data from 18 different sources:</p>
+                        <ul>
+                            <li><strong>Smithery.ai</strong> — 30K+ skills, 1.8K+ MCP servers</li>
+                            <li><strong>Official repositories</strong> — anthropics/skills, modelcontextprotocol/servers</li>
+                            <li><strong>Community collections</strong> — punkpeye/awesome-mcp-servers, VoltAgent/awesome-agent-skills</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">Is the data free to use?</summary>
+                    <div class="faq-answer">
+                        <p>Yes! All data is freely available under open terms. You can use it for:</p>
+                        <ul>
+                            <li>Building your own applications and tools</li>
+                            <li>Research and analysis</li>
+                            <li>Integration into other catalogs or directories</li>
+                        </ul>
+                        <p>Data is available in two formats:</p>
+                        <ul>
+                            <li><strong>JSON</strong> (18 MB) — Best for web applications</li>
+                            <li><strong>Parquet</strong> (3.7 MB) — 5x smaller, ideal for data analysis with pandas</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">How can I contribute or submit my skill/server?</summary>
+                    <div class="faq-answer">
+                        <p>There are several ways to get your skill or MCP server included:</p>
+                        <ul>
+                            <li><strong>Publish on Smithery.ai</strong> — Items are automatically scraped daily</li>
+                            <li><strong>Add to awesome-lists</strong> — Submit a PR to punkpeye/awesome-mcp-servers or similar collections</li>
+                            <li><strong>Create a public GitHub repo</strong> — Use the standard SKILL.md format for skills</li>
+                        </ul>
+                        <p>The scraper automatically discovers and indexes new items from all tracked sources.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">How do I install a Claude Skill?</summary>
+                    <div class="faq-answer">
+                        <p>To install a Claude Skill in Claude Code, use one of these methods:</p>
+                        <ul>
+                            <li><code>claude skill add &lt;skill-name&gt;</code> — Install from Smithery registry</li>
+                            <li><code>claude skill add &lt;github-url&gt;</code> — Install from GitHub repository</li>
+                            <li><code>/install-skill</code> — Use the built-in slash command</li>
+                        </ul>
+                        <p>Once installed, skills add new slash commands and capabilities to your Claude Code session.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">How do I add an MCP Server to Claude?</summary>
+                    <div class="faq-answer">
+                        <p>MCP Servers can be configured in two ways:</p>
+                        <ul>
+                            <li><strong>Claude Desktop:</strong> Edit <code>claude_desktop_config.json</code> in your config directory</li>
+                            <li><strong>Claude Code:</strong> Use <code>claude mcp add &lt;server&gt;</code> command</li>
+                        </ul>
+                        <p>Each server provides specific capabilities. For example, the <code>filesystem</code> server enables file operations, while <code>postgres</code> server provides database access.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">What is the difference between Skills and MCP Servers?</summary>
+                    <div class="faq-answer">
+                        <p>Skills and MCP Servers serve different purposes:</p>
+                        <ul>
+                            <li><strong>Skills</strong> are prompt-based instructions that define how Claude should behave for specific tasks. They're like custom commands or workflows defined in markdown.</li>
+                            <li><strong>MCP Servers</strong> are actual executable code that runs alongside Claude, providing real-time access to external systems, databases, and APIs.</li>
+                        </ul>
+                        <p>Think of it this way: Skills customize Claude's responses, while MCP Servers extend what Claude can actually do.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">What sources does SkillsIndex aggregate from?</summary>
+                    <div class="faq-answer">
+                        <p>SkillsIndex aggregates data from <strong>18 sources</strong> across the ecosystem:</p>
+                        <ul>
+                            <li><strong>Registries:</strong> Smithery.ai, NPM (@anthropic packages), PyPI (mcp-* packages)</li>
+                            <li><strong>Official:</strong> anthropics/skills, modelcontextprotocol/servers, google/A2A</li>
+                            <li><strong>Awesome Lists:</strong> awesome-mcp-servers, awesome-claude-code, awesome-a2a, awesome-agent-skills</li>
+                            <li><strong>Community:</strong> Various GitHub repositories with Skills and MCP implementations</li>
+                        </ul>
+                        <p>Each source is scraped daily at 06:00 UTC, with deduplication across sources.</p>
+                    </div>
+                </details>
             </div>
         </div>
     </section>

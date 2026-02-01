@@ -1,0 +1,33 @@
+# SkillsIndex Robots.txt
+# https://skillsindex-dev.github.io/skills/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://skillsindex-dev.github.io/skills/sitemap.xml
+
+# AI Crawlers - Welcome!
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
