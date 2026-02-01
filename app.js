@@ -1,4 +1,4 @@
-// SkillsIndex - Interactive Dashboard
+// SkillsIndex — Clean Dashboard
 
 const DATA_URL = 'https://raw.githubusercontent.com/skillsindex-dev/data/main/latest/skills.json';
 const STATS_URL = 'https://raw.githubusercontent.com/skillsindex-dev/data/main/latest/stats.json';
@@ -6,164 +6,200 @@ const STATS_URL = 'https://raw.githubusercontent.com/skillsindex-dev/data/main/l
 let allData = [];
 let filteredData = [];
 let currentPage = 0;
-const ITEMS_PER_PAGE = 24;
+const PAGE_SIZE = 24;
 
-// Colors for charts
+// Colors
 const COLORS = {
     skill: '#22c55e',
     mcp: '#3b82f6',
     a2a: '#f59e0b',
-    github: '#6366f1',
-    smithery: '#8b5cf6',
-    categories: ['#6366f1', '#8b5cf6', '#a855f7', '#d946ef', '#ec4899', '#f43f5e', '#f97316', '#eab308', '#22c55e', '#14b8a6', '#3b82f6', '#6366f1']
+    github: '#71717a',
+    smithery: '#d4a574'
 };
 
 // Initialize
-document.addEventListener('DOMContentLoaded', () => {
-    loadStats();
-    loadData();
-    setupTabs();
-    setupFilters();
-});
+document.addEventListener('DOMContentLoaded', init);
 
-// Load stats.json for dashboard
+async function init() {
+    setupKeyboardShortcuts();
+    setupCodeTabs();
+    await Promise.all([loadStats(), loadData()]);
+}
+
+// Keyboard shortcuts
+function setupKeyboardShortcuts() {
+    document.addEventListener('keydown', (e) => {
+        if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+            e.preventDefault();
+            document.getElementById('search-input').focus();
+        }
+    });
+}
+
+// Code tabs
+function setupCodeTabs() {
+    document.querySelectorAll('.code-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.code-block').forEach(b => b.classList.add('hidden'));
+            tab.classList.add('active');
+            document.getElementById(`code-${tab.dataset.lang}`).classList.remove('hidden');
+        });
+    });
+}
+
+// Load stats
 async function loadStats() {
     try {
-        const response = await fetch(STATS_URL);
-        const stats = await response.json();
-        renderDashboard(stats);
-    } catch (error) {
-        console.error('Failed to load stats:', error);
+        const res = await fetch(STATS_URL);
+        const stats = await res.json();
+        renderStats(stats);
+    } catch (e) {
+        console.error('Failed to load stats:', e);
     }
 }
 
-// Load full data for search/explore
+// Load data
 async function loadData() {
     try {
-        const response = await fetch(DATA_URL);
-        allData = await response.json();
+        const res = await fetch(DATA_URL);
+        allData = await res.json();
         filteredData = [...allData];
 
-        // Update hero stats with exact numbers
-        document.getElementById('stat-skills').textContent = formatNumber(allData.filter(i => i.type === 'skill').length);
-        document.getElementById('stat-mcp').textContent = formatNumber(allData.filter(i => i.type === 'mcp').length);
-        document.getElementById('stat-a2a').textContent = formatNumber(allData.filter(i => i.type === 'a2a').length);
-        document.getElementById('total-count').textContent = formatNumber(allData.length) + '+';
+        // Update counts
+        const skills = allData.filter(i => i.type === 'skill').length;
+        const mcp = allData.filter(i => i.type === 'mcp').length;
+        const a2a = allData.filter(i => i.type === 'a2a').length;
 
-        // Populate category filter
+        document.getElementById('hero-count').textContent = formatNum(allData.length);
+        document.getElementById('stat-skills').textContent = formatNum(skills);
+        document.getElementById('stat-mcp').textContent = formatNum(mcp);
+        document.getElementById('stat-a2a').textContent = formatNum(a2a);
+
+        // Populate categories
         const categories = [...new Set(allData.map(i => i.category))].sort();
-        const categorySelect = document.getElementById('filter-category');
-        categories.forEach(cat => {
-            const option = document.createElement('option');
-            option.value = cat;
-            option.textContent = cat;
-            categorySelect.appendChild(option);
+        const catSelect = document.getElementById('filter-category');
+        categories.forEach(c => {
+            const opt = document.createElement('option');
+            opt.value = c;
+            opt.textContent = c;
+            catSelect.appendChild(opt);
         });
 
+        setupFilters();
         renderResults();
-    } catch (error) {
-        console.error('Failed to load data:', error);
-        document.getElementById('results-grid').innerHTML = '<div class="loading">Failed to load data. Please try again.</div>';
+    } catch (e) {
+        console.error('Failed to load data:', e);
+        document.getElementById('results-grid').innerHTML =
+            '<div class="loading-state"><span>Failed to load data</span></div>';
     }
 }
 
-// Render dashboard
-function renderDashboard(stats) {
-    // Update last update time
-    const lastUpdate = new Date(stats.scraped_at);
-    document.getElementById('last-update').textContent = lastUpdate.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit'
+// Render stats
+function renderStats(stats) {
+    // Last update
+    const date = new Date(stats.scraped_at);
+    document.getElementById('last-update').textContent = date.toLocaleDateString('en-US', {
+        month: 'short', day: 'numeric', year: 'numeric'
     });
 
     // Type chart
-    renderDonutChart('type-chart', 'type-legend', stats.by_type, {
+    renderDonut('chart-type', stats.by_type, {
         skill: COLORS.skill,
         mcp: COLORS.mcp,
         a2a: COLORS.a2a
     });
 
     // Source chart
-    renderDonutChart('source-chart', 'source-legend', stats.by_source, {
+    renderDonut('chart-source', stats.by_source, {
         github: COLORS.github,
         smithery: COLORS.smithery
     });
 
-    // Category bar chart
-    renderBarChart('category-chart', stats.by_category);
+    // Categories
+    renderBars('chart-categories', stats.by_category);
 
-    // Quality metrics
-    renderQualityMetrics('quality-metrics', stats.quality, stats.total_items);
+    // Top items
+    renderTopItems('top-items', stats.top_items);
 
-    // Stars stats
-    renderStarsStats('stars-stats', stats.stars_stats);
+    // Quality
+    renderQuality('quality-metrics', stats.quality, stats.total_items);
 
-    // Top lists
-    renderTopItems('top-items-list', stats.top_items);
-    renderTopRepos('top-repos-list', stats.top_repos);
-    renderTopAuthors('top-authors-list', stats.top_authors);
+    // Contributors
+    renderContributors('top-authors', stats.top_authors);
 }
 
-// Donut chart with CSS
-function renderDonutChart(chartId, legendId, data, colors) {
-    const chart = document.getElementById(chartId);
-    const legend = document.getElementById(legendId);
-
+// Donut chart
+function renderDonut(id, data, colors) {
+    const container = document.getElementById(id);
     const total = Object.values(data).reduce((a, b) => a + b, 0);
-    let cumulative = 0;
-    let gradientParts = [];
 
-    Object.entries(data).forEach(([key, value]) => {
-        const percentage = (value / total) * 100;
-        const start = cumulative;
-        cumulative += percentage;
-        gradientParts.push(`${colors[key]} ${start}% ${cumulative}%`);
+    let gradient = [];
+    let cumulative = 0;
+
+    Object.entries(data).forEach(([key, val]) => {
+        const pct = (val / total) * 100;
+        gradient.push(`${colors[key]} ${cumulative}% ${cumulative + pct}%`);
+        cumulative += pct;
     });
 
-    chart.style.background = `conic-gradient(${gradientParts.join(', ')})`;
-    chart.innerHTML = `<div style="position:absolute;inset:20px;background:var(--bg-card);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;">
-        <div style="font-size:1.5rem;font-weight:700;">${formatNumber(total)}</div>
-        <div style="font-size:0.75rem;color:var(--text-secondary);">total</div>
-    </div>`;
-    chart.style.position = 'relative';
-
-    legend.innerHTML = Object.entries(data).map(([key, value]) => `
+    const legend = Object.entries(data).map(([key, val]) => `
         <div class="legend-item">
-            <div class="legend-color" style="background:${colors[key]}"></div>
-            <span>${key}</span>
-            <span class="legend-value">${formatNumber(value)}</span>
+            <div class="legend-dot" style="background:${colors[key]}"></div>
+            <span class="legend-name">${key}</span>
+            <span class="legend-value">${formatNum(val)}</span>
+        </div>
+    `).join('');
+
+    container.innerHTML = `
+        <div class="donut" style="background: conic-gradient(${gradient.join(', ')})">
+            <div class="donut-center">
+                <span class="donut-value">${formatNum(total)}</span>
+                <span class="donut-label">total</span>
+            </div>
+        </div>
+        <div class="legend">${legend}</div>
+    `;
+}
+
+// Bar chart
+function renderBars(id, data) {
+    const container = document.getElementById(id);
+    const entries = Object.entries(data).slice(0, 8);
+    const max = Math.max(...entries.map(([, v]) => v));
+
+    container.innerHTML = entries.map(([key, val]) => `
+        <div class="bar-row">
+            <span class="bar-label">${key}</span>
+            <div class="bar-track">
+                <div class="bar-fill" style="width: ${(val / max) * 100}%"></div>
+            </div>
+            <span class="bar-value">${formatNum(val)}</span>
         </div>
     `).join('');
 }
 
-// Bar chart
-function renderBarChart(containerId, data) {
-    const container = document.getElementById(containerId);
-    const max = Math.max(...Object.values(data));
-
-    container.innerHTML = Object.entries(data).slice(0, 10).map(([key, value], i) => `
-        <div class="bar-item">
-            <div class="bar-label">${key}</div>
-            <div class="bar-track">
-                <div class="bar-fill" style="width:${(value / max) * 100}%;background:${COLORS.categories[i % COLORS.categories.length]}"></div>
-            </div>
-            <div class="bar-value">${formatNumber(value)}</div>
+// Top items
+function renderTopItems(id, items) {
+    const container = document.getElementById(id);
+    container.innerHTML = items.slice(0, 8).map((item, i) => `
+        <div class="top-item">
+            <span class="top-rank ${i === 0 ? 'gold' : i === 1 ? 'silver' : i === 2 ? 'bronze' : ''}">${i + 1}</span>
+            <span class="top-name">${esc(item.name)}</span>
+            <span class="top-type-badge ${item.type}">${item.type}</span>
+            <span class="top-stars">${formatNum(item.stars)}</span>
         </div>
     `).join('');
 }
 
 // Quality metrics
-function renderQualityMetrics(containerId, quality, total) {
-    const container = document.getElementById(containerId);
-
+function renderQuality(id, quality, total) {
+    const container = document.getElementById(id);
     const metrics = [
-        { label: 'With description', value: quality.with_description, color: '#22c55e' },
-        { label: 'With tags', value: quality.with_tags, color: '#3b82f6' },
-        { label: 'With repository', value: quality.with_repo, color: '#8b5cf6' },
-        { label: 'Verified', value: quality.verified, color: '#f59e0b' }
+        { label: 'With description', value: quality.with_description },
+        { label: 'With tags', value: quality.with_tags },
+        { label: 'With repository', value: quality.with_repo },
+        { label: 'Verified', value: quality.verified }
     ];
 
     container.innerHTML = metrics.map(m => {
@@ -175,191 +211,88 @@ function renderQualityMetrics(containerId, quality, total) {
                     <span class="quality-value">${pct}%</span>
                 </div>
                 <div class="quality-bar">
-                    <div class="quality-fill" style="width:${pct}%;background:${m.color}"></div>
+                    <div class="quality-fill" style="width: ${pct}%"></div>
                 </div>
             </div>
         `;
     }).join('');
 }
 
-// Stars stats
-function renderStarsStats(containerId, stats) {
-    const container = document.getElementById(containerId);
-
-    container.innerHTML = `
-        <div class="stats-item">
-            <span class="stats-item-label">Max stars</span>
-            <span class="stats-item-value">${formatNumber(stats.max)}</span>
-        </div>
-        <div class="stats-item">
-            <span class="stats-item-label">Average</span>
-            <span class="stats-item-value">${formatNumber(Math.round(stats.avg))}</span>
-        </div>
-        <div class="stats-item">
-            <span class="stats-item-label">With stars</span>
-            <span class="stats-item-value">${formatNumber(stats.with_stars)}</span>
-        </div>
-        <div class="stats-item">
-            <span class="stats-item-label">Zero stars</span>
-            <span class="stats-item-value">${formatNumber(stats.zero_stars)}</span>
-        </div>
-    `;
-}
-
-// Top items list
-function renderTopItems(containerId, items) {
-    const container = document.getElementById(containerId);
-
-    container.innerHTML = items.slice(0, 20).map((item, i) => `
-        <div class="top-item">
-            <div class="top-rank ${i === 0 ? 'gold' : i === 1 ? 'silver' : i === 2 ? 'bronze' : ''}">${i + 1}</div>
-            <div class="top-info">
-                <div class="top-name">${escapeHtml(item.name)}</div>
-                <div class="top-meta">
-                    <span class="top-type ${item.type}">${item.type}</span>
-                    <span>via ${item.source}</span>
-                </div>
-            </div>
-            <div class="top-stars">
-                <span>⭐</span>
-                <span>${formatNumber(item.stars)}</span>
-            </div>
+// Contributors
+function renderContributors(id, authors) {
+    const container = document.getElementById(id);
+    container.innerHTML = Object.entries(authors).slice(0, 6).map(([name, count]) => `
+        <div class="contributor-item">
+            <span class="contributor-name">${name}</span>
+            <span class="contributor-count">${formatNum(count)}</span>
         </div>
     `).join('');
-}
-
-// Top repos list
-function renderTopRepos(containerId, repos) {
-    const container = document.getElementById(containerId);
-
-    container.innerHTML = Object.entries(repos).slice(0, 15).map(([repo, count], i) => `
-        <div class="top-item">
-            <div class="top-rank ${i === 0 ? 'gold' : i === 1 ? 'silver' : i === 2 ? 'bronze' : ''}">${i + 1}</div>
-            <div class="top-info">
-                <a href="https://github.com/${repo}" target="_blank" class="top-name">${repo}</a>
-            </div>
-            <div class="top-stars">
-                <span>${formatNumber(count)} items</span>
-            </div>
-        </div>
-    `).join('');
-}
-
-// Top authors list
-function renderTopAuthors(containerId, authors) {
-    const container = document.getElementById(containerId);
-
-    container.innerHTML = Object.entries(authors).slice(0, 15).map(([author, count], i) => `
-        <div class="top-item">
-            <div class="top-rank ${i === 0 ? 'gold' : i === 1 ? 'silver' : i === 2 ? 'bronze' : ''}">${i + 1}</div>
-            <div class="top-info">
-                <div class="top-name">${author}</div>
-            </div>
-            <div class="top-stars">
-                <span>${formatNumber(count)} items</span>
-            </div>
-        </div>
-    `).join('');
-}
-
-// Setup tabs
-function setupTabs() {
-    const tabs = document.querySelectorAll('.tab');
-    const contents = document.querySelectorAll('.tab-content');
-
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            tabs.forEach(t => t.classList.remove('active'));
-            contents.forEach(c => c.classList.remove('active'));
-
-            tab.classList.add('active');
-            document.getElementById(tab.dataset.tab).classList.add('active');
-        });
-    });
 }
 
 // Setup filters
 function setupFilters() {
-    const searchInput = document.getElementById('search-input');
-    const typeFilter = document.getElementById('filter-type');
-    const categoryFilter = document.getElementById('filter-category');
-    const sourceFilter = document.getElementById('filter-source');
-    const sortFilter = document.getElementById('filter-sort');
-    const loadMoreBtn = document.getElementById('load-more');
+    const search = document.getElementById('search-input');
+    const type = document.getElementById('filter-type');
+    const category = document.getElementById('filter-category');
+    const sort = document.getElementById('filter-sort');
+    const loadMore = document.getElementById('load-more');
 
-    let debounceTimer;
-
-    const applyFilters = () => {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => {
-            const search = searchInput.value.toLowerCase();
-            const type = typeFilter.value;
-            const category = categoryFilter.value;
-            const source = sourceFilter.value;
-            const sort = sortFilter.value;
+    let debounce;
+    const apply = () => {
+        clearTimeout(debounce);
+        debounce = setTimeout(() => {
+            const q = search.value.toLowerCase();
+            const t = type.value;
+            const c = category.value;
+            const s = sort.value;
 
             filteredData = allData.filter(item => {
-                if (type && item.type !== type) return false;
-                if (category && item.category !== category) return false;
-                if (source && item.source !== source) return false;
-                if (search) {
-                    const searchText = `${item.name} ${item.description || ''} ${(item.tags || []).join(' ')}`.toLowerCase();
-                    if (!searchText.includes(search)) return false;
+                if (t && item.type !== t) return false;
+                if (c && item.category !== c) return false;
+                if (q) {
+                    const text = `${item.name} ${item.description || ''} ${(item.tags || []).join(' ')}`.toLowerCase();
+                    if (!text.includes(q)) return false;
                 }
                 return true;
             });
 
-            // Sort
-            if (sort === 'stars') {
-                filteredData.sort((a, b) => (b.stars || 0) - (a.stars || 0));
-            } else if (sort === 'name') {
-                filteredData.sort((a, b) => a.name.localeCompare(b.name));
-            } else if (sort === 'recent') {
-                filteredData.sort((a, b) => new Date(b.scraped_at || 0) - new Date(a.scraped_at || 0));
-            }
+            if (s === 'stars') filteredData.sort((a, b) => (b.stars || 0) - (a.stars || 0));
+            else if (s === 'name') filteredData.sort((a, b) => a.name.localeCompare(b.name));
+            else if (s === 'recent') filteredData.sort((a, b) => new Date(b.scraped_at || 0) - new Date(a.scraped_at || 0));
 
             currentPage = 0;
             renderResults();
-        }, 200);
+        }, 150);
     };
 
-    searchInput.addEventListener('input', applyFilters);
-    typeFilter.addEventListener('change', applyFilters);
-    categoryFilter.addEventListener('change', applyFilters);
-    sourceFilter.addEventListener('change', applyFilters);
-    sortFilter.addEventListener('change', applyFilters);
-
-    loadMoreBtn.addEventListener('click', () => {
-        currentPage++;
-        renderResults(true);
-    });
+    search.addEventListener('input', apply);
+    type.addEventListener('change', apply);
+    category.addEventListener('change', apply);
+    sort.addEventListener('change', apply);
+    loadMore.addEventListener('click', () => { currentPage++; renderResults(true); });
 }
 
-// Render search results
+// Render results
 function renderResults(append = false) {
     const container = document.getElementById('results-grid');
     const countEl = document.getElementById('results-count');
-    const loadMoreBtn = document.getElementById('load-more');
+    const loadMore = document.getElementById('load-more');
 
-    const start = currentPage * ITEMS_PER_PAGE;
-    const end = start + ITEMS_PER_PAGE;
-    const pageItems = filteredData.slice(start, end);
+    const start = currentPage * PAGE_SIZE;
+    const items = filteredData.slice(start, start + PAGE_SIZE);
 
-    countEl.textContent = formatNumber(filteredData.length);
+    countEl.textContent = formatNum(filteredData.length);
 
-    const html = pageItems.map(item => `
-        <a href="${item.raw_url || item.repo_url || '#'}" target="_blank" class="result-card">
-            <div class="result-header">
-                <div class="result-name">${escapeHtml(item.name)}</div>
-                ${item.stars > 0 ? `<div class="result-stars">⭐ ${formatNumber(item.stars)}</div>` : ''}
+    const html = items.map(item => `
+        <a href="${item.raw_url || item.repo_url || '#'}" target="_blank" rel="noopener" class="item-card">
+            <div class="item-header">
+                <span class="item-name">${esc(item.name)}</span>
+                ${item.stars > 0 ? `<span class="item-stars">★ ${formatNum(item.stars)}</span>` : ''}
             </div>
-            <div class="result-description">${escapeHtml(item.description || 'No description available')}</div>
-            <div class="result-footer">
-                <div class="result-tags">
-                    <span class="result-tag">${item.category}</span>
-                    ${item.source ? `<span class="result-tag">${item.source}</span>` : ''}
-                </div>
-                <span class="result-type ${item.type}">${item.type}</span>
+            <p class="item-description">${esc(item.description || 'No description')}</p>
+            <div class="item-footer">
+                <span class="item-category">${item.category}</span>
+                <span class="item-type ${item.type}">${item.type}</span>
             </div>
         </a>
     `).join('');
@@ -367,31 +300,22 @@ function renderResults(append = false) {
     if (append) {
         container.innerHTML += html;
     } else {
-        container.innerHTML = html || '<div class="loading">No items found matching your criteria.</div>';
+        container.innerHTML = html || '<div class="loading-state"><span>No items found</span></div>';
     }
 
-    // Show/hide load more button
-    if (end >= filteredData.length) {
-        loadMoreBtn.classList.add('hidden');
-    } else {
-        loadMoreBtn.classList.remove('hidden');
-    }
+    loadMore.classList.toggle('hidden', start + PAGE_SIZE >= filteredData.length);
 }
 
 // Utilities
-function formatNumber(num) {
-    if (num >= 1000000) {
-        return (num / 1000000).toFixed(1) + 'M';
-    }
-    if (num >= 1000) {
-        return (num / 1000).toFixed(1) + 'K';
-    }
-    return num.toLocaleString();
+function formatNum(n) {
+    if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+    return n.toLocaleString();
 }
 
-function escapeHtml(text) {
-    if (!text) return '';
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+function esc(str) {
+    if (!str) return '';
+    const el = document.createElement('div');
+    el.textContent = str;
+    return el.innerHTML;
 }
