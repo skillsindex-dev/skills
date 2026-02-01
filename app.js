@@ -18,6 +18,9 @@ const COLORS = {
     smithery: '#d4a574'
 };
 
+// Favorites storage key
+const FAVORITES_KEY = 'skillsindex_favorites';
+
 // Initialize
 document.addEventListener('DOMContentLoaded', init);
 
@@ -33,6 +36,10 @@ function setupKeyboardShortcuts() {
         if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
             e.preventDefault();
             document.getElementById('search-input').focus();
+        }
+        // Escape to clear search
+        if (e.key === 'Escape' && document.activeElement.tagName === 'INPUT') {
+            document.activeElement.blur();
         }
     });
 }
@@ -247,16 +254,23 @@ function setupFilters() {
             const c = category.value;
             const s = sort.value;
 
-            filteredData = allData.filter(item => {
-                if (t && item.type !== t) return false;
-                if (c && item.category !== c) return false;
-                if (q) {
-                    const text = `${item.name} ${item.description || ''} ${(item.tags || []).join(' ')}`.toLowerCase();
-                    if (!text.includes(q)) return false;
-                }
-                return true;
-            });
+            // Handle special filter for favorites
+            if (t === 'favorites') {
+                const favs = getFavorites();
+                filteredData = allData.filter(item => favs.includes(item.id));
+            } else {
+                filteredData = allData.filter(item => {
+                    if (t && item.type !== t) return false;
+                    if (c && item.category !== c) return false;
+                    if (q) {
+                        const text = `${item.name} ${item.description || ''} ${(item.tags || []).join(' ')}`.toLowerCase();
+                        if (!text.includes(q)) return false;
+                    }
+                    return true;
+                });
+            }
 
+            // Sort
             if (s === 'stars') filteredData.sort((a, b) => (b.stars || 0) - (a.stars || 0));
             else if (s === 'name') filteredData.sort((a, b) => a.name.localeCompare(b.name));
             else if (s === 'recent') filteredData.sort((a, b) => new Date(b.scraped_at || 0) - new Date(a.scraped_at || 0));
@@ -271,6 +285,26 @@ function setupFilters() {
     category.addEventListener('change', apply);
     sort.addEventListener('change', apply);
     loadMore.addEventListener('click', () => { currentPage++; renderResults(true); });
+
+    // Check URL params
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('type')) {
+        type.value = params.get('type');
+        apply();
+    }
+    if (params.get('q')) {
+        search.value = params.get('q');
+        apply();
+    }
+}
+
+// Check if item is new (within last 7 days)
+function isNewItem(item) {
+    if (!item.scraped_at) return false;
+    const scraped = new Date(item.scraped_at);
+    const now = new Date();
+    const diffDays = (now - scraped) / (1000 * 60 * 60 * 24);
+    return diffDays <= 7;
 }
 
 // Render results
@@ -281,22 +315,41 @@ function renderResults(append = false) {
 
     const start = currentPage * PAGE_SIZE;
     const items = filteredData.slice(start, start + PAGE_SIZE);
+    const favorites = getFavorites();
 
     countEl.textContent = formatNum(filteredData.length);
 
-    const html = items.map(item => `
-        <a href="${item.raw_url || item.repo_url || '#'}" target="_blank" rel="noopener" class="item-card">
+    const html = items.map(item => {
+        const isFav = favorites.includes(item.id);
+        const isNew = isNewItem(item);
+        const detailUrl = `./item/${item.id}/`;
+
+        return `
+        <div class="item-card" data-id="${item.id}">
             <div class="item-header">
-                <span class="item-name">${esc(item.name)}</span>
-                ${item.stars > 0 ? `<span class="item-stars">★ ${formatNum(item.stars)}</span>` : ''}
+                <a href="${detailUrl}" class="item-name-link">
+                    <span class="item-name">${esc(item.name)}</span>
+                </a>
+                <div class="item-actions">
+                    ${item.stars > 0 ? `<span class="item-stars">★ ${formatNum(item.stars)}</span>` : ''}
+                    <button class="item-fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavorite('${item.id}', event)" title="${isFav ? 'Remove from favorites' : 'Add to favorites'}">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <p class="item-description">${esc(item.description || 'No description')}</p>
+            <a href="${detailUrl}" class="item-body">
+                ${isNew ? '<span class="item-badge new">New</span>' : ''}
+                ${item.verified ? '<span class="item-badge verified">Verified</span>' : ''}
+                <p class="item-description">${esc(item.description || 'No description')}</p>
+            </a>
             <div class="item-footer">
                 <span class="item-category">${item.category}</span>
                 <span class="item-type ${item.type}">${item.type}</span>
             </div>
-        </a>
-    `).join('');
+        </div>
+    `}).join('');
 
     if (append) {
         container.innerHTML += html;
@@ -305,6 +358,51 @@ function renderResults(append = false) {
     }
 
     loadMore.classList.toggle('hidden', start + PAGE_SIZE >= filteredData.length);
+}
+
+// Favorites functions
+function getFavorites() {
+    try {
+        return JSON.parse(localStorage.getItem(FAVORITES_KEY) || '[]');
+    } catch {
+        return [];
+    }
+}
+
+function toggleFavorite(id, event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const favs = getFavorites();
+    const idx = favs.indexOf(id);
+
+    if (idx === -1) {
+        favs.push(id);
+    } else {
+        favs.splice(idx, 1);
+    }
+
+    localStorage.setItem(FAVORITES_KEY, JSON.stringify(favs));
+
+    // Update button state
+    const btn = event.currentTarget;
+    const svg = btn.querySelector('svg');
+    const isNowFav = idx === -1;
+
+    btn.classList.toggle('active', isNowFav);
+    svg.setAttribute('fill', isNowFav ? 'currentColor' : 'none');
+    btn.title = isNowFav ? 'Remove from favorites' : 'Add to favorites';
+
+    // Update favorites count in filter if visible
+    updateFavoritesCount();
+}
+
+function updateFavoritesCount() {
+    const favs = getFavorites();
+    const option = document.querySelector('#filter-type option[value="favorites"]');
+    if (option) {
+        option.textContent = `Favorites (${favs.length})`;
+    }
 }
 
 // Utilities

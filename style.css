@@ -468,6 +468,83 @@ button {
     align-items: center;
 }
 
+/* Item card enhancements */
+.item-name-link {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-name-link:hover .item-name {
+    color: var(--accent);
+}
+
+.item-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.item-fav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.item-fav-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.item-fav-btn.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-muted);
+}
+
+.item-body {
+    display: block;
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-body:hover .item-description {
+    color: var(--text-primary);
+}
+
+/* Item badges */
+.item-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    margin-right: 6px;
+}
+
+.item-badge.new {
+    color: var(--success);
+    background: rgba(34, 197, 94, 0.1);
+}
+
+.item-badge.verified {
+    color: var(--info);
+    background: rgba(59, 130, 246, 0.1);
+}
+
 .item-category {
     font-size: 11px;
     color: var(--text-muted);
