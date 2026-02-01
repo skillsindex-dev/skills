@@ -89,132 +89,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
-    <style>
-        :root {
-            --bg-primary: #09090b;
-            --bg-secondary: #0f0f12;
-            --bg-tertiary: #18181b;
-            --bg-card: #1c1c20;
-            --bg-hover: #27272a;
-            --text-primary: #fafafa;
-            --text-secondary: #a1a1aa;
-            --text-muted: #71717a;
-            --border: #27272a;
-            --border-hover: #3f3f46;
-            --accent: #d4a574;
-            --accent-secondary: #c9956c;
-            --success: #22c55e;
-            --info: #3b82f6;
-            --warning: #eab308;
-            --type-skill: #22c55e;
-            --type-mcp: #3b82f6;
-            --type-a2a: #f59e0b;
-            --container: 800px;
-            --radius: 8px;
-            --radius-lg: 12px;
-            --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-        body { font-family: var(--font); background: var(--bg-primary); color: var(--text-primary); line-height: 1.6; font-size: 15px; }
-        a { color: inherit; text-decoration: none; }
-
-        .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
-
-        /* Navigation */
-        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(9, 9, 11, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-        .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-        .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 16px; }
-        .logo-icon { width: 22px; height: 22px; color: var(--accent); }
-        .nav-links { display: flex; align-items: center; gap: 28px; }
-        .nav-links a { font-size: 14px; color: var(--text-secondary); transition: color 0.15s; }
-        .nav-links a:hover { color: var(--text-primary); }
-
-        /* Main Content */
-        .main { padding: 100px 0 60px; }
-
-        /* Breadcrumb */
-        .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); margin-bottom: 24px; flex-wrap: wrap; }
-        .breadcrumb a { color: var(--text-secondary); }
-        .breadcrumb a:hover { color: var(--accent); }
-        .breadcrumb-sep { color: var(--text-muted); }
-
-        /* Item Header */
-        .item-header { margin-bottom: 32px; }
-        .item-type-badge { display: inline-block; padding: 4px 10px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; border-radius: 4px; margin-bottom: 12px; }
-        .item-type-badge.skill { color: var(--type-skill); background: rgba(34, 197, 94, 0.1); }
-        .item-type-badge.mcp { color: var(--type-mcp); background: rgba(59, 130, 246, 0.1); }
-        .item-type-badge.a2a { color: var(--type-a2a); background: rgba(245, 158, 11, 0.1); }
-        .item-title { font-size: 32px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; line-height: 1.2; }
-        .item-meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 14px; color: var(--text-secondary); }
-        .item-meta-item { display: flex; align-items: center; gap: 6px; }
-        .item-stars { color: var(--warning); }
-        .verified-badge { color: var(--success); }
-
-        /* Description */
-        .item-description { font-size: 16px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 32px; }
-
-        /* Info Card */
-        .info-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 24px; }
-        .info-card-title { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 16px; }
-        .info-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); }
-        .info-row:last-child { border-bottom: none; }
-        .info-label { color: var(--text-muted); font-size: 13px; }
-        .info-value { color: var(--text-primary); font-size: 13px; font-weight: 500; }
-        .info-value a { color: var(--accent); }
-        .info-value a:hover { text-decoration: underline; }
-
-        /* Tags */
-        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
-        .tag { padding: 4px 10px; font-size: 12px; color: var(--text-secondary); background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 100px; transition: all 0.15s; }
-        .tag:hover { border-color: var(--accent); color: var(--accent); }
-
-        /* Install Section */
-        .install-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 24px; }
-        .install-title { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 16px; }
-        .install-method { margin-bottom: 16px; }
-        .install-method:last-child { margin-bottom: 0; }
-        .install-label { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
-        .install-code { display: block; padding: 12px 14px; font-size: 13px; font-family: 'SF Mono', Monaco, Consolas, monospace; color: var(--accent); background: var(--bg-tertiary); border-radius: var(--radius); overflow-x: auto; white-space: nowrap; }
-
-        /* Actions */
-        .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
-        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; font-size: 14px; font-weight: 500; border-radius: var(--radius); border: 1px solid transparent; transition: all 0.15s; cursor: pointer; text-decoration: none; }
-        .btn-primary { background: var(--accent); color: var(--bg-primary); border-color: var(--accent); }
-        .btn-primary:hover { background: var(--accent-secondary); }
-        .btn-secondary { background: var(--bg-card); color: var(--text-primary); border-color: var(--border); }
-        .btn-secondary:hover { background: var(--bg-hover); border-color: var(--border-hover); }
-
-        /* Share */
-        .share-section { margin-bottom: 32px; }
-        .share-title { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
-        .share-buttons { display: flex; gap: 8px; }
-        .share-btn { padding: 8px 14px; font-size: 12px; color: var(--text-secondary); background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; transition: all 0.15s; }
-        .share-btn:hover { border-color: var(--accent); color: var(--accent); }
-
-        /* Related */
-        .related-section { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
-        .related-title { font-size: 18px; font-weight: 600; margin-bottom: 20px; }
-        .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
-        .related-card { display: block; padding: 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); transition: all 0.15s; }
-        .related-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
-        .related-card-name { font-size: 14px; font-weight: 500; margin-bottom: 4px; }
-        .related-card-desc { font-size: 12px; color: var(--text-muted); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-
-        /* Footer */
-        .footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; }
-        .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-        .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 14px; }
-        .footer-links { display: flex; gap: 24px; }
-        .footer-links a { font-size: 13px; color: var(--text-muted); transition: color 0.15s; }
-        .footer-links a:hover { color: var(--text-secondary); }
-
-        /* Back Link */
-        .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-muted); margin-bottom: 24px; transition: color 0.15s; }
-        .back-link:hover { color: var(--accent); }
-    </style>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/skills/item.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -227,9 +103,9 @@
                 <span>SkillsIndex</span>
             </a>
             <div class="nav-links">
-                <a href="/skills/#catalog">Catalog</a>
-                <a href="/skills/#stats">Statistics</a>
-                <a href="https://github.com/skillsindex-dev" target="_blank" rel="noopener">GitHub</a>
+                <a href="/skills/catalog/">Catalog</a>
+                <a href="/skills/kits/">Kits</a>
+                <a href="/skills/docs/">Docs</a>
             </div>
         </div>
     </nav>
@@ -238,7 +114,7 @@
     <main class="main">
         <div class="container">
             <!-- Back Link -->
-            <a href="/skills/" class="back-link">
+            <a href="/skills/catalog/" class="back-link">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
@@ -249,7 +125,7 @@
             <nav class="breadcrumb" aria-label="Breadcrumb">
                 <a href="/skills/">Home</a>
                 <span class="breadcrumb-sep">/</span>
-                <a href="/skills/?type=skill">Skills</a>
+                <a href="/skills/catalog/?type=skill">Skills</a>
                 <span class="breadcrumb-sep">/</span>
                 <span>whisper-transcribe</span>
             </nav>
@@ -275,11 +151,11 @@
             
             <div class="tags">
                 
-                <a href="/skills/?q=Data &amp; Analytics" class="tag">Data &amp; Analytics</a>
+                <a href="/skills/catalog/?q=Data &amp; Analytics" class="tag">Data &amp; Analytics</a>
                 
-                <a href="/skills/?q=Writing" class="tag">Writing</a>
+                <a href="/skills/catalog/?q=Writing" class="tag">Writing</a>
                 
-                <a href="/skills/?q=Coding" class="tag">Coding</a>
+                <a href="/skills/catalog/?q=Coding" class="tag">Coding</a>
                 
             </div>
             

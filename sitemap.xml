@@ -7,28 +7,22 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://skillsindex-dev.github.io/skills/#catalog</loc>
+    <loc>https://skillsindex-dev.github.io/skills/catalog/</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://skillsindex-dev.github.io/skills/#stats</loc>
+    <loc>https://skillsindex-dev.github.io/skills/kits/</loc>
     <lastmod>2026-02-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://skillsindex-dev.github.io/skills/#api</loc>
+    <loc>https://skillsindex-dev.github.io/skills/docs/</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skillsindex-dev.github.io/skills/#faq</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://skillsindex-dev.github.io/skills/item/3c288ca28697/</loc>
