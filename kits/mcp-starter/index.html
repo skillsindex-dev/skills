@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Starter Pack — SkillsIndex</title>
+    <meta name="description" content="25 essential MCP servers with ready-to-use configurations. Database, file system, API access, and more.">
+    <link rel="canonical" href="https://skillsindex-dev.github.io/skills/kits/mcp-starter/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-primary: #0a0a0b; --bg-secondary: #111113; --bg-card: #161618; --border: #2a2a2d; --text-primary: #fafafa; --text-secondary: #a1a1aa; --text-muted: #71717a; --accent: #e07a5f; --accent-muted: rgba(224, 122, 95, 0.1); --success: #22c55e; --info: #3b82f6; --container: 1000px; --radius: 12px; --font: 'Inter', sans-serif; --font-display: 'Playfair Display', serif; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); background: var(--bg-primary); color: var(--text-primary); line-height: 1.7; }
+        a { color: inherit; text-decoration: none; }
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10, 10, 11, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; }
+        .nav-links { display: flex; gap: 32px; }
+        .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-secondary); }
+        .hero { padding: 140px 0 80px; }
+        .hero-badge { display: inline-flex; padding: 8px 16px; font-size: 13px; color: var(--accent); background: var(--accent-muted); border-radius: 100px; margin-bottom: 20px; }
+        .popular-badge { background: var(--accent); color: var(--bg-primary); padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600; margin-left: 12px; }
+        .hero-icon { font-size: 64px; margin-bottom: 24px; }
+        .hero h1 { font-family: var(--font-display); font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+        .hero-description { color: var(--text-secondary); font-size: 20px; max-width: 600px; margin-bottom: 32px; }
+        .hero-cta { display: flex; align-items: center; gap: 16px; }
+        .btn-primary { padding: 14px 28px; background: var(--accent); color: var(--bg-primary); border: none; border-radius: 8px; font-weight: 600; cursor: pointer; }
+        .hero-price-value { font-size: 36px; font-weight: 700; }
+        .hero-price-period { color: var(--text-muted); margin-left: 8px; }
+        .section { padding: 64px 0; }
+        .section-title { font-family: var(--font-display); font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+        .section-description { color: var(--text-secondary); margin-bottom: 32px; }
+        .mcp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .mcp-item { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: var(--bg-card); border-radius: 8px; border: 1px solid var(--border); font-size: 14px; }
+        .mcp-badge { font-size: 11px; padding: 2px 6px; border-radius: 4px; font-weight: 500; background: rgba(59, 130, 246, 0.15); color: var(--info); }
+        .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+        .feature { display: flex; gap: 12px; padding: 20px; background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border); }
+        .feature-icon { color: var(--success); }
+        .feature-title { font-weight: 500; }
+        .feature-description { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+        .cta-section { text-align: center; padding: 64px; background: var(--bg-secondary); border-radius: 16px; margin: 64px 0; }
+        .cta-section h2 { font-family: var(--font-display); font-size: 32px; margin-bottom: 16px; }
+        .cta-price-value { font-size: 48px; font-weight: 700; color: var(--accent); }
+        .footer { padding: 48px 0; border-top: 1px solid var(--border); }
+        .footer-inner { display: flex; justify-content: space-between; }
+        .footer-text { color: var(--text-muted); font-size: 14px; }
+        .footer-links { display: flex; gap: 24px; }
+        .footer-links a { color: var(--text-secondary); font-size: 14px; }
+        @media (max-width: 768px) { .hero h1 { font-size: 32px; } .mcp-grid { grid-template-columns: 1fr; } .features-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="nav"><div class="nav-inner"><a href="/skills/" class="logo"><span>⚡</span><span>SkillsIndex</span></a><div class="nav-links"><a href="/skills/catalog/">Catalog</a><a href="/skills/kits/">Kits</a><a href="/skills/docs/">Docs</a></div></div></nav>
+    <section class="hero"><div class="container">
+        <span class="hero-badge">🔧 MCP Servers<span class="popular-badge">POPULAR</span></span>
+        <div class="hero-icon">🔧</div>
+        <h1>MCP Starter Pack</h1>
+        <p class="hero-description">25 essential MCP servers with ready-to-use configs. The foundation for any Claude project.</p>
+        <div class="hero-cta"><div><span class="hero-price-value">$79</span><span class="hero-price-period">one-time</span></div><button class="btn-primary" onclick="alert('Coming soon!')">Get MCP Starter Pack</button></div>
+    </div></section>
+    <section class="section"><div class="container">
+        <h2 class="section-title">Included MCP Servers</h2>
+        <p class="section-description">25 pre-configured servers covering all essential categories.</p>
+        <div class="mcp-grid">
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>filesystem</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>postgres</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>sqlite</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>redis</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>mongodb</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>github</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>gitlab</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>slack</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>discord</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>s3</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>gcs</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>fetch</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>puppeteer</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>playwright</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>docker</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>kubernetes</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>aws</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>gcp</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>azure</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>stripe</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>twilio</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>sendgrid</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>openai</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>notion</div>
+            <div class="mcp-item"><span class="mcp-badge">mcp</span>linear</div>
+        </div>
+        <div class="features-grid">
+            <div class="feature"><span class="feature-icon">✓</span><div><div class="feature-title">Pre-configured JSON</div><div class="feature-description">Ready-to-use claude_desktop_config.json snippets</div></div></div>
+            <div class="feature"><span class="feature-icon">✓</span><div><div class="feature-title">Setup Guides</div><div class="feature-description">Step-by-step instructions for each server</div></div></div>
+            <div class="feature"><span class="feature-icon">✓</span><div><div class="feature-title">Environment Templates</div><div class="feature-description">.env templates for API keys and credentials</div></div></div>
+            <div class="feature"><span class="feature-icon">✓</span><div><div class="feature-title">Troubleshooting</div><div class="feature-description">Common issues and solutions documented</div></div></div>
+        </div>
+    </div></section>
+    <section class="container"><div class="cta-section">
+        <h2>The MCP foundation</h2>
+        <p>Start every project with essential integrations already configured.</p>
+        <div style="margin-bottom: 24px;"><span class="cta-price-value">$79</span><span style="color: var(--text-muted);">one-time</span></div>
+        <button class="btn-primary" style="padding: 16px 48px; font-size: 16px;" onclick="alert('Coming soon!')">Get MCP Starter Pack</button>
+    </div></section>
+    <footer class="footer"><div class="container footer-inner"><div class="footer-text">&copy; 2025 SkillsIndex</div><div class="footer-links"><a href="/skills/">Home</a><a href="/skills/kits/">All Kits</a></div></div></footer>
+</body>
+</html>

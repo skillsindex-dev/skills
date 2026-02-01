@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Kit — SkillsIndex</title>
+    <meta name="description" content="25 HIPAA-aware Claude skills for healthcare. Medical data handling, clinical documentation, HL7/FHIR integration.">
+    <link rel="canonical" href="https://skillsindex-dev.github.io/skills/kits/healthcare/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0b;
+            --bg-secondary: #111113;
+            --bg-card: #161618;
+            --border: #2a2a2d;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --accent: #e07a5f;
+            --accent-hover: #d4694e;
+            --accent-muted: rgba(224, 122, 95, 0.1);
+            --success: #22c55e;
+            --container: 1000px;
+            --radius: 12px;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); background: var(--bg-primary); color: var(--text-primary); line-height: 1.7; }
+        a { color: inherit; text-decoration: none; }
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10, 10, 11, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; }
+        .nav-links { display: flex; align-items: center; gap: 32px; }
+        .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-secondary); }
+        .nav-links a:hover { color: var(--text-primary); }
+        .hero { padding: 140px 0 80px; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 800px; height: 500px; background: radial-gradient(ellipse, rgba(224, 122, 95, 0.06) 0%, transparent 70%); }
+        .hero-badge { display: inline-flex; padding: 8px 16px; font-size: 13px; font-weight: 500; color: var(--accent); background: var(--accent-muted); border-radius: 100px; margin-bottom: 20px; }
+        .hero-icon { font-size: 64px; margin-bottom: 24px; }
+        .hero h1 { font-family: var(--font-display); font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+        .hero-description { color: var(--text-secondary); font-size: 20px; max-width: 600px; margin-bottom: 32px; }
+        .hero-cta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+        .btn { padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 15px; cursor: pointer; border: none; }
+        .btn-primary { background: var(--accent); color: var(--bg-primary); }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .hero-price-value { font-size: 36px; font-weight: 700; }
+        .hero-price-period { color: var(--text-muted); margin-left: 8px; }
+        .section { padding: 64px 0; }
+        .section-title { font-family: var(--font-display); font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+        .section-description { color: var(--text-secondary); margin-bottom: 32px; }
+        .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        .feature { display: flex; gap: 12px; padding: 20px; background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border); }
+        .feature-icon { color: var(--success); font-size: 18px; }
+        .feature-title { font-weight: 500; }
+        .feature-description { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+        .compliance-box { background: linear-gradient(135deg, rgba(224, 122, 95, 0.1), rgba(224, 122, 95, 0.02)); border: 1px solid rgba(224, 122, 95, 0.3); border-radius: var(--radius); padding: 32px; margin: 32px 0; }
+        .compliance-title { font-size: 18px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .compliance-list { list-style: none; }
+        .compliance-list li { padding: 8px 0; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; }
+        .compliance-list li::before { content: '✓'; color: var(--success); font-weight: 600; }
+        .cta-section { text-align: center; padding: 64px; background: var(--bg-secondary); border-radius: 16px; margin: 64px 0; }
+        .cta-section h2 { font-family: var(--font-display); font-size: 32px; margin-bottom: 16px; }
+        .cta-section p { color: var(--text-secondary); margin-bottom: 24px; }
+        .cta-price-value { font-size: 48px; font-weight: 700; color: var(--accent); }
+        .footer { padding: 48px 0; border-top: 1px solid var(--border); }
+        .footer-inner { display: flex; justify-content: space-between; align-items: center; }
+        .footer-text { color: var(--text-muted); font-size: 14px; }
+        .footer-links { display: flex; gap: 24px; }
+        .footer-links a { color: var(--text-secondary); font-size: 14px; }
+        @media (max-width: 768px) { .hero h1 { font-size: 32px; } .features-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/skills/" class="logo"><span>⚡</span><span>SkillsIndex</span></a>
+            <div class="nav-links">
+                <a href="/skills/catalog/">Catalog</a>
+                <a href="/skills/kits/">Kits</a>
+                <a href="/skills/docs/">Docs</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <span class="hero-badge">🏥 Healthcare</span>
+            <div class="hero-icon">🏥</div>
+            <h1>Healthcare Kit</h1>
+            <p class="hero-description">
+                HIPAA-aware Claude skills for healthcare workflows. Medical data handling, clinical documentation, and regulatory compliance.
+            </p>
+            <div class="hero-cta">
+                <div>
+                    <span class="hero-price-value">$79</span>
+                    <span class="hero-price-period">one-time</span>
+                </div>
+                <button class="btn btn-primary" onclick="alert('Coming soon! Join waitlist.')">Get Healthcare Kit</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="compliance-box">
+                <div class="compliance-title">🛡️ Built for Compliance</div>
+                <ul class="compliance-list">
+                    <li>HIPAA-aware data handling patterns</li>
+                    <li>PHI redaction and anonymization</li>
+                    <li>Audit trail generation</li>
+                    <li>Secure data processing workflows</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title">What's included</h2>
+            <p class="section-description">25 skills designed for healthcare professionals and developers.</p>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <div class="feature-title">Clinical Documentation</div>
+                        <div class="feature-description">Generate SOAP notes, discharge summaries, referral letters</div>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <div class="feature-title">HL7/FHIR Integration</div>
+                        <div class="feature-description">Parse and generate healthcare data formats</div>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <div class="feature-title">Medical Coding</div>
+                        <div class="feature-description">ICD-10, CPT code suggestions and validation</div>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <div class="feature-title">PHI Handling</div>
+                        <div class="feature-description">Redaction, de-identification, secure processing</div>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <div class="feature-title">Lab Result Analysis</div>
+                        <div class="feature-description">Parse and interpret laboratory values</div>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <div class="feature-title">Drug Interaction Checks</div>
+                        <div class="feature-description">Medication safety and interaction alerts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="cta-section">
+            <h2>Ready for healthcare AI?</h2>
+            <p>Get compliant Claude skills for your healthcare workflows.</p>
+            <div style="margin-bottom: 24px;">
+                <span class="cta-price-value">$79</span>
+                <span style="color: var(--text-muted);">one-time</span>
+            </div>
+            <button class="btn btn-primary" style="padding: 16px 48px; font-size: 16px;" onclick="alert('Coming soon! Join waitlist.')">Get Healthcare Kit</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-text">&copy; 2025 SkillsIndex</div>
+            <div class="footer-links">
+                <a href="/skills/">Home</a>
+                <a href="/skills/kits/">All Kits</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

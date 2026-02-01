@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kits Documentation — SkillsIndex</title>
+    <meta name="description" content="Learn about SkillsIndex Premium Kits. Curated bundles of Claude tools for specific workflows.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-primary: #0a0a0b; --bg-secondary: #111113; --bg-card: #161618; --border: #2a2a2d; --text-primary: #fafafa; --text-secondary: #a1a1aa; --text-muted: #71717a; --accent: #e07a5f; --accent-muted: rgba(224, 122, 95, 0.1); --success: #22c55e; --container: 1100px; --sidebar: 240px; --radius: 8px; --font: 'Inter', sans-serif; --font-mono: 'JetBrains Mono', monospace; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); background: var(--bg-primary); color: var(--text-primary); line-height: 1.7; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-secondary); padding: 2px 6px; border-radius: 4px; }
+        pre { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; overflow-x: auto; margin: 16px 0; }
+        pre code { background: none; padding: 0; }
+        .layout { display: flex; min-height: 100vh; }
+        .sidebar { width: var(--sidebar); background: var(--bg-secondary); border-right: 1px solid var(--border); padding: 24px 0; position: fixed; top: 0; left: 0; bottom: 0; }
+        .main { flex: 1; margin-left: var(--sidebar); padding: 48px; max-width: 800px; }
+        .sidebar-header { padding: 0 20px 24px; border-bottom: 1px solid var(--border); margin-bottom: 16px; }
+        .sidebar-logo { display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--text-primary); text-decoration: none; }
+        .nav-section { padding: 8px 0; }
+        .nav-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); padding: 8px 20px; }
+        .nav-link { display: block; padding: 8px 20px; color: var(--text-secondary); font-size: 14px; text-decoration: none; }
+        .nav-link:hover { color: var(--text-primary); background: var(--bg-card); text-decoration: none; }
+        .nav-link.active { color: var(--accent); background: var(--accent-muted); border-right: 2px solid var(--accent); }
+        h1 { font-size: 32px; font-weight: 700; margin-bottom: 16px; }
+        h2 { font-size: 24px; font-weight: 600; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--border); }
+        h3 { font-size: 18px; font-weight: 600; margin: 24px 0 12px; }
+        p { margin: 16px 0; color: var(--text-secondary); }
+        ul { margin: 16px 0; padding-left: 24px; color: var(--text-secondary); }
+        li { margin: 8px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); font-size: 14px; }
+        th { font-weight: 600; color: var(--text-muted); font-size: 12px; text-transform: uppercase; }
+        .kit-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin: 16px 0; display: flex; gap: 16px; align-items: flex-start; }
+        .kit-icon { font-size: 32px; }
+        .kit-title { font-weight: 600; margin-bottom: 4px; }
+        .kit-desc { font-size: 14px; color: var(--text-muted); }
+        .kit-price { font-weight: 600; color: var(--accent); margin-top: 8px; }
+        @media (max-width: 768px) { .sidebar { display: none; } .main { margin-left: 0; padding: 24px; } }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <nav class="sidebar">
+            <div class="sidebar-header"><a href="/skills/" class="sidebar-logo"><span>⚡</span><span>SkillsIndex</span></a></div>
+            <div class="nav-section">
+                <div class="nav-title">Getting Started</div>
+                <a href="/skills/docs/" class="nav-link">Introduction</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-title">API</div>
+                <a href="/skills/docs/api/" class="nav-link">Overview</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-title">CLI</div>
+                <a href="/skills/docs/cli/" class="nav-link">Installation</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-title">Kits</div>
+                <a href="/skills/docs/kits/" class="nav-link active">Overview</a>
+                <a href="/skills/kits/" class="nav-link">Browse Kits</a>
+            </div>
+        </nav>
+
+        <main class="main">
+            <h1>Premium Kits</h1>
+            <p>Kits are curated bundles of Claude tools — skills, MCP servers, and configurations — designed for specific workflows. Each kit is hand-picked, tested, and documented.</p>
+
+            <h2>What's in a Kit?</h2>
+            <p>Each kit includes:</p>
+            <ul>
+                <li><strong>Curated Skills</strong> — 25-50 hand-picked skills that work well together</li>
+                <li><strong>MCP Servers</strong> — Pre-configured servers for databases, APIs, and services</li>
+                <li><strong>Configuration Files</strong> — Ready-to-use JSON configs</li>
+                <li><strong>Documentation</strong> — Setup guides, tutorials, and best practices</li>
+                <li><strong>Lifetime Updates</strong> — New skills added as they become available</li>
+            </ul>
+
+            <h2>Available Kits</h2>
+
+            <h3>Developer Kits</h3>
+
+            <a href="/skills/kits/data-engineer/" class="kit-card" style="text-decoration: none;">
+                <div class="kit-icon">📊</div>
+                <div>
+                    <div class="kit-title">Data Engineer Kit</div>
+                    <div class="kit-desc">ETL, pandas, SQL, dbt, data validation</div>
+                    <div class="kit-price">$49</div>
+                </div>
+            </a>
+
+            <a href="/skills/kits/mcp-starter/" class="kit-card" style="text-decoration: none;">
+                <div class="kit-icon">🔧</div>
+                <div>
+                    <div class="kit-title">MCP Starter Pack</div>
+                    <div class="kit-desc">25 essential MCP servers with configs</div>
+                    <div class="kit-price">$79</div>
+                </div>
+            </a>
+
+            <a href="/skills/kits/devops/" class="kit-card" style="text-decoration: none;">
+                <div class="kit-icon">⚙️</div>
+                <div>
+                    <div class="kit-title">DevOps Kit</div>
+                    <div class="kit-desc">Docker, K8s, CI/CD, Terraform</div>
+                    <div class="kit-price">$49</div>
+                </div>
+            </a>
+
+            <a href="/skills/kits/security/" class="kit-card" style="text-decoration: none;">
+                <div class="kit-icon">🛡️</div>
+                <div>
+                    <div class="kit-title">Security Kit</div>
+                    <div class="kit-desc">Pentesting, OWASP, auth, auditing</div>
+                    <div class="kit-price">$49</div>
+                </div>
+            </a>
+
+            <a href="/skills/kits/marketing/" class="kit-card" style="text-decoration: none;">
+                <div class="kit-icon">📈</div>
+                <div>
+                    <div class="kit-title">Marketing Kit</div>
+                    <div class="kit-desc">SEO, content, email, analytics</div>
+                    <div class="kit-price">$49</div>
+                </div>
+            </a>
+
+            <h3>Industry Kits</h3>
+
+            <a href="/skills/kits/healthcare/" class="kit-card" style="text-decoration: none;">
+                <div class="kit-icon">🏥</div>
+                <div>
+                    <div class="kit-title">Healthcare Kit</div>
+                    <div class="kit-desc">HIPAA compliance, HL7/FHIR, medical coding</div>
+                    <div class="kit-price">$79</div>
+                </div>
+            </a>
+
+            <a href="/skills/kits/legal/" class="kit-card" style="text-decoration: none;">
+                <div class="kit-icon">⚖️</div>
+                <div>
+                    <div class="kit-title">Legal Kit</div>
+                    <div class="kit-desc">Contract analysis, legal research, compliance</div>
+                    <div class="kit-price">$79</div>
+                </div>
+            </a>
+
+            <a href="/skills/kits/finance/" class="kit-card" style="text-decoration: none;">
+                <div class="kit-icon">💰</div>
+                <div>
+                    <div class="kit-title">Finance Kit</div>
+                    <div class="kit-desc">SOX compliance, risk analysis, auditing</div>
+                    <div class="kit-price">$79</div>
+                </div>
+            </a>
+
+            <h2>Installation</h2>
+            <pre><code># 1. Install the CLI
+npm install -g skillsindex-cli
+
+# 2. Login with your license key
+si auth login --key YOUR_LICENSE_KEY
+
+# 3. Install your kit
+si kits install data-engineer</code></pre>
+
+            <h2>Pricing</h2>
+            <table>
+                <thead>
+                    <tr><th>Kit</th><th>Skills</th><th>MCPs</th><th>Price</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Data Engineer</td><td>50</td><td>8</td><td>$49</td></tr>
+                    <tr><td>MCP Starter Pack</td><td>10</td><td>25</td><td>$79</td></tr>
+                    <tr><td>DevOps</td><td>40</td><td>12</td><td>$49</td></tr>
+                    <tr><td>Security</td><td>35</td><td>6</td><td>$49</td></tr>
+                    <tr><td>Marketing</td><td>30</td><td>5</td><td>$49</td></tr>
+                    <tr><td>Healthcare</td><td>25</td><td>4</td><td>$79</td></tr>
+                    <tr><td>Legal</td><td>30</td><td>5</td><td>$79</td></tr>
+                    <tr><td>Finance</td><td>35</td><td>6</td><td>$79</td></tr>
+                    <tr><td><strong>Full Bundle</strong></td><td>All</td><td>All</td><td><strong>$249</strong></td></tr>
+                </tbody>
+            </table>
+            <p>All purchases are one-time payments with lifetime access and updates.</p>
+
+            <h2>FAQ</h2>
+            <h3>Can I get a refund?</h3>
+            <p>Yes, we offer a 14-day money-back guarantee on all kits.</p>
+
+            <h3>Do kits get updates?</h3>
+            <p>Yes, you get lifetime updates. When we add new skills to a kit, you get them automatically.</p>
+
+            <h3>Can I share my license?</h3>
+            <p>Licenses are for individual use. Contact us for team pricing.</p>
+        </main>
+    </div>
+</body>
+</html>

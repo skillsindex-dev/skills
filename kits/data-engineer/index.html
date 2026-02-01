@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineer Kit — SkillsIndex</title>
+    <meta name="description" content="50 curated Claude skills for data engineering. ETL pipelines, pandas, SQL optimization, dbt integration, data validation workflows.">
+    <link rel="canonical" href="https://skillsindex-dev.github.io/skills/kits/data-engineer/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Data Engineer Kit — SkillsIndex">
+    <meta property="og:description" content="Ship data pipelines 10x faster with 50 curated Claude skills.">
+    <meta property="og:url" content="https://skillsindex-dev.github.io/skills/kits/data-engineer/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0b;
+            --bg-secondary: #111113;
+            --bg-card: #161618;
+            --bg-card-hover: #1c1c1f;
+            --border: #2a2a2d;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --accent: #e07a5f;
+            --accent-hover: #d4694e;
+            --accent-muted: rgba(224, 122, 95, 0.1);
+            --success: #22c55e;
+            --info: #3b82f6;
+            --warning: #f59e0b;
+            --container: 1000px;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        a { color: inherit; text-decoration: none; }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(10, 10, 11, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color 0.15s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 140px 0 80px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 500px;
+            background: radial-gradient(ellipse, rgba(224, 122, 95, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--accent);
+            background: var(--accent-muted);
+            border-radius: 100px;
+            margin-bottom: 20px;
+        }
+
+        .hero-icon {
+            font-size: 64px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            color: var(--text-secondary);
+            font-size: 20px;
+            max-width: 600px;
+            margin-bottom: 32px;
+        }
+
+        .hero-cta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.15s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--bg-primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-muted);
+        }
+
+        .hero-price {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .hero-price-value {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .hero-price-period {
+            color: var(--text-muted);
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin: 64px 0;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 24px;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Section */
+        .section {
+            padding: 64px 0;
+        }
+
+        .section-header {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .section-description {
+            color: var(--text-secondary);
+        }
+
+        /* Pain Points */
+        .pain-points {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .pain-point {
+            display: flex;
+            gap: 16px;
+            padding: 24px;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .pain-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .pain-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .pain-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 20px;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .feature-icon {
+            color: var(--success);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .feature-title {
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .feature-description {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Skills List */
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 16px;
+            background: var(--bg-card);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            font-size: 14px;
+        }
+
+        .skill-type {
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .skill-type.skill { background: rgba(34, 197, 94, 0.15); color: var(--success); }
+        .skill-type.mcp { background: rgba(59, 130, 246, 0.15); color: var(--info); }
+
+        /* Installation */
+        .install-steps {
+            counter-reset: step;
+        }
+
+        .install-step {
+            display: flex;
+            gap: 20px;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .install-step:last-child {
+            border-bottom: none;
+        }
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: var(--accent);
+            color: var(--bg-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .step-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .step-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .step-code {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 13px;
+            overflow-x: auto;
+        }
+
+        /* FAQ */
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .faq-answer {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* CTA */
+        .cta-section {
+            text-align: center;
+            padding: 64px;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            margin: 64px 0;
+        }
+
+        .cta-section h2 {
+            font-family: var(--font-display);
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .cta-price {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .cta-price-value {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .cta-price-period {
+            color: var(--text-muted);
+        }
+
+        /* Guarantee */
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 48px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .pain-points { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .skills-list { grid-template-columns: 1fr; }
+            .hero-cta { flex-direction: column; align-items: stretch; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/skills/" class="logo">
+                <span>⚡</span>
+                <span>SkillsIndex</span>
+            </a>
+            <div class="nav-links">
+                <a href="/skills/catalog/">Catalog</a>
+                <a href="/skills/kits/">Kits</a>
+                <a href="/skills/docs/">Docs</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-badge">📊 Data Engineering</span>
+            <div class="hero-icon">📊</div>
+            <h1>Data Engineer Kit</h1>
+            <p class="hero-description">
+                Ship data pipelines 10x faster. 50 curated Claude skills for ETL, data validation, SQL optimization, and more.
+            </p>
+            <div class="hero-cta">
+                <div class="hero-price">
+                    <span class="hero-price-value">$49</span>
+                    <span class="hero-price-period">one-time payment</span>
+                </div>
+                <button class="btn btn-primary" onclick="alert('Coming soon! Join waitlist.')">Get Data Engineer Kit</button>
+                <a href="#whats-included" class="btn btn-secondary">See what's included</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="container">
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">50</div>
+                <div class="stat-label">Skills</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">8</div>
+                <div class="stat-label">MCP Servers</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">15</div>
+                <div class="stat-label">Configs</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">∞</div>
+                <div class="stat-label">Updates</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sound familiar?</h2>
+                <p class="section-description">Data engineering is hard. These tools make it easier.</p>
+            </div>
+
+            <div class="pain-points">
+                <div class="pain-point">
+                    <span class="pain-icon">🐢</span>
+                    <div>
+                        <div class="pain-title">Slow pipeline development</div>
+                        <div class="pain-description">Writing ETL from scratch takes forever. Debugging data issues is painful.</div>
+                    </div>
+                </div>
+                <div class="pain-point">
+                    <span class="pain-icon">🔍</span>
+                    <div>
+                        <div class="pain-title">Finding the right tools</div>
+                        <div class="pain-description">Thousands of skills exist. Which ones actually work? Which are worth your time?</div>
+                    </div>
+                </div>
+                <div class="pain-point">
+                    <span class="pain-icon">⚠️</span>
+                    <div>
+                        <div class="pain-title">Data quality issues</div>
+                        <div class="pain-description">Catching data problems before they hit production requires manual effort.</div>
+                    </div>
+                </div>
+                <div class="pain-point">
+                    <span class="pain-icon">📚</span>
+                    <div>
+                        <div class="pain-title">Poor documentation</div>
+                        <div class="pain-description">Most skills have no docs. You spend hours figuring out how they work.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="section" id="whats-included" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What's included</h2>
+                <p class="section-description">Everything you need for data engineering workflows.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <div class="feature-title">Pandas Mastery Skills</div>
+                        <div class="feature-description">15 skills for data manipulation, cleaning, and transformation</div>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <div class="feature-title">SQL Optimization</div>
+                        <div class="feature-description">10 skills for query optimization, indexing strategies, and debugging</div>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <div class="feature-title">dbt Integration</div>
+                        <div class="feature-description">8 skills for dbt models, tests, and documentation</div>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <div class="feature-title">Data Validation</div>
+                        <div class="feature-description">7 skills for Great Expectations, Pandera, and custom validators</div>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <div class="feature-title">ETL Workflows</div>
+                        <div class="feature-description">5 skills for Airflow, Prefect, and Luigi pipelines</div>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <div class="feature-title">Data Visualization</div>
+                        <div class="feature-description">5 skills for charts, dashboards, and reporting</div>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <div class="feature-title">MCP Servers</div>
+                        <div class="feature-description">8 pre-configured servers for databases, S3, and APIs</div>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <div class="feature-title">Ready-to-use Configs</div>
+                        <div class="feature-description">15 configuration files for common setups</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Skills -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sample skills</h2>
+                <p class="section-description">A preview of what's in the kit.</p>
+            </div>
+
+            <div class="skills-list">
+                <div class="skill-item">
+                    <span class="skill-type skill">skill</span>
+                    pandas-profiler
+                </div>
+                <div class="skill-item">
+                    <span class="skill-type skill">skill</span>
+                    sql-optimizer
+                </div>
+                <div class="skill-item">
+                    <span class="skill-type skill">skill</span>
+                    dbt-model-generator
+                </div>
+                <div class="skill-item">
+                    <span class="skill-type skill">skill</span>
+                    data-quality-checker
+                </div>
+                <div class="skill-item">
+                    <span class="skill-type skill">skill</span>
+                    csv-to-parquet
+                </div>
+                <div class="skill-item">
+                    <span class="skill-type skill">skill</span>
+                    etl-debugger
+                </div>
+                <div class="skill-item">
+                    <span class="skill-type mcp">mcp</span>
+                    postgres-mcp
+                </div>
+                <div class="skill-item">
+                    <span class="skill-type mcp">mcp</span>
+                    s3-mcp
+                </div>
+                <div class="skill-item">
+                    <span class="skill-type mcp">mcp</span>
+                    bigquery-mcp
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Installation</h2>
+                <p class="section-description">Get started in under 5 minutes.</p>
+            </div>
+
+            <div class="install-steps">
+                <div class="install-step">
+                    <span class="step-number">1</span>
+                    <div>
+                        <div class="step-title">Install the CLI</div>
+                        <div class="step-description">Get the SkillsIndex CLI tool for easy kit management.</div>
+                        <div class="step-code">npm install -g skillsindex-cli</div>
+                    </div>
+                </div>
+
+                <div class="install-step">
+                    <span class="step-number">2</span>
+                    <div>
+                        <div class="step-title">Authenticate</div>
+                        <div class="step-description">Log in with your license key (received after purchase).</div>
+                        <div class="step-code">si auth login --key YOUR_LICENSE_KEY</div>
+                    </div>
+                </div>
+
+                <div class="install-step">
+                    <span class="step-number">3</span>
+                    <div>
+                        <div class="step-title">Install the kit</div>
+                        <div class="step-description">Download and set up all skills and configs.</div>
+                        <div class="step-code">si kits install data-engineer</div>
+                    </div>
+                </div>
+
+                <div class="install-step">
+                    <span class="step-number">4</span>
+                    <div>
+                        <div class="step-title">Start using</div>
+                        <div class="step-description">All skills are ready. Start building pipelines!</div>
+                        <div class="step-code">claude "Create an ETL pipeline for CSV to PostgreSQL"</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">FAQ</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Is this a subscription?</div>
+                    <div class="faq-answer">No, it's a one-time purchase. You get lifetime access to the kit and all future updates.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What if I already have some of these skills?</div>
+                    <div class="faq-answer">The kit includes curated, tested versions with documentation and configs. Even if you have similar skills, these are optimized to work together.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do I need Claude Max/Pro?</div>
+                    <div class="faq-answer">The skills work with any Claude Code setup. Some MCP servers may require Claude Max for optimal performance.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I get a refund?</div>
+                    <div class="faq-answer">Yes, we offer a 14-day money-back guarantee. No questions asked.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container">
+        <div class="cta-section">
+            <h2>Ready to ship faster?</h2>
+            <p>Get the Data Engineer Kit and start building better pipelines today.</p>
+            <div class="cta-price">
+                <span class="cta-price-value">$49</span>
+                <span class="cta-price-period">one-time</span>
+            </div>
+            <button class="btn btn-primary" style="padding: 16px 48px; font-size: 16px;" onclick="alert('Coming soon! Join waitlist.')">Get Data Engineer Kit</button>
+            <div class="guarantee">
+                <span>🛡️</span>
+                <span>14-day money-back guarantee</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-text">
+                &copy; 2025 SkillsIndex. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="/skills/">Home</a>
+                <a href="/skills/kits/">All Kits</a>
+                <a href="/skills/docs/">Docs</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

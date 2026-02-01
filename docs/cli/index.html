@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLI Reference — SkillsIndex</title>
+    <meta name="description" content="SkillsIndex CLI documentation. Install and manage Claude tools from your terminal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-primary: #0a0a0b; --bg-secondary: #111113; --bg-card: #161618; --border: #2a2a2d; --text-primary: #fafafa; --text-secondary: #a1a1aa; --text-muted: #71717a; --accent: #e07a5f; --accent-muted: rgba(224, 122, 95, 0.1); --success: #22c55e; --warning: #f59e0b; --container: 1100px; --sidebar: 240px; --radius: 8px; --font: 'Inter', sans-serif; --font-mono: 'JetBrains Mono', monospace; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); background: var(--bg-primary); color: var(--text-primary); line-height: 1.7; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-secondary); padding: 2px 6px; border-radius: 4px; }
+        pre { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; overflow-x: auto; margin: 16px 0; }
+        pre code { background: none; padding: 0; }
+        .layout { display: flex; min-height: 100vh; }
+        .sidebar { width: var(--sidebar); background: var(--bg-secondary); border-right: 1px solid var(--border); padding: 24px 0; position: fixed; top: 0; left: 0; bottom: 0; }
+        .main { flex: 1; margin-left: var(--sidebar); padding: 48px; max-width: 800px; }
+        .sidebar-header { padding: 0 20px 24px; border-bottom: 1px solid var(--border); margin-bottom: 16px; }
+        .sidebar-logo { display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--text-primary); text-decoration: none; }
+        .nav-section { padding: 8px 0; }
+        .nav-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); padding: 8px 20px; }
+        .nav-link { display: block; padding: 8px 20px; color: var(--text-secondary); font-size: 14px; text-decoration: none; }
+        .nav-link:hover { color: var(--text-primary); background: var(--bg-card); text-decoration: none; }
+        .nav-link.active { color: var(--accent); background: var(--accent-muted); border-right: 2px solid var(--accent); }
+        h1 { font-size: 32px; font-weight: 700; margin-bottom: 16px; }
+        h2 { font-size: 24px; font-weight: 600; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--border); }
+        h3 { font-size: 18px; font-weight: 600; margin: 24px 0 12px; }
+        p { margin: 16px 0; color: var(--text-secondary); }
+        ul { margin: 16px 0; padding-left: 24px; color: var(--text-secondary); }
+        li { margin: 8px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); font-size: 14px; }
+        th { font-weight: 600; color: var(--text-muted); font-size: 12px; text-transform: uppercase; }
+        .callout { background: var(--accent-muted); border: 1px solid rgba(224, 122, 95, 0.3); border-radius: var(--radius); padding: 16px 20px; margin: 24px 0; }
+        .callout-warning { background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3); }
+        .callout-title { font-weight: 600; color: var(--accent); margin-bottom: 4px; }
+        .callout-warning .callout-title { color: var(--warning); }
+        .cmd { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 16px 0; }
+        .cmd-name { font-family: var(--font-mono); font-weight: 600; color: var(--accent); margin-bottom: 8px; }
+        .cmd-desc { font-size: 14px; color: var(--text-secondary); }
+        @media (max-width: 768px) { .sidebar { display: none; } .main { margin-left: 0; padding: 24px; } }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <nav class="sidebar">
+            <div class="sidebar-header"><a href="/skills/" class="sidebar-logo"><span>⚡</span><span>SkillsIndex</span></a></div>
+            <div class="nav-section">
+                <div class="nav-title">Getting Started</div>
+                <a href="/skills/docs/" class="nav-link">Introduction</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-title">API</div>
+                <a href="/skills/docs/api/" class="nav-link">Overview</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-title">CLI</div>
+                <a href="/skills/docs/cli/" class="nav-link active">Installation</a>
+                <a href="/skills/docs/cli/#commands" class="nav-link">Commands</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-title">Kits</div>
+                <a href="/skills/docs/kits/" class="nav-link">Overview</a>
+            </div>
+        </nav>
+
+        <main class="main">
+            <h1>CLI Reference</h1>
+            <p>The SkillsIndex CLI (<code>si</code>) lets you search, install, and manage Claude tools from your terminal.</p>
+
+            <div class="callout callout-warning">
+                <div class="callout-title">⚠️ Coming Soon</div>
+                <p>The CLI is currently in development. This documentation describes the planned functionality.</p>
+            </div>
+
+            <h2>Installation</h2>
+            <pre><code># npm
+npm install -g skillsindex-cli
+
+# yarn
+yarn global add skillsindex-cli
+
+# pnpm
+pnpm add -g skillsindex-cli</code></pre>
+
+            <p>Verify installation:</p>
+            <pre><code>si --version</code></pre>
+
+            <h2 id="commands">Commands</h2>
+
+            <h3>Search</h3>
+            <div class="cmd">
+                <div class="cmd-name">si search &lt;query&gt;</div>
+                <div class="cmd-desc">Search the catalog for skills, MCP servers, or A2A agents.</div>
+            </div>
+            <pre><code># Search for pandas-related tools
+si search "pandas"
+
+# Filter by type
+si search "database" --type mcp
+
+# Filter by category
+si search "security" --category Security</code></pre>
+
+            <h3>Install</h3>
+            <div class="cmd">
+                <div class="cmd-name">si install &lt;id|name&gt;</div>
+                <div class="cmd-desc">Install a skill or MCP server.</div>
+            </div>
+            <pre><code># Install by name
+si install pandas-profiler
+
+# Install by ID
+si install 3c288ca28697
+
+# Install MCP server
+si install postgres-mcp --type mcp</code></pre>
+
+            <h3>List</h3>
+            <div class="cmd">
+                <div class="cmd-name">si list</div>
+                <div class="cmd-desc">List installed skills and MCP servers.</div>
+            </div>
+            <pre><code>si list
+si list --type skill
+si list --type mcp</code></pre>
+
+            <h3>Doctor</h3>
+            <div class="cmd">
+                <div class="cmd-name">si doctor</div>
+                <div class="cmd-desc">Check installation health and fix common issues.</div>
+            </div>
+            <pre><code>si doctor
+si doctor --fix</code></pre>
+
+            <h3>Kits</h3>
+            <div class="cmd">
+                <div class="cmd-name">si kits &lt;command&gt;</div>
+                <div class="cmd-desc">Manage premium kits.</div>
+            </div>
+            <pre><code># List available kits
+si kits list
+
+# Install a purchased kit
+si kits install data-engineer
+
+# Update a kit
+si kits update data-engineer</code></pre>
+
+            <h3>Auth</h3>
+            <div class="cmd">
+                <div class="cmd-name">si auth &lt;command&gt;</div>
+                <div class="cmd-desc">Manage authentication for premium features.</div>
+            </div>
+            <pre><code># Login with license key
+si auth login --key YOUR_LICENSE_KEY
+
+# Check auth status
+si auth status
+
+# Logout
+si auth logout</code></pre>
+
+            <h3>Config</h3>
+            <div class="cmd">
+                <div class="cmd-name">si config &lt;key&gt; [value]</div>
+                <div class="cmd-desc">Get or set configuration options.</div>
+            </div>
+            <pre><code># View all config
+si config
+
+# Set default type filter
+si config defaultType mcp
+
+# Reset config
+si config --reset</code></pre>
+
+            <h2>Options</h2>
+            <table>
+                <thead>
+                    <tr><th>Flag</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>--version, -v</code></td><td>Show version number</td></tr>
+                    <tr><td><code>--help, -h</code></td><td>Show help</td></tr>
+                    <tr><td><code>--json</code></td><td>Output as JSON</td></tr>
+                    <tr><td><code>--quiet, -q</code></td><td>Suppress output</td></tr>
+                    <tr><td><code>--verbose</code></td><td>Verbose output</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Configuration File</h2>
+            <p>The CLI stores configuration in <code>~/.skillsindex/config.json</code>:</p>
+            <pre><code>{
+  "licenseKey": "sk_...",
+  "defaultType": null,
+  "installDir": "~/.claude/skills",
+  "mcpConfigPath": "~/.claude/claude_desktop_config.json"
+}</code></pre>
+        </main>
+    </div>
+</body>
+</html>

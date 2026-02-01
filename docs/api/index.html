@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Reference — SkillsIndex</title>
+    <meta name="description" content="SkillsIndex API documentation. Access 24,000+ Claude tools via JSON API.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-primary: #0a0a0b; --bg-secondary: #111113; --bg-card: #161618; --border: #2a2a2d; --text-primary: #fafafa; --text-secondary: #a1a1aa; --text-muted: #71717a; --accent: #e07a5f; --accent-muted: rgba(224, 122, 95, 0.1); --success: #22c55e; --container: 1100px; --sidebar: 240px; --radius: 8px; --font: 'Inter', sans-serif; --font-mono: 'JetBrains Mono', monospace; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); background: var(--bg-primary); color: var(--text-primary); line-height: 1.7; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-secondary); padding: 2px 6px; border-radius: 4px; }
+        pre { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; overflow-x: auto; margin: 16px 0; }
+        pre code { background: none; padding: 0; }
+        .layout { display: flex; min-height: 100vh; }
+        .sidebar { width: var(--sidebar); background: var(--bg-secondary); border-right: 1px solid var(--border); padding: 24px 0; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; }
+        .main { flex: 1; margin-left: var(--sidebar); padding: 48px; max-width: 800px; }
+        .sidebar-header { padding: 0 20px 24px; border-bottom: 1px solid var(--border); margin-bottom: 16px; }
+        .sidebar-logo { display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--text-primary); text-decoration: none; }
+        .sidebar-logo:hover { text-decoration: none; }
+        .nav-section { padding: 8px 0; }
+        .nav-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); padding: 8px 20px; }
+        .nav-link { display: block; padding: 8px 20px; color: var(--text-secondary); font-size: 14px; text-decoration: none; }
+        .nav-link:hover { color: var(--text-primary); background: var(--bg-card); text-decoration: none; }
+        .nav-link.active { color: var(--accent); background: var(--accent-muted); border-right: 2px solid var(--accent); }
+        h1 { font-size: 32px; font-weight: 700; margin-bottom: 16px; }
+        h2 { font-size: 24px; font-weight: 600; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--border); }
+        h3 { font-size: 18px; font-weight: 600; margin: 24px 0 12px; }
+        p { margin: 16px 0; color: var(--text-secondary); }
+        ul { margin: 16px 0; padding-left: 24px; color: var(--text-secondary); }
+        li { margin: 8px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); font-size: 14px; }
+        th { font-weight: 600; color: var(--text-muted); font-size: 12px; text-transform: uppercase; }
+        .endpoint { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 16px 0; }
+        .endpoint-method { display: inline-block; padding: 4px 8px; background: var(--success); color: var(--bg-primary); border-radius: 4px; font-size: 12px; font-weight: 600; margin-right: 8px; }
+        .endpoint-url { font-family: var(--font-mono); font-size: 14px; }
+        @media (max-width: 768px) { .sidebar { display: none; } .main { margin-left: 0; padding: 24px; } }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <nav class="sidebar">
+            <div class="sidebar-header"><a href="/skills/" class="sidebar-logo"><span>⚡</span><span>SkillsIndex</span></a></div>
+            <div class="nav-section">
+                <div class="nav-title">Getting Started</div>
+                <a href="/skills/docs/" class="nav-link">Introduction</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-title">API</div>
+                <a href="/skills/docs/api/" class="nav-link active">Overview</a>
+                <a href="/skills/docs/api/#endpoints" class="nav-link">Endpoints</a>
+                <a href="/skills/docs/api/#schema" class="nav-link">Data Schema</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-title">CLI</div>
+                <a href="/skills/docs/cli/" class="nav-link">Installation</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-title">Kits</div>
+                <a href="/skills/docs/kits/" class="nav-link">Overview</a>
+            </div>
+        </nav>
+
+        <main class="main">
+            <h1>API Reference</h1>
+            <p>Access the full SkillsIndex catalog via static JSON files hosted on GitHub Pages. No authentication required.</p>
+
+            <h2 id="endpoints">Endpoints</h2>
+
+            <div class="endpoint">
+                <span class="endpoint-method">GET</span>
+                <span class="endpoint-url">https://skillsindex-dev.github.io/skills/skills.json</span>
+            </div>
+            <p>Returns the complete catalog as a JSON array. Contains all 24,000+ items.</p>
+            <pre><code>curl https://skillsindex-dev.github.io/skills/skills.json | jq '.[0]'</code></pre>
+
+            <div class="endpoint">
+                <span class="endpoint-method">GET</span>
+                <span class="endpoint-url">https://skillsindex-dev.github.io/skills/stats.json</span>
+            </div>
+            <p>Returns aggregate statistics about the catalog.</p>
+            <pre><code>curl https://skillsindex-dev.github.io/skills/stats.json | jq</code></pre>
+
+            <h2 id="schema">Data Schema</h2>
+            <p>Each item in <code>skills.json</code> has the following structure:</p>
+
+            <pre><code>{
+  "id": "3c288ca28697",
+  "name": "pandas-profiler",
+  "description": "Generate profile reports from pandas DataFrames",
+  "type": "skill",
+  "category": "Data & Analytics",
+  "source": "github",
+  "url": "https://github.com/example/pandas-profiler",
+  "stars": 1250,
+  "author": "example",
+  "tags": ["pandas", "data", "profiling"],
+  "verified": true,
+  "scraped_at": "2025-02-01T12:00:00Z"
+}</code></pre>
+
+            <h3>Field Descriptions</h3>
+            <table>
+                <thead>
+                    <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>id</code></td><td>string</td><td>Unique 12-character hash identifier</td></tr>
+                    <tr><td><code>name</code></td><td>string</td><td>Name of the tool</td></tr>
+                    <tr><td><code>description</code></td><td>string</td><td>Brief description (may be null)</td></tr>
+                    <tr><td><code>type</code></td><td>string</td><td>One of: <code>skill</code>, <code>mcp</code>, <code>a2a</code></td></tr>
+                    <tr><td><code>category</code></td><td>string</td><td>Category classification</td></tr>
+                    <tr><td><code>source</code></td><td>string</td><td>One of: <code>github</code>, <code>smithery</code></td></tr>
+                    <tr><td><code>url</code></td><td>string</td><td>Repository or registry URL</td></tr>
+                    <tr><td><code>stars</code></td><td>number</td><td>GitHub stars (0 if not from GitHub)</td></tr>
+                    <tr><td><code>author</code></td><td>string</td><td>Author or organization name</td></tr>
+                    <tr><td><code>tags</code></td><td>array</td><td>Array of tag strings</td></tr>
+                    <tr><td><code>verified</code></td><td>boolean</td><td>Whether the item is verified</td></tr>
+                    <tr><td><code>scraped_at</code></td><td>string</td><td>ISO timestamp of last update</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Usage Examples</h2>
+
+            <h3>JavaScript</h3>
+            <pre><code>const res = await fetch('https://skillsindex-dev.github.io/skills/skills.json');
+const items = await res.json();
+
+// Filter by type
+const mcpServers = items.filter(i => i.type === 'mcp');
+
+// Search by name
+const pandas = items.filter(i =>
+  i.name.toLowerCase().includes('pandas')
+);
+
+// Sort by stars
+const topItems = items
+  .sort((a, b) => b.stars - a.stars)
+  .slice(0, 10);</code></pre>
+
+            <h3>Python</h3>
+            <pre><code>import requests
+
+data = requests.get('https://skillsindex-dev.github.io/skills/skills.json').json()
+
+# Filter by category
+dev_tools = [i for i in data if i['category'] == 'Development Tools']
+
+# Get verified items
+verified = [i for i in data if i.get('verified')]</code></pre>
+
+            <h2>Rate Limits</h2>
+            <p>The API is served via GitHub Pages CDN. There are no rate limits, but please cache responses locally when building applications.</p>
+        </main>
+    </div>
+</body>
+</html>

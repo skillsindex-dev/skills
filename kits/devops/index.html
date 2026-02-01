@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Kit — SkillsIndex</title>
+    <meta name="description" content="40 Claude skills for DevOps. Docker, Kubernetes, CI/CD, Terraform, monitoring, and infrastructure automation.">
+    <link rel="canonical" href="https://skillsindex-dev.github.io/skills/kits/devops/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-primary: #0a0a0b; --bg-secondary: #111113; --bg-card: #161618; --border: #2a2a2d; --text-primary: #fafafa; --text-secondary: #a1a1aa; --text-muted: #71717a; --accent: #e07a5f; --accent-muted: rgba(224, 122, 95, 0.1); --success: #22c55e; --container: 1000px; --radius: 12px; --font: 'Inter', sans-serif; --font-display: 'Playfair Display', serif; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); background: var(--bg-primary); color: var(--text-primary); line-height: 1.7; }
+        a { color: inherit; text-decoration: none; }
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10, 10, 11, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; }
+        .nav-links { display: flex; gap: 32px; }
+        .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-secondary); }
+        .hero { padding: 140px 0 80px; }
+        .hero-badge { display: inline-flex; padding: 8px 16px; font-size: 13px; color: var(--accent); background: var(--accent-muted); border-radius: 100px; margin-bottom: 20px; }
+        .hero-icon { font-size: 64px; margin-bottom: 24px; }
+        .hero h1 { font-family: var(--font-display); font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+        .hero-description { color: var(--text-secondary); font-size: 20px; max-width: 600px; margin-bottom: 32px; }
+        .hero-cta { display: flex; align-items: center; gap: 16px; }
+        .btn-primary { padding: 14px 28px; background: var(--accent); color: var(--bg-primary); border: none; border-radius: 8px; font-weight: 600; cursor: pointer; }
+        .hero-price-value { font-size: 36px; font-weight: 700; }
+        .hero-price-period { color: var(--text-muted); margin-left: 8px; }
+        .section { padding: 64px 0; }
+        .section-title { font-family: var(--font-display); font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+        .section-description { color: var(--text-secondary); margin-bottom: 32px; }
+        .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        .feature { display: flex; gap: 12px; padding: 20px; background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border); }
+        .feature-icon { color: var(--success); }
+        .feature-title { font-weight: 500; }
+        .feature-description { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+        .cta-section { text-align: center; padding: 64px; background: var(--bg-secondary); border-radius: 16px; margin: 64px 0; }
+        .cta-section h2 { font-family: var(--font-display); font-size: 32px; margin-bottom: 16px; }
+        .cta-price-value { font-size: 48px; font-weight: 700; color: var(--accent); }
+        .footer { padding: 48px 0; border-top: 1px solid var(--border); }
+        .footer-inner { display: flex; justify-content: space-between; }
+        .footer-text { color: var(--text-muted); font-size: 14px; }
+        .footer-links { display: flex; gap: 24px; }
+        .footer-links a { color: var(--text-secondary); font-size: 14px; }
+        @media (max-width: 768px) { .hero h1 { font-size: 32px; } .features-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="nav"><div class="nav-inner"><a href="/skills/" class="logo"><span>⚡</span><span>SkillsIndex</span></a><div class="nav-links"><a href="/skills/catalog/">Catalog</a><a href="/skills/kits/">Kits</a><a href="/skills/docs/">Docs</a></div></div></nav>
+    <section class="hero"><div class="container">
+        <span class="hero-badge">⚙️ DevOps</span>
+        <div class="hero-icon">⚙️</div>
+        <h1>DevOps Kit</h1>
+        <p class="hero-description">40 Claude skills for DevOps engineers. Docker, Kubernetes, CI/CD, Terraform, and infrastructure automation.</p>
+        <div class="hero-cta"><div><span class="hero-price-value">$49</span><span class="hero-price-period">one-time</span></div><button class="btn-primary" onclick="alert('Coming soon!')">Get DevOps Kit</button></div>
+    </div></section>
+    <section class="section"><div class="container">
+        <h2 class="section-title">What's included</h2>
+        <p class="section-description">40 skills designed for DevOps and SRE teams.</p>
+        <div class="features-grid">
+            <div class="feature"><span class="feature-icon">✓</span><div><div class="feature-title">Docker & Containers</div><div class="feature-description">Dockerfile optimization, multi-stage builds, compose</div></div></div>
+            <div class="feature"><span class="feature-icon">✓</span><div><div class="feature-title">Kubernetes</div><div class="feature-description">Manifests, Helm charts, troubleshooting, scaling</div></div></div>
+            <div class="feature"><span class="feature-icon">✓</span><div><div class="feature-title">CI/CD Pipelines</div><div class="feature-description">GitHub Actions, GitLab CI, Jenkins, ArgoCD</div></div></div>
+            <div class="feature"><span class="feature-icon">✓</span><div><div class="feature-title">Infrastructure as Code</div><div class="feature-description">Terraform, Pulumi, CloudFormation modules</div></div></div>
+            <div class="feature"><span class="feature-icon">✓</span><div><div class="feature-title">Monitoring & Logging</div><div class="feature-description">Prometheus, Grafana, ELK stack, alerting</div></div></div>
+            <div class="feature"><span class="feature-icon">✓</span><div><div class="feature-title">Cloud Platforms</div><div class="feature-description">AWS, GCP, Azure automation and best practices</div></div></div>
+        </div>
+    </div></section>
+    <section class="container"><div class="cta-section">
+        <h2>Ship with confidence</h2>
+        <p>Get Claude skills for production-ready infrastructure.</p>
+        <div style="margin-bottom: 24px;"><span class="cta-price-value">$49</span><span style="color: var(--text-muted);">one-time</span></div>
+        <button class="btn-primary" style="padding: 16px 48px; font-size: 16px;" onclick="alert('Coming soon!')">Get DevOps Kit</button>
+    </div></section>
+    <footer class="footer"><div class="container footer-inner"><div class="footer-text">&copy; 2025 SkillsIndex</div><div class="footer-links"><a href="/skills/">Home</a><a href="/skills/kits/">All Kits</a></div></div></footer>
+</body>
+</html>

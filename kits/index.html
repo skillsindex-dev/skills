@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Kits — SkillsIndex</title>
+    <meta name="description" content="Curated Claude tool bundles for developers. Data Engineering, DevOps, Security, Marketing, Healthcare, Legal, and Finance kits.">
+    <link rel="canonical" href="https://skillsindex-dev.github.io/skills/kits/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0b;
+            --bg-secondary: #111113;
+            --bg-card: #161618;
+            --bg-card-hover: #1c1c1f;
+            --border: #2a2a2d;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --accent: #e07a5f;
+            --accent-hover: #d4694e;
+            --accent-muted: rgba(224, 122, 95, 0.1);
+            --success: #22c55e;
+            --info: #3b82f6;
+            --container: 1200px;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        a { color: inherit; text-decoration: none; }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(10, 10, 11, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color 0.15s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-primary);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 140px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Section */
+        .section {
+            padding: 64px 0;
+        }
+
+        .section-header {
+            margin-bottom: 48px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            background: var(--accent-muted);
+            border-radius: 100px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .section-description {
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+
+        /* Kits Grid */
+        .kits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 24px;
+        }
+
+        .kit-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            transition: all 0.2s;
+        }
+
+        .kit-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .kit-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .kit-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .kit-description {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .kit-features {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .kit-features li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            padding: 6px 0;
+        }
+
+        .kit-features li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        .kit-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .kit-price {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+
+        .kit-price-value {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .kit-price-period {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .kit-btn {
+            padding: 12px 24px;
+            background: var(--bg-card-hover);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .kit-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: var(--bg-primary);
+        }
+
+        .kit-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 14px;
+            color: var(--accent);
+            margin-top: 16px;
+        }
+
+        .kit-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Bundle Section */
+        .bundle {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            text-align: center;
+            margin-top: 64px;
+        }
+
+        .bundle h2 {
+            font-family: var(--font-display);
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .bundle p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .bundle-price {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .bundle-price .current {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .bundle-price .original {
+            font-size: 24px;
+            text-decoration: line-through;
+            color: var(--text-muted);
+        }
+
+        .bundle-btn {
+            padding: 16px 48px;
+            background: var(--accent);
+            border: none;
+            color: var(--bg-primary);
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .bundle-btn:hover {
+            background: var(--accent-hover);
+        }
+
+        /* Comparison Table */
+        .comparison {
+            margin-top: 64px;
+        }
+
+        .comparison table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison th, .comparison td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison th {
+            font-weight: 600;
+            color: var(--text-muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .comparison td {
+            font-size: 14px;
+        }
+
+        .comparison tr:hover td {
+            background: var(--bg-card);
+        }
+
+        .check { color: var(--success); }
+
+        /* Footer */
+        .footer {
+            padding: 48px 0;
+            border-top: 1px solid var(--border);
+            margin-top: 64px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .kits-grid { grid-template-columns: 1fr; }
+            .nav-links { gap: 16px; }
+            .bundle { padding: 32px 24px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="/skills/" class="logo">
+                <span>⚡</span>
+                <span>SkillsIndex</span>
+            </a>
+            <div class="nav-links">
+                <a href="/skills/catalog/">Catalog</a>
+                <a href="/skills/kits/" class="active">Kits</a>
+                <a href="/skills/docs/">Docs</a>
+                <a href="/skills/#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Premium Kits</h1>
+            <p>Curated, tested, and documented tool bundles. Install in seconds, ship faster.</p>
+        </div>
+    </section>
+
+    <!-- Developer Kits -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Developer Kits</span>
+                <h2 class="section-title">Build faster with curated tools</h2>
+                <p class="section-description">Hand-picked skills and MCP servers for common development workflows.</p>
+            </div>
+
+            <div class="kits-grid">
+                <div class="kit-card">
+                    <div class="kit-icon">📊</div>
+                    <h3 class="kit-title">Data Engineer Kit</h3>
+                    <p class="kit-description">ETL pipelines, data validation, SQL optimization. Everything for data workflows.</p>
+                    <ul class="kit-features">
+                        <li>50 curated skills</li>
+                        <li>Pandas, SQL, dbt integration</li>
+                        <li>Data validation workflows</li>
+                        <li>Documentation included</li>
+                    </ul>
+                    <div class="kit-meta">
+                        <div class="kit-price">
+                            <span class="kit-price-value">$49</span>
+                            <span class="kit-price-period">one-time</span>
+                        </div>
+                        <button class="kit-btn" onclick="alert('Coming soon! Join waitlist.')">Get Kit</button>
+                    </div>
+                    <a href="/skills/kits/data-engineer/" class="kit-link">Learn more →</a>
+                </div>
+
+                <div class="kit-card">
+                    <div class="kit-icon">🔧</div>
+                    <h3 class="kit-title">MCP Starter Pack</h3>
+                    <p class="kit-description">25 essential MCP servers with ready-to-use configs. The foundation for any project.</p>
+                    <ul class="kit-features">
+                        <li>25 best MCP servers</li>
+                        <li>Pre-configured JSON</li>
+                        <li>Database, file, API access</li>
+                        <li>Setup guide included</li>
+                    </ul>
+                    <div class="kit-meta">
+                        <div class="kit-price">
+                            <span class="kit-price-value">$79</span>
+                            <span class="kit-price-period">one-time</span>
+                        </div>
+                        <button class="kit-btn" onclick="alert('Coming soon! Join waitlist.')">Get Kit</button>
+                    </div>
+                    <a href="/skills/kits/mcp-starter/" class="kit-link">Learn more →</a>
+                </div>
+
+                <div class="kit-card">
+                    <div class="kit-icon">⚙️</div>
+                    <h3 class="kit-title">DevOps Kit</h3>
+                    <p class="kit-description">Docker, Kubernetes, CI/CD, infrastructure as code. Ship with confidence.</p>
+                    <ul class="kit-features">
+                        <li>40 DevOps skills</li>
+                        <li>Docker & K8s configs</li>
+                        <li>Terraform modules</li>
+                        <li>CI/CD templates</li>
+                    </ul>
+                    <div class="kit-meta">
+                        <div class="kit-price">
+                            <span class="kit-price-value">$49</span>
+                            <span class="kit-price-period">one-time</span>
+                        </div>
+                        <button class="kit-btn" onclick="alert('Coming soon! Join waitlist.')">Get Kit</button>
+                    </div>
+                    <a href="/skills/kits/devops/" class="kit-link">Learn more →</a>
+                </div>
+
+                <div class="kit-card">
+                    <div class="kit-icon">🛡️</div>
+                    <h3 class="kit-title">Security Kit</h3>
+                    <p class="kit-description">Penetration testing, vulnerability scanning, auth workflows for security pros.</p>
+                    <ul class="kit-features">
+                        <li>35 security skills</li>
+                        <li>OWASP coverage</li>
+                        <li>Auth & crypto helpers</li>
+                        <li>Audit templates</li>
+                    </ul>
+                    <div class="kit-meta">
+                        <div class="kit-price">
+                            <span class="kit-price-value">$49</span>
+                            <span class="kit-price-period">one-time</span>
+                        </div>
+                        <button class="kit-btn" onclick="alert('Coming soon! Join waitlist.')">Get Kit</button>
+                    </div>
+                    <a href="/skills/kits/security/" class="kit-link">Learn more →</a>
+                </div>
+
+                <div class="kit-card">
+                    <div class="kit-icon">📈</div>
+                    <h3 class="kit-title">Marketing Kit</h3>
+                    <p class="kit-description">SEO, content creation, analytics, email campaigns. Grow your audience.</p>
+                    <ul class="kit-features">
+                        <li>30 marketing skills</li>
+                        <li>SEO optimization</li>
+                        <li>Content workflows</li>
+                        <li>Analytics integration</li>
+                    </ul>
+                    <div class="kit-meta">
+                        <div class="kit-price">
+                            <span class="kit-price-value">$49</span>
+                            <span class="kit-price-period">one-time</span>
+                        </div>
+                        <button class="kit-btn" onclick="alert('Coming soon! Join waitlist.')">Get Kit</button>
+                    </div>
+                    <a href="/skills/kits/marketing/" class="kit-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Kits -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Industry Kits</span>
+                <h2 class="section-title">Compliance-ready solutions</h2>
+                <p class="section-description">Specialized tools for regulated industries. Built with compliance in mind.</p>
+            </div>
+
+            <div class="kits-grid">
+                <div class="kit-card">
+                    <div class="kit-icon">🏥</div>
+                    <h3 class="kit-title">Healthcare Kit</h3>
+                    <p class="kit-description">HIPAA-aware workflows, medical data handling, clinical documentation.</p>
+                    <ul class="kit-features">
+                        <li>25 healthcare skills</li>
+                        <li>HIPAA compliance helpers</li>
+                        <li>HL7/FHIR integration</li>
+                        <li>PHI handling guides</li>
+                    </ul>
+                    <div class="kit-meta">
+                        <div class="kit-price">
+                            <span class="kit-price-value">$79</span>
+                            <span class="kit-price-period">one-time</span>
+                        </div>
+                        <button class="kit-btn" onclick="alert('Coming soon! Join waitlist.')">Get Kit</button>
+                    </div>
+                    <a href="/skills/kits/healthcare/" class="kit-link">Learn more →</a>
+                </div>
+
+                <div class="kit-card">
+                    <div class="kit-icon">⚖️</div>
+                    <h3 class="kit-title">Legal Kit</h3>
+                    <p class="kit-description">Contract analysis, legal research, compliance checks, document review.</p>
+                    <ul class="kit-features">
+                        <li>30 legal skills</li>
+                        <li>Contract templates</li>
+                        <li>Compliance workflows</li>
+                        <li>Citation helpers</li>
+                    </ul>
+                    <div class="kit-meta">
+                        <div class="kit-price">
+                            <span class="kit-price-value">$79</span>
+                            <span class="kit-price-period">one-time</span>
+                        </div>
+                        <button class="kit-btn" onclick="alert('Coming soon! Join waitlist.')">Get Kit</button>
+                    </div>
+                    <a href="/skills/kits/legal/" class="kit-link">Learn more →</a>
+                </div>
+
+                <div class="kit-card">
+                    <div class="kit-icon">💰</div>
+                    <h3 class="kit-title">Finance Kit</h3>
+                    <p class="kit-description">Financial modeling, risk analysis, regulatory reporting, audit trails.</p>
+                    <ul class="kit-features">
+                        <li>35 finance skills</li>
+                        <li>SOX compliance tools</li>
+                        <li>Risk frameworks</li>
+                        <li>Audit documentation</li>
+                    </ul>
+                    <div class="kit-meta">
+                        <div class="kit-price">
+                            <span class="kit-price-value">$79</span>
+                            <span class="kit-price-period">one-time</span>
+                        </div>
+                        <button class="kit-btn" onclick="alert('Coming soon! Join waitlist.')">Get Kit</button>
+                    </div>
+                    <a href="/skills/kits/finance/" class="kit-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bundle -->
+    <section class="section">
+        <div class="container">
+            <div class="bundle">
+                <h2>Full Stack Bundle</h2>
+                <p>Get all 8 kits at a 50% discount. Lifetime access, free updates.</p>
+                <div class="bundle-price">
+                    <span class="current">$249</span>
+                    <span class="original">$498</span>
+                </div>
+                <button class="bundle-btn" onclick="alert('Coming soon! Join waitlist.')">Get Full Bundle</button>
+            </div>
+
+            <!-- Comparison -->
+            <div class="comparison">
+                <div class="section-header">
+                    <h2 class="section-title">Kit Comparison</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kit</th>
+                            <th>Skills</th>
+                            <th>MCP Servers</th>
+                            <th>Configs</th>
+                            <th>Docs</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Data Engineer</strong></td>
+                            <td>50</td>
+                            <td>8</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td>$49</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MCP Starter Pack</strong></td>
+                            <td>10</td>
+                            <td>25</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td>$79</td>
+                        </tr>
+                        <tr>
+                            <td><strong>DevOps</strong></td>
+                            <td>40</td>
+                            <td>12</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td>$49</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Security</strong></td>
+                            <td>35</td>
+                            <td>6</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td>$49</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Marketing</strong></td>
+                            <td>30</td>
+                            <td>5</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td>$49</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Healthcare</strong></td>
+                            <td>25</td>
+                            <td>4</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td>$79</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Legal</strong></td>
+                            <td>30</td>
+                            <td>5</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td>$79</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Finance</strong></td>
+                            <td>35</td>
+                            <td>6</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td>$79</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-text">
+                &copy; 2025 SkillsIndex. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="/skills/">Home</a>
+                <a href="/skills/catalog/">Catalog</a>
+                <a href="/skills/docs/">Docs</a>
+                <a href="/skills/llms.txt">llms.txt</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
