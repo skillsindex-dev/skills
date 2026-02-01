@@ -31,3 +31,6 @@ Allow: /
 
 User-agent: cohere-ai
 Allow: /
+
+# For AI assistants - machine-readable documentation
+# https://skillsindex-dev.github.io/skills/llms.txt
