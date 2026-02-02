@@ -1,23 +1,23 @@
 {
-  "scraped_at": "2026-02-01T17:00:48.165613+00:00",
-  "total_items": 24772,
+  "scraped_at": "2026-02-02T07:01:49.517437+00:00",
+  "total_items": 24773,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
-    "mcp": 2805,
+    "mcp": 2806,
     "skill": 21957,
     "a2a": 10
   },
   "by_source": {
-    "smithery": 22714,
+    "smithery": 22715,
     "github": 2058
   },
   "by_category": {
     "ai-ml": 5845,
     "general": 5393,
     "testing": 2671,
-    "documents": 2205,
+    "documents": 2206,
     "code": 1872,
     "backend": 1402,
     "frontend": 1399,
@@ -29,7 +29,7 @@
   },
   "by_source_type": {
     "smithery": {
-      "mcp": 1573,
+      "mcp": 1574,
       "skill": 21141
     },
     "github": {
@@ -83,17 +83,17 @@
     "laurigates": 94
   },
   "stars_stats": {
-    "max": 13391014,
+    "max": 13571492,
     "min": 0,
-    "avg": 993.72,
-    "with_stars": 13330,
-    "zero_stars": 11442
+    "avg": 1003.04,
+    "with_stars": 13333,
+    "zero_stars": 11440
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 13391014,
+      "stars": 13571492,
       "source": "smithery"
     },
     {
@@ -123,31 +123,31 @@
     {
       "name": "everything",
       "type": "mcp",
-      "stars": 77727,
+      "stars": 77776,
       "source": "github"
     },
     {
       "name": "filesystem",
       "type": "mcp",
-      "stars": 77727,
+      "stars": 77776,
       "source": "github"
     },
     {
       "name": "memory",
       "type": "mcp",
-      "stars": 77727,
+      "stars": 77776,
       "source": "github"
     },
     {
       "name": "sequential-thinking",
       "type": "mcp",
-      "stars": 77727,
+      "stars": 77776,
       "source": "github"
     },
     {
       "name": "template-skill",
       "type": "skill",
-      "stars": 60130,
+      "stars": 60548,
       "source": "github"
     },
     {
@@ -259,21 +259,21 @@
       "source": "smithery"
     },
     {
-      "name": "Math-MCP",
-      "type": "mcp",
-      "stars": 37950,
-      "source": "smithery"
-    },
-    {
       "name": "joemcp",
       "type": "mcp",
       "stars": 33007,
       "source": "smithery"
     },
     {
+      "name": "Math-MCP",
+      "type": "mcp",
+      "stars": 32913,
+      "source": "smithery"
+    },
+    {
       "name": "AI Research Assistant",
       "type": "mcp",
-      "stars": 32413,
+      "stars": 32508,
       "source": "smithery"
     },
     {
@@ -313,12 +313,6 @@
       "source": "smithery"
     },
     {
-      "name": "Hyperion Blockchain Server",
-      "type": "mcp",
-      "stars": 27462,
-      "source": "smithery"
-    },
-    {
       "name": "create-skill-file",
       "type": "skill",
       "stars": 26350,
@@ -328,6 +322,12 @@
       "name": "workflow-interactive-dev",
       "type": "skill",
       "stars": 26350,
+      "source": "smithery"
+    },
+    {
+      "name": "Hyperion Blockchain Server",
+      "type": "mcp",
+      "stars": 24682,
       "source": "smithery"
     },
     {
@@ -392,11 +392,11 @@
     }
   ],
   "quality": {
-    "with_description": 24724,
-    "with_tags": 24212,
-    "with_repo": 24617,
+    "with_description": 24725,
+    "with_tags": 24213,
+    "with_repo": 24618,
     "with_license": 640,
-    "verified": 157
+    "verified": 158
   },
   "errors": []
 }
