@@ -1,40 +1,40 @@
 {
-  "scraped_at": "2026-02-03T06:42:16.626735+00:00",
-  "total_items": 3653,
+  "scraped_at": "2026-02-04T06:42:55.147816+00:00",
+  "total_items": 3674,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
-    "mcp": 2813,
-    "skill": 830,
-    "a2a": 10
+    "mcp": 2815,
+    "skill": 848,
+    "a2a": 11
   },
   "by_source": {
-    "smithery": 1581,
-    "github": 2072
+    "smithery": 1583,
+    "github": 2091
   },
   "by_category": {
-    "ai-ml": 2153,
-    "general": 396,
+    "ai-ml": 2151,
+    "general": 397,
     "testing": 204,
     "backend": 185,
+    "documents": 168,
     "security": 162,
-    "documents": 151,
-    "data": 108,
+    "data": 109,
     "code": 100,
     "frontend": 63,
-    "productivity": 57,
-    "devops": 44,
+    "productivity": 58,
+    "devops": 47,
     "communication": 30
   },
   "by_source_type": {
     "smithery": {
-      "mcp": 1581
+      "mcp": 1583
     },
     "github": {
       "mcp": 1232,
-      "skill": 830,
-      "a2a": 10
+      "skill": 848,
+      "a2a": 11
     }
   },
   "top_repos": {
@@ -43,6 +43,7 @@
     "mrgoonie/claudekit-skills": 32,
     "trailofbits/skills": 22,
     "anthropics/skills": 21,
+    "WordPress/agent-skills": 13,
     "huggingface/skills": 8,
     "muratcankoylan/Agent-Skills-for-Context-Engineering": 8,
     "cloudflare/skills": 7,
@@ -55,9 +56,8 @@
     "better-auth/skills": 3,
     "expo/skills": 3,
     "gokapso/agent-skills": 3,
-    "sanjay3290/ai-skills": 3,
-    "vercel-labs/next-skills": 3,
-    "nihalxkumar/arch-mcp": 2
+    "hashicorp/agent-skills": 3,
+    "sanjay3290/ai-skills": 3
   },
   "top_authors": {
     "xiaobenyang-com": 65,
@@ -84,9 +84,9 @@
   "stars_stats": {
     "max": 13713700,
     "min": 0,
-    "avg": 5746.84,
-    "with_stars": 1721,
-    "zero_stars": 1932
+    "avg": 5827.14,
+    "with_stars": 1739,
+    "zero_stars": 1935
   },
   "top_items": [
     {
@@ -98,127 +98,127 @@
     {
       "name": "everything",
       "type": "mcp",
-      "stars": 77865,
+      "stars": 77957,
       "source": "github"
     },
     {
       "name": "filesystem",
       "type": "mcp",
-      "stars": 77865,
+      "stars": 77957,
       "source": "github"
     },
     {
       "name": "memory",
       "type": "mcp",
-      "stars": 77865,
+      "stars": 77957,
       "source": "github"
     },
     {
       "name": "sequential-thinking",
       "type": "mcp",
-      "stars": 77865,
+      "stars": 77957,
       "source": "github"
     },
     {
       "name": "algorithmic-art",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "brand-guidelines",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "canvas-design",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "doc-coauthoring",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "docx",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "frontend-design",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "internal-comms",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "mcp-builder",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "pdf",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "pptx",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "skill-creator",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "slack-gif-creator",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "template-skill",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "theme-factory",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "web-artifacts-builder",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "webapp-testing",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
       "name": "xlsx",
       "type": "skill",
-      "stars": 61432,
+      "stars": 62456,
       "source": "github"
     },
     {
@@ -391,11 +391,11 @@
     }
   ],
   "quality": {
-    "with_description": 3608,
-    "with_tags": 3093,
-    "with_repo": 3497,
+    "with_description": 3629,
+    "with_tags": 3112,
+    "with_repo": 3518,
     "with_license": 640,
-    "verified": 159
+    "verified": 160
   },
   "errors": []
 }
