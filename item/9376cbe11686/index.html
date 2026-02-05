@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>ruoyi-vue-plus-code-patterns — Skill | SkillsIndex</title>
+    <meta name="title" content="ruoyi-vue-plus-code-patterns — Skill | SkillsIndex">
+    <meta name="description" content="基于若依-vue-plus框架的全栈代码规范指南。定义后端Java Spring Boot与前端Vue3 + TypeScript的标准化编码模式。  核心内容： - 后端分层架构规范：Controller/Service/Mapper三层设计，对象流转模式（Bo/DTO → Entity → Vo） -...">
+    <meta name="keywords" content="ruoyi-vue-plus-code-patterns, skill, frontend, Coding, Design">
+    <meta name="author" content="sebastianlhy">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skillsindex-dev.github.io/skills/item/9376cbe11686/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillsindex-dev.github.io/skills/item/9376cbe11686/">
+    <meta property="og:title" content="ruoyi-vue-plus-code-patterns — Skill">
+    <meta property="og:description" content="基于若依-vue-plus框架的全栈代码规范指南。定义后端Java Spring Boot与前端Vue3 + TypeScript的标准化编码模式。  核心内容： - 后端分层架构规范：Controller/Service/Mapper三层设计，对象流转模式（Bo/DTO → Entity → Vo） -...">
+    <meta property="og:site_name" content="SkillsIndex">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://skillsindex-dev.github.io/skills/item/9376cbe11686/">
+    <meta property="twitter:title" content="ruoyi-vue-plus-code-patterns — Skill">
+    <meta property="twitter:description" content="基于若依-vue-plus框架的全栈代码规范指南。定义后端Java Spring Boot与前端Vue3 + TypeScript的标准化编码模式。  核心内容： - 后端分层架构规范：Controller/Service/Mapper三层设计，对象流转模式（Bo/DTO → Entity → Vo） -...">
+
+    <!-- Structured Data: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ruoyi-vue-plus-code-patterns",
+        "description": "\u57fa\u4e8e\u82e5\u4f9d-vue-plus\u6846\u67b6\u7684\u5168\u6808\u4ee3\u7801\u89c4\u8303\u6307\u5357\u3002\u5b9a\u4e49\u540e\u7aefJava Spring Boot\u4e0e\u524d\u7aefVue3 + TypeScript\u7684\u6807\u51c6\u5316\u7f16\u7801\u6a21\u5f0f\u3002\n\n\u6838\u5fc3\u5185\u5bb9\uff1a\n- \u540e\u7aef\u5206\u5c42\u67b6\u6784\u89c4\u8303\uff1aController/Service/Mapper\u4e09\u5c42\u8bbe\u8ba1\uff0c\u5bf9\u8c61\u6d41\u8f6c\u6a21\u5f0f\uff08Bo/DTO \u2192 Entity \u2192 Vo\uff09\n- \u524d\u7aefVue3\u7ec4\u5408\u5f0fAPI\u89c4\u8303\uff1a<script setup>\u8bed\u6cd5\u7cd6\u3001\u54cd\u5e94\u5f0f\u6570\u636e\u7ba1\u7406\u3001\u7ec4\u4ef6\u901a\u4fe1\u6a21\u5f0f\n- \u6570\u636e\u5e93\u64cd\u4f5c\u89c4\u8303\uff1aMyBatis-Plus\u7684\u4f7f\u7528\u89c4\u8303\u3001\u6279\u91cf\u64cd\u4f5c\u3001\u4e8b\u52a1\u7ba1\u7406\n- \u7edf\u4e00\u54cd\u5e94\u5904\u7406\uff1aAjaxResult\u5c01\u88c5\u3001\u5f02\u5e38\u5904\u7406\u3001\u65e5\u5fd7\u8bb0\u5f55\n- \u5b89\u5168\u4e0e\u6743\u9650\uff1a@PreAuthorize\u6ce8\u89e3\u3001\u6570\u636e\u6743\u9650\u3001\u654f\u611f\u5b57\u6bb5\u5904\u7406\n\n\u89e6\u53d1\u573a\u666f\uff1a\n- \u7f16\u5199\u65b0\u7684\u4e1a\u52a1\u6a21\u5757\uff08CRUD\u529f\u80fd\uff09\n- \u91cd\u6784\u65e7\u4ee3\u7801\u6216\u4f18\u5316\u73b0\u6709\u4ee3\u7801\n- \u8fdb\u884c\u4ee3\u7801\u5ba1\u67e5\uff08Code Review\uff09\n- \u89e3\u51b3\u5206\u5c42\u67b6\u6784\u8bbe\u8ba1\u95ee\u9898\n- \u5904\u7406Vue3\u54cd\u5e94\u5f0f\u6570\u636e\u4e22\u5931\u95ee\u9898\n\n\u89e6\u53d1\u5173\u952e\u8bcd\uff1a\u4ee3\u7801\u89c4\u8303\u3001\u82e5\u4f9d\u6846\u67b6\u3001\u5206\u5c42\u67b6\u6784\u3001DTO/VO\u8f6c\u6362\u3001\u5bf9\u8c61\u6620\u5c04\u3001Vue3 Setup\u3001Composition API\u3001\u7ec4\u4ef6\u5c01\u88c5\u3001\u54cd\u5e94\u5f0f\u3001MyBatis-Plus",
+        "applicationCategory": "frontend",
+        "operatingSystem": "Claude Code, Claude Desktop",
+        "url": "https://github.com/SebastianLHY/ruoyi-develop-claude/tree/main/.claude/skills/code-patterns",
+        "author": {
+            "@type": "Person",
+            "name": "sebastianlhy"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.0",
+            "ratingCount": "1"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "SkillsIndex",
+                "item": "https://skillsindex-dev.github.io/skills/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Skills",
+                "item": "https://skillsindex-dev.github.io/skills/?type=skill"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "ruoyi-vue-plus-code-patterns",
+                "item": "https://skillsindex-dev.github.io/skills/item/9376cbe11686/"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/skills/item.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/skills/" class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                <span>SkillsIndex</span>
+            </a>
+            <div class="nav-links">
+                <a href="/skills/catalog/">Catalog</a>
+                <a href="/skills/kits/">Kits</a>
+                <a href="/skills/docs/">Docs</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Back Link -->
+            <a href="/skills/catalog/" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Catalog
+            </a>
+
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/skills/">Home</a>
+                <span class="breadcrumb-sep">/</span>
+                <a href="/skills/catalog/?type=skill">Skills</a>
+                <span class="breadcrumb-sep">/</span>
+                <span>ruoyi-vue-plus-code-patterns</span>
+            </nav>
+
+            <!-- Item Header -->
+            <header class="item-header">
+                <span class="item-type-badge skill">skill</span>
+                <h1 class="item-title">ruoyi-vue-plus-code-patterns</h1>
+                <div class="item-meta">
+                    
+                    <span class="item-meta-item item-stars">★ 1</span>
+                    
+                    
+                    <span class="item-meta-item">by sebastianlhy</span>
+                    
+                    <span class="item-meta-item">frontend</span>
+                    
+                </div>
+            </header>
+
+            <!-- Description -->
+            <p class="item-description">基于若依-vue-plus框架的全栈代码规范指南。定义后端Java Spring Boot与前端Vue3 + TypeScript的标准化编码模式。
+
+核心内容：
+- 后端分层架构规范：Controller/Service/Mapper三层设计，对象流转模式（Bo/DTO → Entity → Vo）
+- 前端Vue3组合式API规范：&lt;script setup&gt;语法糖、响应式数据管理、组件通信模式
+- 数据库操作规范：MyBatis-Plus的使用规范、批量操作、事务管理
+- 统一响应处理：AjaxResult封装、异常处理、日志记录
+- 安全与权限：@PreAuthorize注解、数据权限、敏感字段处理
+
+触发场景：
+- 编写新的业务模块（CRUD功能）
+- 重构旧代码或优化现有代码
+- 进行代码审查（Code Review）
+- 解决分层架构设计问题
+- 处理Vue3响应式数据丢失问题
+
+触发关键词：代码规范、若依框架、分层架构、DTO/VO转换、对象映射、Vue3 Setup、Composition API、组件封装、响应式、MyBatis-Plus</p>
+
+            <!-- Tags -->
+            
+            <div class="tags">
+                
+                <a href="/skills/catalog/?q=Coding" class="tag">Coding</a>
+                
+                <a href="/skills/catalog/?q=Design" class="tag">Design</a>
+                
+            </div>
+            
+
+            <!-- Actions -->
+            <div class="actions">
+                
+                <a href="https://github.com/SebastianLHY/ruoyi-develop-claude/tree/main/.claude/skills/code-patterns" target="_blank" rel="noopener" class="btn btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                    </svg>
+                    View Source
+                </a>
+                
+                
+                <a href="https://github.com/SebastianLHY/ruoyi-develop-claude" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    Repository
+                </a>
+                
+                <button class="btn btn-secondary" onclick="toggleFavorite('9376cbe11686')" id="fav-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                    </svg>
+                    <span id="fav-text">Favorite</span>
+                </button>
+            </div>
+
+            <!-- Info Card -->
+            <div class="info-card">
+                <h2 class="info-card-title">Details</h2>
+                <div class="info-row">
+                    <span class="info-label">Type</span>
+                    <span class="info-value">Skill</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Category</span>
+                    <span class="info-value">frontend</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Source</span>
+                    <span class="info-value">smithery</span>
+                </div>
+                
+                <div class="info-row">
+                    <span class="info-label">Author</span>
+                    <span class="info-value">sebastianlhy</span>
+                </div>
+                
+                
+                <div class="info-row">
+                    <span class="info-label">Repository</span>
+                    <span class="info-value"><a href="https://github.com/SebastianLHY/ruoyi-develop-claude" target="_blank" rel="noopener">SebastianLHY/ruoyi-develop-claude</a></span>
+                </div>
+                
+                
+                <div class="info-row">
+                    <span class="info-label">Last Updated</span>
+                    <span class="info-value">Feb 03, 2026</span>
+                </div>
+                
+                
+            </div>
+
+            <!-- Installation -->
+            <div class="install-section">
+                <h2 class="install-title">Installation</h2>
+                
+                <div class="install-method">
+                    <div class="install-label">Claude Code CLI</div>
+                    <code class="install-code">claude skill add https://github.com/SebastianLHY/ruoyi-develop-claude/tree/main/.claude/skills/code-patterns</code>
+                </div>
+                <div class="install-method">
+                    <div class="install-label">Manual Installation</div>
+                    <code class="install-code">curl -O https://github.com/SebastianLHY/ruoyi-develop-claude/tree/main/.claude/skills/code-patterns && mv SKILL.md ~/.claude/skills/</code>
+                </div>
+        
+            </div>
+
+            <!-- Share -->
+            <div class="share-section">
+                <div class="share-title">Share this skill</div>
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareTwitter()">Twitter</button>
+                    <button class="share-btn" onclick="shareLinkedIn()">LinkedIn</button>
+                    <button class="share-btn" onclick="copyLink()">Copy Link</button>
+                </div>
+            </div>
+
+            <!-- Related Items -->
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <svg class="logo-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                <span>SkillsIndex</span>
+            </div>
+            <div class="footer-links">
+                <a href="/skills/">Catalog</a>
+                <a href="https://github.com/skillsindex-dev/data" target="_blank" rel="noopener">Data</a>
+                <a href="https://smithery.ai" target="_blank" rel="noopener">Smithery</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Item data for hydration
+        window.__ITEM__ = {"id": "9376cbe11686", "type": "skill", "name": "ruoyi-vue-plus-code-patterns", "description": "基于若依-vue-plus框架的全栈代码规范指南。定义后端Java Spring Boot与前端Vue3 + TypeScript的标准化编码模式。\n\n核心内容：\n- 后端分层架构规范：Controller/Service/Mapper三层设计，对象流转模式（Bo/DTO → Entity → Vo）\n- 前端Vue3组合式API规范：<script setup>语法糖、响应式数据管理、组件通信模式\n- 数据库操作规范：MyBatis-Plus的使用规范、批量操作、事务管理\n- 统一响应处理：AjaxResult封装、异常处理、日志记录\n- 安全与权限：@PreAuthorize注解、数据权限、敏感字段处理\n\n触发场景：\n- 编写新的业务模块（CRUD功能）\n- 重构旧代码或优化现有代码\n- 进行代码审查（Code Review）\n- 解决分层架构设计问题\n- 处理Vue3响应式数据丢失问题\n\n触发关键词：代码规范、若依框架、分层架构、DTO/VO转换、对象映射、Vue3 Setup、Composition API、组件封装、响应式、MyBatis-Plus", "source": "smithery", "repo": "SebastianLHY/ruoyi-develop-claude", "path": "", "stars": 1, "last_commit": "2026-02-03T22:12:30.219Z", "category": "frontend", "tags": ["Coding", "Design"], "raw_url": "https://github.com/SebastianLHY/ruoyi-develop-claude/tree/main/.claude/skills/code-patterns", "repo_url": "https://github.com/SebastianLHY/ruoyi-develop-claude", "license": "", "author": "sebastianlhy", "activations": 0, "scraped_at": "2026-02-05T07:07:38.260187+00:00"};
+
+        // Favorites
+        function getFavorites() {
+            return JSON.parse(localStorage.getItem('skillsindex_favorites') || '[]');
+        }
+
+        function toggleFavorite(id) {
+            const favs = getFavorites();
+            const idx = favs.indexOf(id);
+            if (idx === -1) {
+                favs.push(id);
+            } else {
+                favs.splice(idx, 1);
+            }
+            localStorage.setItem('skillsindex_favorites', JSON.stringify(favs));
+            updateFavButton(id);
+        }
+
+        function updateFavButton(id) {
+            const favs = getFavorites();
+            const isFav = favs.includes(id);
+            const btn = document.getElementById('fav-btn');
+            const text = document.getElementById('fav-text');
+            if (isFav) {
+                btn.style.borderColor = 'var(--accent)';
+                btn.style.color = 'var(--accent)';
+                text.textContent = 'Favorited';
+            } else {
+                btn.style.borderColor = '';
+                btn.style.color = '';
+                text.textContent = 'Favorite';
+            }
+        }
+
+        // Share functions
+        function shareTwitter() {
+            const text = encodeURIComponent('Check out ruoyi-vue-plus-code-patterns on SkillsIndex!');
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+        }
+
+        function shareLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = originalText, 2000);
+            });
+        }
+
+        // Init
+        updateFavButton('9376cbe11686');
+    </script>
+</body>
+</html>
