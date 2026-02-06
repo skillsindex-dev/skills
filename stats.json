@@ -1,93 +1,93 @@
 {
-  "scraped_at": "2026-02-05T07:07:38.260187+00:00",
-  "total_items": 82219,
+  "scraped_at": "2026-02-06T06:45:17.860303+00:00",
+  "total_items": 2282,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
-    "mcp": 2820,
-    "skill": 79388,
+    "mcp": 1326,
+    "skill": 945,
     "a2a": 11
   },
   "by_source": {
-    "smithery": 80133,
-    "github": 2086
+    "smithery": 188,
+    "github": 2094
   },
   "by_category": {
-    "general": 23112,
-    "ai-ml": 14567,
-    "testing": 8518,
-    "documents": 6496,
-    "code": 6304,
-    "frontend": 5009,
-    "backend": 4797,
-    "security": 4210,
-    "data": 3417,
-    "devops": 2603,
-    "productivity": 2466,
-    "communication": 720
+    "ai-ml": 1447,
+    "general": 221,
+    "testing": 110,
+    "security": 103,
+    "code": 78,
+    "documents": 78,
+    "backend": 77,
+    "frontend": 63,
+    "data": 35,
+    "devops": 35,
+    "productivity": 23,
+    "communication": 12
   },
   "by_source_type": {
     "smithery": {
-      "mcp": 1588,
-      "skill": 78545
+      "mcp": 94,
+      "skill": 94
     },
     "github": {
       "mcp": 1232,
-      "skill": 843,
+      "skill": 851,
       "a2a": 11
     }
   },
   "top_repos": {
-    "NeverSight/skills_feed": 3267,
-    "openclaw/skills": 2071,
-    "jeremylongshore/claude-code-plugins-plus-skills": 1874,
-    "a5c-ai/babysitter": 1671,
-    "sickn33/antigravity-awesome-skills": 604,
-    "plurigrid/asi": 481,
-    "benchflow-ai/skillsbench": 377,
-    "Andrejones92/canifi-life-os": 365,
-    "aiskillstore/marketplace": 350,
-    "AmnadTaowsoam/CerebraSkills": 339,
-    "TheBushidoCollective/han": 333,
-    "GPTomics/bioSkills": 330,
-    "davila7/claude-code-templates": 310,
-    "samarv/Shanon": 308,
-    "omer-metin/skills-for-antigravity": 278,
-    "gtmagents/gtm-agents": 225,
-    "oimiragieo/agent-studio": 219,
-    "melodic-software/claude-code-plugins": 217,
-    "aj-geddes/useful-ai-prompts": 212,
-    "eddiebe147/claude-settings": 202
+    "sickn33/antigravity-awesome-skills": 607,
+    "openclaw/openclaw": 49,
+    "alirezarezvani/claude-skills": 36,
+    "mrgoonie/claudekit-skills": 32,
+    "anthropics/skills": 22,
+    "trailofbits/skills": 22,
+    "WordPress/agent-skills": 13,
+    "huggingface/skills": 8,
+    "muratcankoylan/Agent-Skills-for-Context-Engineering": 8,
+    "facebook/react": 7,
+    "cloudflare/skills": 7,
+    "czlonkowski/n8n-skills": 7,
+    "getsentry/skills": 7,
+    "pytorch/pytorch": 6,
+    "anthropics/claude-code": 6,
+    "google-labs-code/stitch-skills": 6,
+    "modelcontextprotocol/servers": 5,
+    "ComposioHQ/awesome-claude-skills": 5,
+    "vercel-labs/agent-skills": 5,
+    "langgenius/dify": 4
   },
   "top_authors": {
-    "neversight": 3267,
-    "openclaw": 2124,
-    "jeremylongshore": 1874,
-    "a5c-ai": 1672,
-    "plurigrid": 481,
-    "benchflow-ai": 377,
-    "andrejones92": 365,
-    "aiskillstore": 350,
-    "amnadtaowsoam": 339,
-    "TheBushidoCollective": 333,
-    "gptomics": 330,
-    "pluginagentmarketplace": 318,
-    "davila7": 310,
-    "samarv": 308,
-    "omer-metin": 278,
-    "gtmagents": 225,
-    "oimiragieo": 219,
-    "aj-geddes": 217,
-    "melodic-software": 217,
-    "eddiebe147": 202
+    "openclaw": 49,
+    "anthropics": 17,
+    "facebook": 7,
+    "pytorch": 6,
+    "langgenius": 4,
+    "f": 3,
+    "smithery-ai": 3,
+    "vercel": 2,
+    "Supabase": 2,
+    "metabase": 2,
+    "cuongpo": 2,
+    "Aman-Amith-Shastry": 2,
+    "anirbanbasu": 2,
+    "hydavinci": 2,
+    "exa": 1,
+    "microsoft": 1,
+    "electron": 1,
+    "openai": 1,
+    "lumberjack-so": 1,
+    "hamid-vakilzadeh": 1
   },
   "stars_stats": {
     "max": 13713700,
     "min": 0,
-    "avg": 731.35,
-    "with_stars": 56531,
-    "zero_stars": 25688
+    "avg": 14409.8,
+    "with_stars": 1043,
+    "zero_stars": 1239
   },
   "top_items": [
     {
@@ -200,12 +200,6 @@
     },
     {
       "name": "bluebubbles",
-      "type": "skill",
-      "stars": 143701,
-      "source": "smithery"
-    },
-    {
-      "name": "camsnap",
       "type": "skill",
       "stars": 143701,
       "source": "smithery"
@@ -373,12 +367,6 @@
       "source": "smithery"
     },
     {
-      "name": "sag",
-      "type": "skill",
-      "stars": 143701,
-      "source": "smithery"
-    },
-    {
       "name": "session-logs",
       "type": "skill",
       "stars": 143701,
@@ -389,14 +377,26 @@
       "type": "skill",
       "stars": 143701,
       "source": "smithery"
+    },
+    {
+      "name": "slack",
+      "type": "skill",
+      "stars": 143701,
+      "source": "smithery"
+    },
+    {
+      "name": "songsee",
+      "type": "skill",
+      "stars": 143701,
+      "source": "smithery"
     }
   ],
   "quality": {
-    "with_description": 81896,
-    "with_tags": 81657,
-    "with_repo": 82062,
-    "with_license": 645,
-    "verified": 162
+    "with_description": 2282,
+    "with_tags": 1974,
+    "with_repo": 2271,
+    "with_license": 648,
+    "verified": 16
   },
   "errors": []
 }
