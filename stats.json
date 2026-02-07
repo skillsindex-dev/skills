@@ -1,27 +1,27 @@
 {
-  "scraped_at": "2026-02-06T06:45:17.860303+00:00",
-  "total_items": 2282,
+  "scraped_at": "2026-02-07T06:34:25.638596+00:00",
+  "total_items": 2366,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
-    "mcp": 1326,
-    "skill": 945,
+    "mcp": 1325,
+    "skill": 1030,
     "a2a": 11
   },
   "by_source": {
-    "smithery": 188,
-    "github": 2094
+    "smithery": 187,
+    "github": 2179
   },
   "by_category": {
-    "ai-ml": 1447,
-    "general": 221,
-    "testing": 110,
-    "security": 103,
+    "ai-ml": 1526,
+    "general": 222,
+    "testing": 112,
+    "security": 104,
+    "documents": 79,
     "code": 78,
-    "documents": 78,
-    "backend": 77,
-    "frontend": 63,
+    "backend": 78,
+    "frontend": 62,
     "data": 35,
     "devops": 35,
     "productivity": 23,
@@ -29,19 +29,19 @@
   },
   "by_source_type": {
     "smithery": {
-      "mcp": 94,
+      "mcp": 93,
       "skill": 94
     },
     "github": {
       "mcp": 1232,
-      "skill": 851,
+      "skill": 936,
       "a2a": 11
     }
   },
   "top_repos": {
-    "sickn33/antigravity-awesome-skills": 607,
+    "sickn33/antigravity-awesome-skills": 686,
     "openclaw/openclaw": 49,
-    "alirezarezvani/claude-skills": 36,
+    "alirezarezvani/claude-skills": 41,
     "mrgoonie/claudekit-skills": 32,
     "anthropics/skills": 22,
     "trailofbits/skills": 22,
@@ -79,21 +79,21 @@
     "microsoft": 1,
     "electron": 1,
     "openai": 1,
-    "lumberjack-so": 1,
-    "hamid-vakilzadeh": 1
+    "hamid-vakilzadeh": 1,
+    "EthanHenrickson": 1
   },
   "stars_stats": {
-    "max": 13713700,
+    "max": 11473099,
     "min": 0,
-    "avg": 14409.8,
-    "with_stars": 1043,
+    "avg": 13219.97,
+    "with_stars": 1127,
     "zero_stars": 1239
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 13713700,
+      "stars": 11473099,
       "source": "smithery"
     },
     {
@@ -392,11 +392,11 @@
     }
   ],
   "quality": {
-    "with_description": 2282,
-    "with_tags": 1974,
-    "with_repo": 2271,
-    "with_license": 648,
-    "verified": 16
+    "with_description": 2366,
+    "with_tags": 2045,
+    "with_repo": 2352,
+    "with_license": 732,
+    "verified": 19
   },
   "errors": []
 }
