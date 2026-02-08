@@ -1,36 +1,36 @@
 {
-  "scraped_at": "2026-02-07T06:34:25.638596+00:00",
-  "total_items": 2366,
+  "scraped_at": "2026-02-08T06:42:14.785726+00:00",
+  "total_items": 2367,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
     "mcp": 1325,
-    "skill": 1030,
+    "skill": 1031,
     "a2a": 11
   },
   "by_source": {
-    "smithery": 187,
+    "smithery": 188,
     "github": 2179
   },
   "by_category": {
-    "ai-ml": 1526,
-    "general": 222,
+    "ai-ml": 1525,
+    "general": 224,
     "testing": 112,
-    "security": 104,
+    "security": 103,
     "documents": 79,
     "code": 78,
     "backend": 78,
     "frontend": 62,
     "data": 35,
     "devops": 35,
-    "productivity": 23,
+    "productivity": 24,
     "communication": 12
   },
   "by_source_type": {
     "smithery": {
       "mcp": 93,
-      "skill": 94
+      "skill": 95
     },
     "github": {
       "mcp": 1232,
@@ -66,15 +66,15 @@
     "facebook": 7,
     "pytorch": 6,
     "langgenius": 4,
+    "smithery-ai": 4,
     "f": 3,
-    "smithery-ai": 3,
+    "hydavinci": 3,
     "vercel": 2,
     "Supabase": 2,
     "metabase": 2,
     "cuongpo": 2,
     "Aman-Amith-Shastry": 2,
     "anirbanbasu": 2,
-    "hydavinci": 2,
     "exa": 1,
     "microsoft": 1,
     "electron": 1,
@@ -83,17 +83,17 @@
     "EthanHenrickson": 1
   },
   "stars_stats": {
-    "max": 11473099,
+    "max": 10946914,
     "min": 0,
-    "avg": 13219.97,
-    "with_stars": 1127,
+    "avg": 13022.35,
+    "with_stars": 1128,
     "zero_stars": 1239
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 11473099,
+      "stars": 10946914,
       "source": "smithery"
     },
     {
@@ -392,11 +392,11 @@
     }
   ],
   "quality": {
-    "with_description": 2366,
-    "with_tags": 2045,
-    "with_repo": 2352,
+    "with_description": 2367,
+    "with_tags": 2042,
+    "with_repo": 2350,
     "with_license": 732,
-    "verified": 19
+    "verified": 22
   },
   "errors": []
 }
