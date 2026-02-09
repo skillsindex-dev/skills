@@ -1,30 +1,30 @@
 {
-  "scraped_at": "2026-02-08T06:42:14.785726+00:00",
-  "total_items": 2367,
+  "scraped_at": "2026-02-09T06:58:09.958680+00:00",
+  "total_items": 2480,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
     "mcp": 1325,
-    "skill": 1031,
+    "skill": 1144,
     "a2a": 11
   },
   "by_source": {
     "smithery": 188,
-    "github": 2179
+    "github": 2292
   },
   "by_category": {
-    "ai-ml": 1525,
-    "general": 224,
-    "testing": 112,
-    "security": 103,
-    "documents": 79,
-    "code": 78,
-    "backend": 78,
-    "frontend": 62,
+    "ai-ml": 1537,
+    "general": 225,
+    "devops": 114,
+    "testing": 113,
+    "security": 112,
+    "documents": 85,
+    "code": 79,
+    "backend": 79,
+    "frontend": 64,
     "data": 35,
-    "devops": 35,
-    "productivity": 24,
+    "productivity": 25,
     "communication": 12
   },
   "by_source_type": {
@@ -34,12 +34,13 @@
     },
     "github": {
       "mcp": 1232,
-      "skill": 936,
+      "skill": 1049,
       "a2a": 11
     }
   },
   "top_repos": {
     "sickn33/antigravity-awesome-skills": 686,
+    "microsoft/skills": 111,
     "openclaw/openclaw": 49,
     "alirezarezvani/claude-skills": 41,
     "mrgoonie/claudekit-skills": 32,
@@ -57,8 +58,7 @@
     "google-labs-code/stitch-skills": 6,
     "modelcontextprotocol/servers": 5,
     "ComposioHQ/awesome-claude-skills": 5,
-    "vercel-labs/agent-skills": 5,
-    "langgenius/dify": 4
+    "vercel-labs/agent-skills": 5
   },
   "top_authors": {
     "openclaw": 49,
@@ -72,28 +72,28 @@
     "vercel": 2,
     "Supabase": 2,
     "metabase": 2,
-    "cuongpo": 2,
-    "Aman-Amith-Shastry": 2,
     "anirbanbasu": 2,
+    "xiaobenyang-com": 2,
     "exa": 1,
     "microsoft": 1,
     "electron": 1,
     "openai": 1,
     "hamid-vakilzadeh": 1,
-    "EthanHenrickson": 1
+    "EthanHenrickson": 1,
+    "upstash": 1
   },
   "stars_stats": {
-    "max": 10946914,
+    "max": 10665156,
     "min": 0,
-    "avg": 13022.35,
-    "with_stars": 1128,
+    "avg": 12659.48,
+    "with_stars": 1241,
     "zero_stars": 1239
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 10946914,
+      "stars": 10665156,
       "source": "smithery"
     },
     {
@@ -392,9 +392,9 @@
     }
   ],
   "quality": {
-    "with_description": 2367,
-    "with_tags": 2042,
-    "with_repo": 2350,
+    "with_description": 2480,
+    "with_tags": 2152,
+    "with_repo": 2463,
     "with_license": 732,
     "verified": 22
   },
