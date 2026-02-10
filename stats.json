@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-02-09T06:58:09.958680+00:00",
+  "scraped_at": "2026-02-10T06:58:05.993772+00:00",
   "total_items": 2480,
   "sources_scraped": 18,
   "sources_successful": 18,
@@ -83,9 +83,9 @@
     "upstash": 1
   },
   "stars_stats": {
-    "max": 10665156,
+    "max": 10345577,
     "min": 0,
-    "avg": 12659.48,
+    "avg": 12590.91,
     "with_stars": 1241,
     "zero_stars": 1239
   },
@@ -93,7 +93,7 @@
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 10665156,
+      "stars": 10345577,
       "source": "smithery"
     },
     {
