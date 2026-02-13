@@ -1,99 +1,99 @@
 {
-  "scraped_at": "2026-02-12T06:56:49.370045+00:00",
-  "total_items": 6432,
+  "scraped_at": "2026-02-13T07:55:44.857125+00:00",
+  "total_items": 84951,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
-    "mcp": 2854,
-    "skill": 3567,
-    "a2a": 11
+    "mcp": 2859,
+    "skill": 82080,
+    "a2a": 12
   },
   "by_source": {
-    "smithery": 3999,
-    "github": 2433
+    "smithery": 82516,
+    "github": 2435
   },
   "by_category": {
-    "ai-ml": 2820,
-    "general": 930,
-    "testing": 478,
-    "documents": 403,
-    "backend": 331,
-    "code": 320,
-    "security": 286,
-    "frontend": 252,
-    "devops": 248,
-    "data": 192,
-    "productivity": 120,
-    "communication": 52
+    "general": 23800,
+    "ai-ml": 15285,
+    "testing": 8727,
+    "documents": 6673,
+    "code": 6463,
+    "frontend": 5170,
+    "backend": 4943,
+    "security": 4346,
+    "data": 3498,
+    "devops": 2753,
+    "productivity": 2544,
+    "communication": 749
   },
   "by_source_type": {
     "smithery": {
-      "mcp": 1621,
-      "skill": 2378
+      "mcp": 1626,
+      "skill": 80890
     },
     "github": {
       "mcp": 1233,
-      "skill": 1189,
-      "a2a": 11
+      "skill": 1190,
+      "a2a": 12
     }
   },
   "top_repos": {
+    "NeverSight/skills_feed": 3260,
+    "openclaw/skills": 2478,
+    "jeremylongshore/claude-code-plugins-plus-skills": 1873,
+    "a5c-ai/babysitter": 1670,
     "sickn33/antigravity-awesome-skills": 818,
+    "plurigrid/asi": 481,
+    "benchflow-ai/skillsbench": 376,
+    "Andrejones92/canifi-life-os": 364,
+    "aiskillstore/marketplace": 350,
+    "AmnadTaowsoam/CerebraSkills": 337,
+    "TheBushidoCollective/han": 333,
+    "GPTomics/bioSkills": 330,
+    "samarv/Shanon": 308,
     "davila7/claude-code-templates": 307,
-    "parcadei/Continuous-Claude-v3": 141,
-    "ruvnet/claude-flow": 131,
-    "microsoft/skills": 111,
-    "trailofbits/skills": 69,
-    "openclaw/openclaw": 59,
-    "anthropics/knowledge-work-plugins": 51,
-    "alirezarezvani/claude-skills": 47,
-    "github/awesome-copilot": 35,
-    "openai/skills": 35,
-    "Yeachan-Heo/oh-my-claudecode": 32,
-    "mrgoonie/claudekit-skills": 32,
-    "danielmiessler/Personal_AI_Infrastructure": 29,
-    "TencentBlueKing/bk-ci": 29,
-    "windmill-labs/windmill": 27,
-    "prowler-cloud/prowler": 27,
-    "wshobson/agents": 26,
-    "EpicenterHQ/epicenter": 25,
-    "OneKeyHQ/app-monorepo": 25
+    "omer-metin/skills-for-antigravity": 278,
+    "gtmagents/gtm-agents": 225,
+    "oimiragieo/agent-studio": 220,
+    "melodic-software/claude-code-plugins": 217,
+    "aj-geddes/useful-ai-prompts": 211,
+    "datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction": 200
   },
   "top_authors": {
+    "neversight": 3260,
+    "openclaw": 2539,
+    "jeremylongshore": 1873,
+    "a5c-ai": 1671,
+    "plurigrid": 481,
+    "benchflow-ai": 376,
+    "andrejones92": 364,
+    "aiskillstore": 350,
+    "amnadtaowsoam": 337,
+    "TheBushidoCollective": 333,
+    "gptomics": 330,
+    "pluginagentmarketplace": 315,
+    "samarv": 308,
     "davila7": 307,
-    "parcadei": 141,
-    "ruvnet": 131,
-    "anthropics": 88,
-    "xiaobenyang-com": 65,
-    "openclaw": 61,
-    "trailofbits": 47,
-    "openai": 46,
-    "github": 36,
-    "yeachan-heo": 32,
-    "danielmiessler": 29,
-    "tencentblueking": 29,
-    "dotnet": 28,
-    "windmill-labs": 27,
-    "prowler-cloud": 27,
-    "composiohq": 26,
-    "wshobson": 26,
-    "epicenterhq": 25,
-    "onekeyhq": 25,
-    "theorcdev": 23
+    "omer-metin": 278,
+    "gtmagents": 225,
+    "oimiragieo": 220,
+    "melodic-software": 217,
+    "aj-geddes": 215,
+    "datadrivenconstruction": 200
   },
   "stars_stats": {
-    "max": 9664004,
+    "max": 9288353,
     "min": 0,
-    "avg": 10039.27,
-    "with_stars": 4442,
-    "zero_stars": 1990
+    "avg": 826.37,
+    "with_stars": 58357,
+    "zero_stars": 26594
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 9664004,
+      "stars": 9288353,
       "source": "smithery"
     },
     {
@@ -392,11 +392,11 @@
     }
   ],
   "quality": {
-    "with_description": 6379,
-    "with_tags": 5841,
-    "with_repo": 6272,
+    "with_description": 84628,
+    "with_tags": 84347,
+    "with_repo": 84790,
     "with_license": 870,
-    "verified": 169
+    "verified": 170
   },
   "errors": []
 }
