@@ -1,49 +1,49 @@
 {
-  "scraped_at": "2026-02-13T07:55:44.857125+00:00",
-  "total_items": 84951,
+  "scraped_at": "2026-02-14T07:30:04.080817+00:00",
+  "total_items": 84966,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
-    "mcp": 2859,
-    "skill": 82080,
+    "mcp": 2869,
+    "skill": 82085,
     "a2a": 12
   },
   "by_source": {
-    "smithery": 82516,
-    "github": 2435
+    "smithery": 82520,
+    "github": 2446
   },
   "by_category": {
     "general": 23800,
-    "ai-ml": 15285,
+    "ai-ml": 15292,
     "testing": 8727,
-    "documents": 6673,
-    "code": 6463,
-    "frontend": 5170,
+    "documents": 6675,
+    "code": 6464,
+    "frontend": 5171,
     "backend": 4943,
-    "security": 4346,
-    "data": 3498,
+    "security": 4347,
+    "data": 3500,
     "devops": 2753,
     "productivity": 2544,
-    "communication": 749
+    "communication": 750
   },
   "by_source_type": {
     "smithery": {
-      "mcp": 1626,
-      "skill": 80890
+      "mcp": 1636,
+      "skill": 80884
     },
     "github": {
       "mcp": 1233,
-      "skill": 1190,
+      "skill": 1201,
       "a2a": 12
     }
   },
   "top_repos": {
     "NeverSight/skills_feed": 3260,
     "openclaw/skills": 2478,
-    "jeremylongshore/claude-code-plugins-plus-skills": 1873,
+    "jeremylongshore/claude-code-plugins-plus-skills": 1872,
     "a5c-ai/babysitter": 1670,
-    "sickn33/antigravity-awesome-skills": 818,
+    "sickn33/antigravity-awesome-skills": 827,
     "plurigrid/asi": 481,
     "benchflow-ai/skillsbench": 376,
     "Andrejones92/canifi-life-os": 364,
@@ -63,7 +63,7 @@
   "top_authors": {
     "neversight": 3260,
     "openclaw": 2539,
-    "jeremylongshore": 1873,
+    "jeremylongshore": 1872,
     "a5c-ai": 1671,
     "plurigrid": 481,
     "benchflow-ai": 376,
@@ -83,17 +83,17 @@
     "datadrivenconstruction": 200
   },
   "stars_stats": {
-    "max": 9288353,
+    "max": 8877700,
     "min": 0,
-    "avg": 826.37,
-    "with_stars": 58357,
-    "zero_stars": 26594
+    "avg": 823.31,
+    "with_stars": 58359,
+    "zero_stars": 26607
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 9288353,
+      "stars": 8877700,
       "source": "smithery"
     },
     {
@@ -392,11 +392,11 @@
     }
   ],
   "quality": {
-    "with_description": 84628,
-    "with_tags": 84347,
-    "with_repo": 84790,
-    "with_license": 870,
-    "verified": 170
+    "with_description": 84643,
+    "with_tags": 84359,
+    "with_repo": 84804,
+    "with_license": 879,
+    "verified": 171
   },
   "errors": []
 }
