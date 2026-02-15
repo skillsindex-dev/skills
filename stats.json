@@ -1,40 +1,40 @@
 {
-  "scraped_at": "2026-02-14T07:30:04.080817+00:00",
-  "total_items": 84966,
+  "scraped_at": "2026-02-15T07:37:18.808950+00:00",
+  "total_items": 85021,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
-    "mcp": 2869,
-    "skill": 82085,
+    "mcp": 2878,
+    "skill": 82131,
     "a2a": 12
   },
   "by_source": {
-    "smithery": 82520,
-    "github": 2446
+    "smithery": 82529,
+    "github": 2492
   },
   "by_category": {
-    "general": 23800,
-    "ai-ml": 15292,
+    "general": 23808,
+    "ai-ml": 15332,
     "testing": 8727,
-    "documents": 6675,
+    "documents": 6676,
     "code": 6464,
     "frontend": 5171,
-    "backend": 4943,
-    "security": 4347,
-    "data": 3500,
-    "devops": 2753,
-    "productivity": 2544,
+    "backend": 4945,
+    "security": 4348,
+    "data": 3501,
+    "devops": 2754,
+    "productivity": 2545,
     "communication": 750
   },
   "by_source_type": {
     "smithery": {
-      "mcp": 1636,
+      "mcp": 1645,
       "skill": 80884
     },
     "github": {
       "mcp": 1233,
-      "skill": 1201,
+      "skill": 1247,
       "a2a": 12
     }
   },
@@ -62,7 +62,7 @@
   },
   "top_authors": {
     "neversight": 3260,
-    "openclaw": 2539,
+    "openclaw": 2538,
     "jeremylongshore": 1872,
     "a5c-ai": 1671,
     "plurigrid": 481,
@@ -83,17 +83,17 @@
     "datadrivenconstruction": 200
   },
   "stars_stats": {
-    "max": 8877700,
+    "max": 8429591,
     "min": 0,
-    "avg": 823.31,
-    "with_stars": 58359,
-    "zero_stars": 26607
+    "avg": 821.13,
+    "with_stars": 58403,
+    "zero_stars": 26618
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 8877700,
+      "stars": 8429591,
       "source": "smithery"
     },
     {
@@ -343,12 +343,6 @@
       "source": "smithery"
     },
     {
-      "name": "openai-image-gen",
-      "type": "skill",
-      "stars": 178203,
-      "source": "smithery"
-    },
-    {
       "name": "openai-whisper",
       "type": "skill",
       "stars": 178203,
@@ -389,14 +383,20 @@
       "type": "skill",
       "stars": 178203,
       "source": "smithery"
+    },
+    {
+      "name": "prose",
+      "type": "skill",
+      "stars": 178203,
+      "source": "smithery"
     }
   ],
   "quality": {
-    "with_description": 84643,
-    "with_tags": 84359,
-    "with_repo": 84804,
+    "with_description": 84698,
+    "with_tags": 84406,
+    "with_repo": 84859,
     "with_license": 879,
-    "verified": 171
+    "verified": 172
   },
   "errors": []
 }
