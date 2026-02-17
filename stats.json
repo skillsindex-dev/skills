@@ -1,29 +1,29 @@
 {
-  "scraped_at": "2026-02-16T06:56:26.335939+00:00",
-  "total_items": 2665,
+  "scraped_at": "2026-02-17T06:51:43.260019+00:00",
+  "total_items": 2686,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
     "mcp": 1331,
-    "skill": 1322,
+    "skill": 1343,
     "a2a": 12
   },
   "by_source": {
     "smithery": 171,
-    "github": 2494
+    "github": 2515
   },
   "by_category": {
-    "ai-ml": 1597,
-    "general": 219,
+    "ai-ml": 1607,
+    "general": 222,
     "devops": 193,
-    "security": 129,
-    "testing": 121,
-    "documents": 110,
-    "code": 87,
-    "backend": 75,
+    "security": 131,
+    "testing": 122,
+    "documents": 112,
+    "code": 86,
+    "backend": 78,
     "frontend": 64,
-    "data": 37,
+    "data": 38,
     "productivity": 23,
     "communication": 10
   },
@@ -34,20 +34,20 @@
     },
     "github": {
       "mcp": 1233,
-      "skill": 1249,
+      "skill": 1270,
       "a2a": 12
     }
   },
   "top_repos": {
-    "sickn33/antigravity-awesome-skills": 828,
+    "sickn33/antigravity-awesome-skills": 831,
     "microsoft/skills": 111,
-    "alirezarezvani/claude-skills": 47,
+    "alirezarezvani/claude-skills": 60,
     "mrgoonie/claudekit-skills": 32,
     "openai/skills": 30,
-    "anthropics/skills": 22,
+    "anthropics/skills": 28,
     "trailofbits/skills": 22,
-    "github/awesome-copilot": 14,
     "WordPress/agent-skills": 13,
+    "github/awesome-copilot": 12,
     "anthropics/claude-code": 9,
     "huggingface/skills": 8,
     "muratcankoylan/Agent-Skills-for-Context-Engineering": 8,
@@ -57,12 +57,12 @@
     "getsentry/skills": 7,
     "google-labs-code/stitch-skills": 6,
     "transloadit/skills": 6,
-    "modelcontextprotocol/servers": 5,
-    "ComposioHQ/awesome-claude-skills": 5
+    "anthropics/knowledge-work-plugins": 6,
+    "modelcontextprotocol/servers": 5
   },
   "top_authors": {
-    "anthropics": 33,
-    "github": 15,
+    "anthropics": 35,
+    "github": 13,
     "davila7": 7,
     "vercel": 4,
     "openclaw": 3,
@@ -74,7 +74,7 @@
     "hithereiamaliff": 2,
     "hydavinci": 2,
     "exa": 1,
-    "facebook": 1,
+    "shubhamsaboo": 1,
     "microsoft": 1,
     "openai": 1,
     "hamid-vakilzadeh": 1,
@@ -83,23 +83,17 @@
     "EthanHenrickson": 1
   },
   "stars_stats": {
-    "max": 7930585,
+    "max": 7589050,
     "min": 0,
-    "avg": 8808.97,
-    "with_stars": 1424,
+    "avg": 8773.99,
+    "with_stars": 1445,
     "zero_stars": 1241
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 7930585,
-      "source": "smithery"
-    },
-    {
-      "name": "fix",
-      "type": "skill",
-      "stars": 242877,
+      "stars": 7589050,
       "source": "smithery"
     },
     {
@@ -151,6 +145,12 @@
       "source": "smithery"
     },
     {
+      "name": "python-expert",
+      "type": "skill",
+      "stars": 92956,
+      "source": "smithery"
+    },
+    {
       "name": "playwright-cli",
       "type": "skill",
       "stars": 82347,
@@ -159,37 +159,37 @@
     {
       "name": "everything",
       "type": "mcp",
-      "stars": 78759,
+      "stars": 78805,
       "source": "github"
     },
     {
       "name": "filesystem",
       "type": "mcp",
-      "stars": 78759,
+      "stars": 78805,
       "source": "github"
     },
     {
       "name": "memory",
       "type": "mcp",
-      "stars": 78759,
+      "stars": 78805,
       "source": "github"
     },
     {
       "name": "sequential-thinking",
       "type": "mcp",
-      "stars": 78759,
+      "stars": 78805,
       "source": "github"
     },
     {
       "name": "brand-guidelines",
       "type": "skill",
-      "stars": 70363,
+      "stars": 70771,
       "source": "github"
     },
     {
       "name": "template-skill",
       "type": "skill",
-      "stars": 70363,
+      "stars": 70771,
       "source": "github"
     },
     {
@@ -339,7 +339,7 @@
     {
       "name": "AI Research Assistant",
       "type": "mcp",
-      "stars": 50962,
+      "stars": 50668,
       "source": "smithery"
     },
     {
@@ -387,15 +387,15 @@
     {
       "name": "Linkup",
       "type": "mcp",
-      "stars": 22854,
+      "stars": 23135,
       "source": "smithery"
     }
   ],
   "quality": {
-    "with_description": 2664,
-    "with_tags": 2320,
-    "with_repo": 2650,
-    "with_license": 880,
+    "with_description": 2685,
+    "with_tags": 2339,
+    "with_repo": 2671,
+    "with_license": 896,
     "verified": 20
   },
   "errors": []
