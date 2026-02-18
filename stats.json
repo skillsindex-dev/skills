@@ -1,45 +1,45 @@
 {
-  "scraped_at": "2026-02-17T06:51:43.260019+00:00",
-  "total_items": 2686,
+  "scraped_at": "2026-02-18T06:55:07.245476+00:00",
+  "total_items": 2739,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
-    "mcp": 1331,
-    "skill": 1343,
+    "mcp": 1380,
+    "skill": 1347,
     "a2a": 12
   },
   "by_source": {
-    "smithery": 171,
-    "github": 2515
+    "smithery": 169,
+    "github": 2570
   },
   "by_category": {
-    "ai-ml": 1607,
+    "ai-ml": 1649,
     "general": 222,
-    "devops": 193,
+    "devops": 194,
     "security": 131,
     "testing": 122,
-    "documents": 112,
-    "code": 86,
-    "backend": 78,
+    "documents": 115,
+    "code": 88,
+    "backend": 82,
     "frontend": 64,
-    "data": 38,
+    "data": 39,
     "productivity": 23,
     "communication": 10
   },
   "by_source_type": {
     "smithery": {
       "mcp": 98,
-      "skill": 73
+      "skill": 71
     },
     "github": {
-      "mcp": 1233,
-      "skill": 1270,
+      "mcp": 1282,
+      "skill": 1276,
       "a2a": 12
     }
   },
   "top_repos": {
-    "sickn33/antigravity-awesome-skills": 831,
+    "sickn33/antigravity-awesome-skills": 835,
     "microsoft/skills": 111,
     "alirezarezvani/claude-skills": 60,
     "mrgoonie/claudekit-skills": 32,
@@ -48,26 +48,26 @@
     "trailofbits/skills": 22,
     "WordPress/agent-skills": 13,
     "github/awesome-copilot": 12,
-    "anthropics/claude-code": 9,
+    "anthropics/claude-code": 8,
     "huggingface/skills": 8,
     "muratcankoylan/Agent-Skills-for-Context-Engineering": 8,
-    "davila7/claude-code-templates": 7,
     "cloudflare/skills": 7,
     "czlonkowski/n8n-skills": 7,
     "getsentry/skills": 7,
+    "anthropics/knowledge-work-plugins": 7,
+    "davila7/claude-code-templates": 6,
     "google-labs-code/stitch-skills": 6,
     "transloadit/skills": 6,
-    "anthropics/knowledge-work-plugins": 6,
     "modelcontextprotocol/servers": 5
   },
   "top_authors": {
     "anthropics": 35,
     "github": 13,
-    "davila7": 7,
+    "davila7": 6,
     "vercel": 4,
     "openclaw": 3,
-    "pytorch": 3,
     "smithery-ai": 3,
+    "pytorch": 2,
     "metabase": 2,
     "langchain-ai": 2,
     "anirbanbasu": 2,
@@ -85,9 +85,9 @@
   "stars_stats": {
     "max": 7589050,
     "min": 0,
-    "avg": 8773.99,
-    "with_stars": 1445,
-    "zero_stars": 1241
+    "avg": 8964.96,
+    "with_stars": 1449,
+    "zero_stars": 1290
   },
   "top_items": [
     {
@@ -139,12 +139,6 @@
       "source": "smithery"
     },
     {
-      "name": "triaging-issues",
-      "type": "skill",
-      "stars": 97267,
-      "source": "smithery"
-    },
-    {
       "name": "python-expert",
       "type": "skill",
       "stars": 92956,
@@ -159,37 +153,37 @@
     {
       "name": "everything",
       "type": "mcp",
-      "stars": 78805,
+      "stars": 78870,
       "source": "github"
     },
     {
       "name": "filesystem",
       "type": "mcp",
-      "stars": 78805,
+      "stars": 78870,
       "source": "github"
     },
     {
       "name": "memory",
       "type": "mcp",
-      "stars": 78805,
+      "stars": 78870,
       "source": "github"
     },
     {
       "name": "sequential-thinking",
       "type": "mcp",
-      "stars": 78805,
+      "stars": 78870,
       "source": "github"
     },
     {
       "name": "brand-guidelines",
       "type": "skill",
-      "stars": 70771,
+      "stars": 71183,
       "source": "github"
     },
     {
       "name": "template-skill",
       "type": "skill",
-      "stars": 70771,
+      "stars": 71183,
       "source": "github"
     },
     {
@@ -278,12 +272,6 @@
     },
     {
       "name": "agent-identifier",
-      "type": "skill",
-      "stars": 65489,
-      "source": "smithery"
-    },
-    {
-      "name": "claude-opus-4-5-migration",
       "type": "skill",
       "stars": 65489,
       "source": "smithery"
@@ -389,13 +377,25 @@
       "type": "mcp",
       "stars": 23135,
       "source": "smithery"
+    },
+    {
+      "name": "ai-sdk",
+      "type": "skill",
+      "stars": 21608,
+      "source": "smithery"
+    },
+    {
+      "name": "agentic-eval",
+      "type": "skill",
+      "stars": 20589,
+      "source": "smithery"
     }
   ],
   "quality": {
-    "with_description": 2685,
-    "with_tags": 2339,
-    "with_repo": 2671,
-    "with_license": 896,
+    "with_description": 2738,
+    "with_tags": 2386,
+    "with_repo": 2724,
+    "with_license": 900,
     "verified": 20
   },
   "errors": []
