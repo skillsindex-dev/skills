@@ -1,27 +1,27 @@
 {
-  "scraped_at": "2026-02-18T06:55:07.245476+00:00",
-  "total_items": 2739,
+  "scraped_at": "2026-02-19T06:53:21.930471+00:00",
+  "total_items": 2768,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
-    "mcp": 1380,
-    "skill": 1347,
+    "mcp": 1410,
+    "skill": 1346,
     "a2a": 12
   },
   "by_source": {
-    "smithery": 169,
-    "github": 2570
+    "smithery": 167,
+    "github": 2601
   },
   "by_category": {
-    "ai-ml": 1649,
+    "ai-ml": 1682,
     "general": 222,
     "devops": 194,
-    "security": 131,
-    "testing": 122,
-    "documents": 115,
+    "security": 130,
+    "testing": 123,
+    "documents": 113,
     "code": 88,
-    "backend": 82,
+    "backend": 80,
     "frontend": 64,
     "data": 39,
     "productivity": 23,
@@ -29,11 +29,11 @@
   },
   "by_source_type": {
     "smithery": {
-      "mcp": 98,
-      "skill": 71
+      "mcp": 97,
+      "skill": 70
     },
     "github": {
-      "mcp": 1282,
+      "mcp": 1313,
       "skill": 1276,
       "a2a": 12
     }
@@ -55,45 +55,45 @@
     "czlonkowski/n8n-skills": 7,
     "getsentry/skills": 7,
     "anthropics/knowledge-work-plugins": 7,
-    "davila7/claude-code-templates": 6,
     "google-labs-code/stitch-skills": 6,
     "transloadit/skills": 6,
-    "modelcontextprotocol/servers": 5
+    "modelcontextprotocol/servers": 5,
+    "davila7/claude-code-templates": 5
   },
   "top_authors": {
     "anthropics": 35,
     "github": 13,
-    "davila7": 6,
+    "davila7": 5,
     "vercel": 4,
     "openclaw": 3,
     "smithery-ai": 3,
     "pytorch": 2,
+    "microsoft": 2,
     "metabase": 2,
     "langchain-ai": 2,
+    "devbrother2024": 2,
     "anirbanbasu": 2,
-    "hithereiamaliff": 2,
-    "hydavinci": 2,
+    "xiaobenyang-com": 2,
     "exa": 1,
     "shubhamsaboo": 1,
-    "microsoft": 1,
-    "openai": 1,
     "hamid-vakilzadeh": 1,
+    "openai": 1,
     "payloadcms": 1,
     "LinkupPlatform": 1,
-    "EthanHenrickson": 1
+    "upstash": 1
   },
   "stars_stats": {
-    "max": 7589050,
+    "max": 6673791,
     "min": 0,
-    "avg": 8964.96,
-    "with_stars": 1449,
-    "zero_stars": 1290
+    "avg": 8850.37,
+    "with_stars": 1447,
+    "zero_stars": 1321
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 7589050,
+      "stars": 6673791,
       "source": "smithery"
     },
     {
@@ -153,37 +153,37 @@
     {
       "name": "everything",
       "type": "mcp",
-      "stars": 78870,
+      "stars": 78957,
       "source": "github"
     },
     {
       "name": "filesystem",
       "type": "mcp",
-      "stars": 78870,
+      "stars": 78957,
       "source": "github"
     },
     {
       "name": "memory",
       "type": "mcp",
-      "stars": 78870,
+      "stars": 78957,
       "source": "github"
     },
     {
       "name": "sequential-thinking",
       "type": "mcp",
-      "stars": 78870,
+      "stars": 78957,
       "source": "github"
     },
     {
       "name": "brand-guidelines",
       "type": "skill",
-      "stars": 71183,
+      "stars": 71595,
       "source": "github"
     },
     {
       "name": "template-skill",
       "type": "skill",
-      "stars": 71183,
+      "stars": 71595,
       "source": "github"
     },
     {
@@ -319,15 +319,15 @@
       "source": "smithery"
     },
     {
-      "name": "skill-installer",
-      "type": "skill",
-      "stars": 59655,
+      "name": "AI Research Assistant",
+      "type": "mcp",
+      "stars": 60289,
       "source": "smithery"
     },
     {
-      "name": "AI Research Assistant",
-      "type": "mcp",
-      "stars": 50668,
+      "name": "skill-installer",
+      "type": "skill",
+      "stars": 59655,
       "source": "smithery"
     },
     {
@@ -375,7 +375,7 @@
     {
       "name": "Linkup",
       "type": "mcp",
-      "stars": 23135,
+      "stars": 24049,
       "source": "smithery"
     },
     {
@@ -392,11 +392,11 @@
     }
   ],
   "quality": {
-    "with_description": 2738,
-    "with_tags": 2386,
-    "with_repo": 2724,
+    "with_description": 2767,
+    "with_tags": 2410,
+    "with_repo": 2754,
     "with_license": 900,
-    "verified": 20
+    "verified": 19
   },
   "errors": []
 }
