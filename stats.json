@@ -1,39 +1,39 @@
 {
-  "scraped_at": "2026-02-21T06:34:32.829898+00:00",
-  "total_items": 2801,
+  "scraped_at": "2026-02-22T06:39:24.977156+00:00",
+  "total_items": 2802,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
     "mcp": 1429,
-    "skill": 1360,
+    "skill": 1361,
     "a2a": 12
   },
   "by_source": {
     "smithery": 171,
-    "github": 2630
+    "github": 2631
   },
   "by_category": {
-    "ai-ml": 1694,
-    "general": 250,
+    "ai-ml": 1695,
+    "general": 251,
     "devops": 202,
     "security": 116,
-    "documents": 100,
-    "testing": 97,
+    "documents": 99,
+    "testing": 98,
     "backend": 82,
     "code": 76,
-    "productivity": 76,
+    "productivity": 75,
     "frontend": 64,
     "data": 37,
     "communication": 7
   },
   "by_source_type": {
     "smithery": {
-      "mcp": 99,
-      "skill": 72
+      "mcp": 98,
+      "skill": 73
     },
     "github": {
-      "mcp": 1330,
+      "mcp": 1331,
       "skill": 1288,
       "a2a": 12
     }
@@ -42,13 +42,13 @@
     "sickn33/antigravity-awesome-skills": 843,
     "microsoft/skills": 111,
     "alirezarezvani/claude-skills": 60,
+    "openai/skills": 32,
     "mrgoonie/claudekit-skills": 32,
-    "openai/skills": 31,
     "anthropics/skills": 27,
     "trailofbits/skills": 22,
     "WordPress/agent-skills": 13,
     "github/awesome-copilot": 12,
-    "anthropics/knowledge-work-plugins": 9,
+    "anthropics/knowledge-work-plugins": 10,
     "anthropics/claude-code": 8,
     "huggingface/skills": 8,
     "muratcankoylan/Agent-Skills-for-Context-Engineering": 8,
@@ -61,16 +61,15 @@
     "davila7/claude-code-templates": 5
   },
   "top_authors": {
-    "anthropics": 37,
+    "anthropics": 38,
     "github": 13,
     "davila7": 5,
     "vercel": 4,
-    "xiaobenyang-com": 4,
-    "openclaw": 3,
+    "openai": 3,
     "smithery-ai": 3,
+    "xiaobenyang-com": 3,
+    "openclaw": 2,
     "pytorch": 2,
-    "microsoft": 2,
-    "openai": 2,
     "langchain-ai": 2,
     "devbrother2024": 2,
     "anirbanbasu": 2,
@@ -78,32 +77,27 @@
     "CaullenOmdahl": 2,
     "exa": 1,
     "shubhamsaboo": 1,
+    "microsoft": 1,
     "hamid-vakilzadeh": 1,
     "metabase": 1,
     "payloadcms": 1
   },
   "stars_stats": {
-    "max": 5736774,
+    "max": 5241236,
     "min": 0,
-    "avg": 8705.31,
+    "avg": 8580.04,
     "with_stars": 1463,
-    "zero_stars": 1338
+    "zero_stars": 1339
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 5736774,
+      "stars": 5241236,
       "source": "smithery"
     },
     {
       "name": "himalaya",
-      "type": "skill",
-      "stars": 178203,
-      "source": "smithery"
-    },
-    {
-      "name": "notion",
       "type": "skill",
       "stars": 178203,
       "source": "smithery"
@@ -153,43 +147,43 @@
     {
       "name": "everything",
       "type": "mcp",
-      "stars": 79052,
+      "stars": 79106,
       "source": "github"
     },
     {
       "name": "filesystem",
       "type": "mcp",
-      "stars": 79052,
+      "stars": 79106,
       "source": "github"
     },
     {
       "name": "memory",
       "type": "mcp",
-      "stars": 79052,
+      "stars": 79106,
       "source": "github"
     },
     {
       "name": "sequential-thinking",
       "type": "mcp",
-      "stars": 79052,
+      "stars": 79106,
       "source": "github"
     },
     {
       "name": "brand-guidelines",
       "type": "skill",
-      "stars": 72536,
+      "stars": 73004,
       "source": "github"
     },
     {
       "name": "template-skill",
       "type": "skill",
-      "stars": 72536,
+      "stars": 73004,
       "source": "github"
     },
     {
       "name": "AI Research Assistant",
       "type": "mcp",
-      "stars": 69556,
+      "stars": 69402,
       "source": "smithery"
     },
     {
@@ -369,7 +363,7 @@
     {
       "name": "Linkup",
       "type": "mcp",
-      "stars": 25946,
+      "stars": 25379,
       "source": "smithery"
     },
     {
@@ -389,14 +383,20 @@
       "type": "skill",
       "stars": 20589,
       "source": "smithery"
+    },
+    {
+      "name": "gh-cli",
+      "type": "skill",
+      "stars": 20589,
+      "source": "smithery"
     }
   ],
   "quality": {
-    "with_description": 2795,
-    "with_tags": 2409,
-    "with_repo": 2788,
+    "with_description": 2796,
+    "with_tags": 2411,
+    "with_repo": 2789,
     "with_license": 908,
-    "verified": 18
+    "verified": 17
   },
   "errors": []
 }
