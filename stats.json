@@ -1,45 +1,45 @@
 {
-  "scraped_at": "2026-02-22T06:39:24.977156+00:00",
-  "total_items": 2802,
+  "scraped_at": "2026-02-23T06:57:33.946214+00:00",
+  "total_items": 2850,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
-    "mcp": 1429,
-    "skill": 1361,
+    "mcp": 1431,
+    "skill": 1407,
     "a2a": 12
   },
   "by_source": {
-    "smithery": 171,
-    "github": 2631
+    "smithery": 172,
+    "github": 2678
   },
   "by_category": {
-    "ai-ml": 1695,
-    "general": 251,
-    "devops": 202,
-    "security": 116,
-    "documents": 99,
-    "testing": 98,
-    "backend": 82,
-    "code": 76,
-    "productivity": 75,
-    "frontend": 64,
+    "ai-ml": 1703,
+    "general": 255,
+    "devops": 206,
+    "security": 125,
+    "documents": 109,
+    "testing": 103,
+    "backend": 85,
+    "code": 81,
+    "productivity": 71,
+    "frontend": 67,
     "data": 37,
-    "communication": 7
+    "communication": 8
   },
   "by_source_type": {
     "smithery": {
       "mcp": 98,
-      "skill": 73
+      "skill": 74
     },
     "github": {
-      "mcp": 1331,
-      "skill": 1288,
+      "mcp": 1333,
+      "skill": 1333,
       "a2a": 12
     }
   },
   "top_repos": {
-    "sickn33/antigravity-awesome-skills": 843,
+    "sickn33/antigravity-awesome-skills": 887,
     "microsoft/skills": 111,
     "alirezarezvani/claude-skills": 60,
     "openai/skills": 32,
@@ -48,7 +48,7 @@
     "trailofbits/skills": 22,
     "WordPress/agent-skills": 13,
     "github/awesome-copilot": 12,
-    "anthropics/knowledge-work-plugins": 10,
+    "anthropics/knowledge-work-plugins": 11,
     "anthropics/claude-code": 8,
     "huggingface/skills": 8,
     "muratcankoylan/Agent-Skills-for-Context-Engineering": 8,
@@ -61,7 +61,7 @@
     "davila7/claude-code-templates": 5
   },
   "top_authors": {
-    "anthropics": 38,
+    "anthropics": 39,
     "github": 13,
     "davila7": 5,
     "vercel": 4,
@@ -70,6 +70,7 @@
     "xiaobenyang-com": 3,
     "openclaw": 2,
     "pytorch": 2,
+    "microsoft": 2,
     "langchain-ai": 2,
     "devbrother2024": 2,
     "anirbanbasu": 2,
@@ -77,23 +78,22 @@
     "CaullenOmdahl": 2,
     "exa": 1,
     "shubhamsaboo": 1,
-    "microsoft": 1,
     "hamid-vakilzadeh": 1,
     "metabase": 1,
     "payloadcms": 1
   },
   "stars_stats": {
-    "max": 5241236,
+    "max": 4803157,
     "min": 0,
-    "avg": 8580.04,
-    "with_stars": 1463,
-    "zero_stars": 1339
+    "avg": 8627.9,
+    "with_stars": 1509,
+    "zero_stars": 1341
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 5241236,
+      "stars": 4803157,
       "source": "smithery"
     },
     {
@@ -147,43 +147,43 @@
     {
       "name": "everything",
       "type": "mcp",
-      "stars": 79106,
+      "stars": 79162,
       "source": "github"
     },
     {
       "name": "filesystem",
       "type": "mcp",
-      "stars": 79106,
+      "stars": 79162,
       "source": "github"
     },
     {
       "name": "memory",
       "type": "mcp",
-      "stars": 79106,
+      "stars": 79162,
       "source": "github"
     },
     {
       "name": "sequential-thinking",
       "type": "mcp",
-      "stars": 79106,
+      "stars": 79162,
       "source": "github"
     },
     {
       "name": "brand-guidelines",
       "type": "skill",
-      "stars": 73004,
+      "stars": 73539,
       "source": "github"
     },
     {
       "name": "template-skill",
       "type": "skill",
-      "stars": 73004,
+      "stars": 73539,
       "source": "github"
     },
     {
       "name": "AI Research Assistant",
       "type": "mcp",
-      "stars": 69402,
+      "stars": 69363,
       "source": "smithery"
     },
     {
@@ -363,7 +363,7 @@
     {
       "name": "Linkup",
       "type": "mcp",
-      "stars": 25379,
+      "stars": 25671,
       "source": "smithery"
     },
     {
@@ -392,11 +392,11 @@
     }
   ],
   "quality": {
-    "with_description": 2796,
-    "with_tags": 2411,
-    "with_repo": 2789,
-    "with_license": 908,
-    "verified": 17
+    "with_description": 2844,
+    "with_tags": 2451,
+    "with_repo": 2837,
+    "with_license": 952,
+    "verified": 18
   },
   "errors": []
 }
