@@ -1,45 +1,45 @@
 {
-  "scraped_at": "2026-02-24T06:53:34.722520+00:00",
-  "total_items": 2848,
+  "scraped_at": "2026-02-25T06:56:04.239625+00:00",
+  "total_items": 2856,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
-    "mcp": 1431,
-    "skill": 1405,
-    "a2a": 12
+    "mcp": 1432,
+    "skill": 1411,
+    "a2a": 13
   },
   "by_source": {
-    "smithery": 170,
-    "github": 2678
+    "smithery": 172,
+    "github": 2684
   },
   "by_category": {
-    "ai-ml": 1701,
-    "general": 255,
-    "devops": 206,
+    "ai-ml": 1702,
+    "general": 258,
+    "devops": 208,
     "security": 125,
-    "documents": 110,
+    "documents": 109,
     "testing": 103,
-    "backend": 85,
+    "backend": 86,
     "code": 79,
     "productivity": 72,
-    "frontend": 67,
+    "frontend": 69,
     "data": 37,
     "communication": 8
   },
   "by_source_type": {
     "smithery": {
       "mcp": 98,
-      "skill": 72
+      "skill": 74
     },
     "github": {
-      "mcp": 1333,
-      "skill": 1333,
-      "a2a": 12
+      "mcp": 1334,
+      "skill": 1337,
+      "a2a": 13
     }
   },
   "top_repos": {
-    "sickn33/antigravity-awesome-skills": 887,
+    "sickn33/antigravity-awesome-skills": 890,
     "microsoft/skills": 111,
     "alirezarezvani/claude-skills": 60,
     "openai/skills": 32,
@@ -48,7 +48,7 @@
     "trailofbits/skills": 22,
     "WordPress/agent-skills": 13,
     "github/awesome-copilot": 12,
-    "anthropics/knowledge-work-plugins": 10,
+    "anthropics/knowledge-work-plugins": 12,
     "anthropics/claude-code": 8,
     "huggingface/skills": 8,
     "muratcankoylan/Agent-Skills-for-Context-Engineering": 8,
@@ -61,7 +61,7 @@
     "davila7/claude-code-templates": 5
   },
   "top_authors": {
-    "anthropics": 38,
+    "anthropics": 40,
     "github": 13,
     "davila7": 5,
     "vercel": 4,
@@ -83,17 +83,17 @@
     "payloadcms": 1
   },
   "stars_stats": {
-    "max": 4318374,
+    "max": 3948150,
     "min": 0,
-    "avg": 8562.88,
-    "with_stars": 1507,
-    "zero_stars": 1341
+    "avg": 8640.26,
+    "with_stars": 1513,
+    "zero_stars": 1343
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 4318374,
+      "stars": 3948150,
       "source": "smithery"
     },
     {
@@ -141,43 +141,43 @@
     {
       "name": "everything",
       "type": "mcp",
-      "stars": 79233,
+      "stars": 79335,
       "source": "github"
     },
     {
       "name": "filesystem",
       "type": "mcp",
-      "stars": 79233,
+      "stars": 79335,
       "source": "github"
     },
     {
       "name": "memory",
       "type": "mcp",
-      "stars": 79233,
+      "stars": 79335,
       "source": "github"
     },
     {
       "name": "sequential-thinking",
       "type": "mcp",
-      "stars": 79233,
+      "stars": 79335,
       "source": "github"
     },
     {
       "name": "brand-guidelines",
       "type": "skill",
-      "stars": 74299,
+      "stars": 75147,
       "source": "github"
     },
     {
       "name": "template-skill",
       "type": "skill",
-      "stars": 74299,
+      "stars": 75147,
       "source": "github"
     },
     {
       "name": "AI Research Assistant",
       "type": "mcp",
-      "stars": 70276,
+      "stars": 70057,
       "source": "smithery"
     },
     {
@@ -357,7 +357,13 @@
     {
       "name": "Linkup",
       "type": "mcp",
-      "stars": 27147,
+      "stars": 28328,
+      "source": "smithery"
+    },
+    {
+      "name": "Clay MCP",
+      "type": "mcp",
+      "stars": 27420,
       "source": "smithery"
     },
     {
@@ -383,20 +389,14 @@
       "type": "skill",
       "stars": 20589,
       "source": "smithery"
-    },
-    {
-      "name": "git-commit",
-      "type": "skill",
-      "stars": 20589,
-      "source": "smithery"
     }
   ],
   "quality": {
-    "with_description": 2842,
-    "with_tags": 2451,
-    "with_repo": 2834,
-    "with_license": 952,
-    "verified": 19
+    "with_description": 2850,
+    "with_tags": 2457,
+    "with_repo": 2840,
+    "with_license": 955,
+    "verified": 21
   },
   "errors": []
 }
