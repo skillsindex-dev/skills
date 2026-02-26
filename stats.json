@@ -1,31 +1,31 @@
 {
-  "scraped_at": "2026-02-25T06:56:04.239625+00:00",
-  "total_items": 2856,
+  "scraped_at": "2026-02-26T06:52:42.092552+00:00",
+  "total_items": 2892,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
-    "mcp": 1432,
-    "skill": 1411,
+    "mcp": 1436,
+    "skill": 1443,
     "a2a": 13
   },
   "by_source": {
     "smithery": 172,
-    "github": 2684
+    "github": 2720
   },
   "by_category": {
-    "ai-ml": 1702,
-    "general": 258,
-    "devops": 208,
-    "security": 125,
-    "documents": 109,
-    "testing": 103,
-    "backend": 86,
-    "code": 79,
-    "productivity": 72,
-    "frontend": 69,
-    "data": 37,
-    "communication": 8
+    "ai-ml": 1710,
+    "general": 264,
+    "devops": 204,
+    "security": 137,
+    "testing": 130,
+    "documents": 123,
+    "code": 88,
+    "backend": 87,
+    "frontend": 77,
+    "data": 41,
+    "productivity": 21,
+    "communication": 10
   },
   "by_source_type": {
     "smithery": {
@@ -33,13 +33,13 @@
       "skill": 74
     },
     "github": {
-      "mcp": 1334,
-      "skill": 1337,
+      "mcp": 1338,
+      "skill": 1369,
       "a2a": 13
     }
   },
   "top_repos": {
-    "sickn33/antigravity-awesome-skills": 890,
+    "sickn33/antigravity-awesome-skills": 922,
     "microsoft/skills": 111,
     "alirezarezvani/claude-skills": 60,
     "openai/skills": 32,
@@ -72,7 +72,6 @@
     "openclaw": 2,
     "microsoft": 2,
     "langchain-ai": 2,
-    "anirbanbasu": 2,
     "icons8community": 2,
     "CaullenOmdahl": 2,
     "exa": 1,
@@ -80,20 +79,21 @@
     "shubhamsaboo": 1,
     "hamid-vakilzadeh": 1,
     "metabase": 1,
-    "payloadcms": 1
+    "payloadcms": 1,
+    "clay-inc": 1
   },
   "stars_stats": {
-    "max": 3948150,
+    "max": 3575443,
     "min": 0,
-    "avg": 8640.26,
-    "with_stars": 1513,
-    "zero_stars": 1343
+    "avg": 8748.92,
+    "with_stars": 1545,
+    "zero_stars": 1347
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 3948150,
+      "stars": 3575443,
       "source": "smithery"
     },
     {
@@ -141,43 +141,43 @@
     {
       "name": "everything",
       "type": "mcp",
-      "stars": 79335,
+      "stars": 79432,
       "source": "github"
     },
     {
       "name": "filesystem",
       "type": "mcp",
-      "stars": 79335,
+      "stars": 79432,
       "source": "github"
     },
     {
       "name": "memory",
       "type": "mcp",
-      "stars": 79335,
+      "stars": 79432,
       "source": "github"
     },
     {
       "name": "sequential-thinking",
       "type": "mcp",
-      "stars": 79335,
+      "stars": 79432,
       "source": "github"
     },
     {
       "name": "brand-guidelines",
       "type": "skill",
-      "stars": 75147,
+      "stars": 76155,
       "source": "github"
     },
     {
       "name": "template-skill",
       "type": "skill",
-      "stars": 75147,
+      "stars": 76155,
       "source": "github"
     },
     {
       "name": "AI Research Assistant",
       "type": "mcp",
-      "stars": 70057,
+      "stars": 68875,
       "source": "smithery"
     },
     {
@@ -331,6 +331,12 @@
       "source": "smithery"
     },
     {
+      "name": "Clay MCP",
+      "type": "mcp",
+      "stars": 37183,
+      "source": "smithery"
+    },
+    {
       "name": "analyzing-financial-statements",
       "type": "skill",
       "stars": 32676,
@@ -357,13 +363,7 @@
     {
       "name": "Linkup",
       "type": "mcp",
-      "stars": 28328,
-      "source": "smithery"
-    },
-    {
-      "name": "Clay MCP",
-      "type": "mcp",
-      "stars": 27420,
+      "stars": 28553,
       "source": "smithery"
     },
     {
@@ -392,11 +392,11 @@
     }
   ],
   "quality": {
-    "with_description": 2850,
-    "with_tags": 2457,
-    "with_repo": 2840,
-    "with_license": 955,
-    "verified": 21
+    "with_description": 2891,
+    "with_tags": 2487,
+    "with_repo": 2876,
+    "with_license": 987,
+    "verified": 22
   },
   "errors": []
 }
