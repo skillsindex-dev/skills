@@ -1,36 +1,36 @@
 {
-  "scraped_at": "2026-02-27T06:44:29.899891+00:00",
-  "total_items": 2893,
+  "scraped_at": "2026-02-28T06:29:49.486527+00:00",
+  "total_items": 2894,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
     "mcp": 1436,
-    "skill": 1444,
+    "skill": 1445,
     "a2a": 13
   },
   "by_source": {
-    "smithery": 172,
+    "smithery": 173,
     "github": 2721
   },
   "by_category": {
-    "ai-ml": 1711,
-    "general": 263,
-    "devops": 204,
-    "security": 136,
-    "testing": 130,
-    "documents": 123,
-    "code": 89,
+    "ai-ml": 1709,
+    "general": 277,
+    "devops": 213,
+    "security": 125,
+    "documents": 110,
+    "testing": 102,
     "backend": 87,
-    "frontend": 77,
-    "data": 41,
-    "productivity": 22,
-    "communication": 10
+    "code": 80,
+    "productivity": 74,
+    "frontend": 70,
+    "data": 39,
+    "communication": 8
   },
   "by_source_type": {
     "smithery": {
       "mcp": 98,
-      "skill": 74
+      "skill": 75
     },
     "github": {
       "mcp": 1338,
@@ -39,7 +39,7 @@
     }
   },
   "top_repos": {
-    "sickn33/antigravity-awesome-skills": 922,
+    "sickn33/antigravity-awesome-skills": 910,
     "microsoft/skills": 111,
     "alirezarezvani/claude-skills": 60,
     "openai/skills": 32,
@@ -49,6 +49,7 @@
     "WordPress/agent-skills": 13,
     "anthropics/knowledge-work-plugins": 13,
     "github/awesome-copilot": 12,
+    "netlify/context-and-tools": 12,
     "anthropics/claude-code": 8,
     "huggingface/skills": 8,
     "muratcankoylan/Agent-Skills-for-Context-Engineering": 8,
@@ -57,22 +58,21 @@
     "getsentry/skills": 7,
     "google-labs-code/stitch-skills": 6,
     "transloadit/skills": 6,
-    "modelcontextprotocol/servers": 5,
-    "davila7/claude-code-templates": 5
+    "modelcontextprotocol/servers": 5
   },
   "top_authors": {
-    "anthropics": 41,
+    "anthropics": 42,
     "github": 13,
     "davila7": 5,
     "vercel": 4,
     "openai": 3,
     "smithery-ai": 3,
     "devbrother2024": 3,
-    "xiaobenyang-com": 3,
     "openclaw": 2,
     "microsoft": 2,
     "langchain-ai": 2,
     "icons8community": 2,
+    "xiaobenyang-com": 2,
     "CaullenOmdahl": 2,
     "exa": 1,
     "pytorch": 1,
@@ -83,17 +83,17 @@
     "LinkupPlatform": 1
   },
   "stars_stats": {
-    "max": 3106866,
+    "max": 2810910,
     "min": 0,
-    "avg": 8754.2,
-    "with_stars": 1546,
+    "avg": 8824.84,
+    "with_stars": 1547,
     "zero_stars": 1347
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 3106866,
+      "stars": 2810910,
       "source": "smithery"
     },
     {
@@ -141,47 +141,41 @@
     {
       "name": "everything",
       "type": "mcp",
-      "stars": 79528,
+      "stars": 79652,
       "source": "github"
     },
     {
       "name": "filesystem",
       "type": "mcp",
-      "stars": 79528,
+      "stars": 79652,
       "source": "github"
     },
     {
       "name": "memory",
       "type": "mcp",
-      "stars": 79528,
+      "stars": 79652,
       "source": "github"
     },
     {
       "name": "sequential-thinking",
       "type": "mcp",
-      "stars": 79528,
-      "source": "github"
-    },
-    {
-      "name": "brand-guidelines",
-      "type": "skill",
-      "stars": 77736,
+      "stars": 79652,
       "source": "github"
     },
     {
       "name": "template-skill",
       "type": "skill",
-      "stars": 77736,
+      "stars": 78840,
       "source": "github"
     },
     {
-      "name": "AI Research Assistant",
-      "type": "mcp",
-      "stars": 67452,
+      "name": "algorithmic-art",
+      "type": "skill",
+      "stars": 66293,
       "source": "smithery"
     },
     {
-      "name": "algorithmic-art",
+      "name": "brand-guidelines",
       "type": "skill",
       "stars": 66293,
       "source": "smithery"
@@ -307,6 +301,12 @@
       "source": "smithery"
     },
     {
+      "name": "AI Research Assistant",
+      "type": "mcp",
+      "stars": 64285,
+      "source": "smithery"
+    },
+    {
       "name": "frontend-design",
       "type": "skill",
       "stars": 63077,
@@ -327,7 +327,7 @@
     {
       "name": "Clay MCP",
       "type": "mcp",
-      "stars": 38387,
+      "stars": 41659,
       "source": "smithery"
     },
     {
@@ -357,7 +357,7 @@
     {
       "name": "Linkup",
       "type": "mcp",
-      "stars": 28495,
+      "stars": 28571,
       "source": "smithery"
     },
     {
@@ -392,10 +392,10 @@
     }
   ],
   "quality": {
-    "with_description": 2892,
-    "with_tags": 2488,
-    "with_repo": 2877,
-    "with_license": 987,
+    "with_description": 2889,
+    "with_tags": 2474,
+    "with_repo": 2878,
+    "with_license": 975,
     "verified": 22
   },
   "errors": []
