@@ -1,31 +1,31 @@
 {
-  "scraped_at": "2026-02-28T06:29:49.486527+00:00",
-  "total_items": 2894,
+  "scraped_at": "2026-03-01T06:38:08.504251+00:00",
+  "total_items": 2898,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
     "mcp": 1436,
-    "skill": 1445,
+    "skill": 1449,
     "a2a": 13
   },
   "by_source": {
     "smithery": 173,
-    "github": 2721
+    "github": 2725
   },
   "by_category": {
-    "ai-ml": 1709,
+    "ai-ml": 1712,
     "general": 277,
     "devops": 213,
     "security": 125,
     "documents": 110,
     "testing": 102,
     "backend": 87,
-    "code": 80,
-    "productivity": 74,
+    "code": 81,
+    "productivity": 73,
     "frontend": 70,
     "data": 39,
-    "communication": 8
+    "communication": 9
   },
   "by_source_type": {
     "smithery": {
@@ -34,12 +34,12 @@
     },
     "github": {
       "mcp": 1338,
-      "skill": 1370,
+      "skill": 1374,
       "a2a": 13
     }
   },
   "top_repos": {
-    "sickn33/antigravity-awesome-skills": 910,
+    "sickn33/antigravity-awesome-skills": 914,
     "microsoft/skills": 111,
     "alirezarezvani/claude-skills": 60,
     "openai/skills": 32,
@@ -67,10 +67,9 @@
     "vercel": 4,
     "openai": 3,
     "smithery-ai": 3,
-    "devbrother2024": 3,
     "openclaw": 2,
-    "microsoft": 2,
     "langchain-ai": 2,
+    "devbrother2024": 2,
     "icons8community": 2,
     "xiaobenyang-com": 2,
     "CaullenOmdahl": 2,
@@ -80,20 +79,21 @@
     "hamid-vakilzadeh": 1,
     "metabase": 1,
     "clay-inc": 1,
-    "LinkupPlatform": 1
+    "LinkupPlatform": 1,
+    "slack": 1
   },
   "stars_stats": {
-    "max": 2810910,
+    "max": 2494567,
     "min": 0,
-    "avg": 8824.84,
-    "with_stars": 1547,
+    "avg": 8898.09,
+    "with_stars": 1551,
     "zero_stars": 1347
   },
   "top_items": [
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 2810910,
+      "stars": 2494567,
       "source": "smithery"
     },
     {
@@ -133,39 +133,33 @@
       "source": "smithery"
     },
     {
-      "name": "playwright-cli",
-      "type": "skill",
-      "stars": 82347,
-      "source": "smithery"
-    },
-    {
       "name": "everything",
       "type": "mcp",
-      "stars": 79652,
+      "stars": 79738,
       "source": "github"
     },
     {
       "name": "filesystem",
       "type": "mcp",
-      "stars": 79652,
+      "stars": 79738,
       "source": "github"
     },
     {
       "name": "memory",
       "type": "mcp",
-      "stars": 79652,
+      "stars": 79738,
       "source": "github"
     },
     {
       "name": "sequential-thinking",
       "type": "mcp",
-      "stars": 79652,
+      "stars": 79738,
       "source": "github"
     },
     {
       "name": "template-skill",
       "type": "skill",
-      "stars": 78840,
+      "stars": 79659,
       "source": "github"
     },
     {
@@ -301,15 +295,15 @@
       "source": "smithery"
     },
     {
-      "name": "AI Research Assistant",
-      "type": "mcp",
-      "stars": 64285,
-      "source": "smithery"
-    },
-    {
       "name": "frontend-design",
       "type": "skill",
       "stars": 63077,
+      "source": "smithery"
+    },
+    {
+      "name": "AI Research Assistant",
+      "type": "mcp",
+      "stars": 62935,
       "source": "smithery"
     },
     {
@@ -327,7 +321,7 @@
     {
       "name": "Clay MCP",
       "type": "mcp",
-      "stars": 41659,
+      "stars": 41931,
       "source": "smithery"
     },
     {
@@ -357,7 +351,7 @@
     {
       "name": "Linkup",
       "type": "mcp",
-      "stars": 28571,
+      "stars": 29152,
       "source": "smithery"
     },
     {
@@ -389,14 +383,20 @@
       "type": "skill",
       "stars": 20589,
       "source": "smithery"
+    },
+    {
+      "name": "github-issues",
+      "type": "skill",
+      "stars": 20589,
+      "source": "smithery"
     }
   ],
   "quality": {
-    "with_description": 2889,
-    "with_tags": 2474,
-    "with_repo": 2878,
-    "with_license": 975,
-    "verified": 22
+    "with_description": 2893,
+    "with_tags": 2479,
+    "with_repo": 2880,
+    "with_license": 979,
+    "verified": 24
   },
   "errors": []
 }
