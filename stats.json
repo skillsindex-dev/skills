@@ -1,44 +1,44 @@
 {
-  "scraped_at": "2026-03-19T07:19:44.712380+00:00",
-  "total_items": 4167,
+  "scraped_at": "2026-03-20T07:10:58.848475+00:00",
+  "total_items": 4166,
   "sources_scraped": 18,
   "sources_successful": 17,
   "sources_failed": 1,
   "by_type": {
-    "mcp": 2104,
-    "skill": 2044,
+    "mcp": 2102,
+    "skill": 2045,
     "a2a": 19
   },
   "by_source": {
-    "smithery": 485,
-    "github": 3682
+    "smithery": 479,
+    "github": 3687
   },
   "by_category": {
-    "ai-ml": 2273,
-    "general": 605,
-    "devops": 226,
+    "ai-ml": 2276,
+    "general": 603,
+    "devops": 225,
     "testing": 183,
-    "documents": 175,
+    "documents": 174,
     "security": 174,
-    "backend": 164,
+    "backend": 161,
     "code": 107,
     "frontend": 99,
-    "data": 92,
-    "productivity": 48,
-    "communication": 21
+    "data": 95,
+    "productivity": 49,
+    "communication": 20
   },
   "by_source_type": {
     "smithery": {
-      "mcp": 485
+      "mcp": 479
     },
     "github": {
-      "skill": 2044,
-      "mcp": 1619,
+      "skill": 2045,
+      "mcp": 1623,
       "a2a": 19
     }
   },
   "top_repos": {
-    "sickn33/antigravity-awesome-skills": 1247,
+    "sickn33/antigravity-awesome-skills": 1248,
     "alirezarezvani/claude-skills": 170,
     "microsoft/skills": 111,
     "phuryn/pm-skills": 65,
@@ -60,342 +60,342 @@
     "getsentry/skills": 7
   },
   "top_authors": {
-    "node2flow": 7,
-    "openclaw-ai": 5,
+    "smithery-ai": 6,
+    "node2flow": 6,
+    "openclaw-ai": 6,
+    "emmanuel": 6,
     "santiago.blanco.vilchez": 5,
-    "smithery-ai": 4,
     "hithereiamaliff": 4,
-    "emmanuel": 4,
-    "pinkpixel-dev": 3,
+    "luis.ticas1": 4,
     "arjunkmrm": 3,
-    "luis.ticas1": 3,
-    "markchiang": 3,
-    "osamah96": 3,
-    "acedatacloud-mcp": 3,
+    "Tasfiul-Hedayet": 3,
+    "Polaralias": 3,
     "icons8community": 2,
     "aryankeluskar": 2,
+    "pinkpixel-dev": 2,
     "CaullenOmdahl": 2,
-    "xiaobenyang-com": 2,
-    "chuhuoyuan": 2,
     "agentidx": 2,
+    "chuhuoyuan": 2,
+    "xiaobenyang-com": 2,
+    "AITutor3": 2,
     "seahbk1006": 2,
-    "AITutor3": 2
+    "janwilmake": 2
   },
   "stars_stats": {
-    "max": 237613,
+    "max": 276887,
     "min": 0,
-    "avg": 10364.9,
-    "with_stars": 2445,
-    "zero_stars": 1722
+    "avg": 10500.7,
+    "with_stars": 2437,
+    "zero_stars": 1729
   },
   "top_items": [
     {
       "name": "Instagram",
       "type": "mcp",
-      "stars": 237613,
-      "source": "smithery"
-    },
-    {
-      "name": "algorithmic-art",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "brand-guidelines",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "canvas-design",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "claude-api",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "doc-coauthoring",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "docx",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "frontend-design",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "internal-comms",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "mcp-builder",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "pdf",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "pptx",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "skill-creator",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "slack-gif-creator",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "template-skill",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "theme-factory",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "web-artifacts-builder",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "webapp-testing",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "xlsx",
-      "type": "skill",
-      "stars": 97211,
-      "source": "github"
-    },
-    {
-      "name": "everything",
-      "type": "mcp",
-      "stars": 81483,
-      "source": "github"
-    },
-    {
-      "name": "filesystem",
-      "type": "mcp",
-      "stars": 81483,
-      "source": "github"
-    },
-    {
-      "name": "memory",
-      "type": "mcp",
-      "stars": 81483,
-      "source": "github"
-    },
-    {
-      "name": "sequential-thinking",
-      "type": "mcp",
-      "stars": 81483,
-      "source": "github"
-    },
-    {
-      "name": "Clay MCP",
-      "type": "mcp",
-      "stars": 79938,
+      "stars": 276887,
       "source": "smithery"
     },
     {
       "name": "Math-MCP",
       "type": "mcp",
-      "stars": 66478,
+      "stars": 112900,
+      "source": "smithery"
+    },
+    {
+      "name": "algorithmic-art",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "brand-guidelines",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "canvas-design",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "claude-api",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "doc-coauthoring",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "docx",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "frontend-design",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "internal-comms",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "mcp-builder",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "pdf",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "pptx",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "skill-creator",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "slack-gif-creator",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "template-skill",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "theme-factory",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "web-artifacts-builder",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "webapp-testing",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "xlsx",
+      "type": "skill",
+      "stars": 98100,
+      "source": "github"
+    },
+    {
+      "name": "everything",
+      "type": "mcp",
+      "stars": 81588,
+      "source": "github"
+    },
+    {
+      "name": "filesystem",
+      "type": "mcp",
+      "stars": 81588,
+      "source": "github"
+    },
+    {
+      "name": "memory",
+      "type": "mcp",
+      "stars": 81588,
+      "source": "github"
+    },
+    {
+      "name": "sequential-thinking",
+      "type": "mcp",
+      "stars": 81588,
+      "source": "github"
+    },
+    {
+      "name": "Clay MCP",
+      "type": "mcp",
+      "stars": 79385,
       "source": "smithery"
     },
     {
       "name": "AI Research Assistant",
       "type": "mcp",
-      "stars": 57001,
+      "stars": 53792,
       "source": "smithery"
     },
     {
       "name": "Exa Search",
       "type": "mcp",
-      "stars": 39341,
+      "stars": 39232,
       "source": "smithery"
     },
     {
       "name": "Google Sheets",
       "type": "mcp",
-      "stars": 35629,
+      "stars": 36956,
       "source": "smithery"
     },
     {
       "name": "Linkup",
       "type": "mcp",
-      "stars": 33434,
+      "stars": 33646,
+      "source": "smithery"
+    },
+    {
+      "name": "Slack",
+      "type": "mcp",
+      "stars": 26783,
       "source": "smithery"
     },
     {
       "name": "00-andruia-consultant",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "007",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "10-andruia-skill-smith",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "20-andruia-niche-intelligence",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "2d-games",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "3d-games",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "3d-web-experience",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "ab-test-setup",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "acceptance-orchestrator",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "accessibility-compliance-accessibility-audit",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "active-directory-attacks",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "activecampaign-automation",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "address-github-comments",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "advanced-evaluation",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "advogado-criminal",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "advogado-especialista",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "agent-evaluation",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "agent-framework-azure-ai-py",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "agent-manager-skill",
       "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     },
     {
       "name": "agent-memory-mcp",
       "type": "skill",
-      "stars": 25749,
-      "source": "github"
-    },
-    {
-      "name": "agent-memory-systems",
-      "type": "skill",
-      "stars": 25749,
+      "stars": 25997,
       "source": "github"
     }
   ],
   "quality": {
-    "with_description": 4113,
-    "with_tags": 3366,
-    "with_repo": 4121,
-    "with_license": 1422,
-    "verified": 23
+    "with_description": 4111,
+    "with_tags": 3362,
+    "with_repo": 4119,
+    "with_license": 1423,
+    "verified": 24
   },
   "errors": [
     {
