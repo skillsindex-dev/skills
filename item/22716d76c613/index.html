@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>suguvisa-mcp — MCP Server | SkillsIndex</title>
+    <meta name="title" content="suguvisa-mcp — MCP Server | SkillsIndex">
+    <meta name="description" content="日本の特定技能ビザ申請を自動化するMCPサーバー。申請種別判定、必要書類リスト、期限計算、データ検証に対応。   **日本の特定技能（SSW）ビザ申請業務を、AIチャットだけで完結させる業界唯一のMCPサーバー。** ...">
+    <meta name="keywords" content="suguvisa-mcp, mcp, ai-ml, chat, claude, document, excel">
+    <meta name="author" content="a-kabe-1qio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skillsindex-dev.github.io/skills/item/22716d76c613/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillsindex-dev.github.io/skills/item/22716d76c613/">
+    <meta property="og:title" content="suguvisa-mcp — MCP Server">
+    <meta property="og:description" content="日本の特定技能ビザ申請を自動化するMCPサーバー。申請種別判定、必要書類リスト、期限計算、データ検証に対応。   **日本の特定技能（SSW）ビザ申請業務を、AIチャットだけで完結させる業界唯一のMCPサーバー。** ...">
+    <meta property="og:site_name" content="SkillsIndex">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://skillsindex-dev.github.io/skills/item/22716d76c613/">
+    <meta property="twitter:title" content="suguvisa-mcp — MCP Server">
+    <meta property="twitter:description" content="日本の特定技能ビザ申請を自動化するMCPサーバー。申請種別判定、必要書類リスト、期限計算、データ検証に対応。   **日本の特定技能（SSW）ビザ申請業務を、AIチャットだけで完結させる業界唯一のMCPサーバー。** ...">
+
+    <!-- Structured Data: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "suguvisa-mcp",
+        "description": "\u65e5\u672c\u306e\u7279\u5b9a\u6280\u80fd\u30d3\u30b6\u7533\u8acb\u3092\u81ea\u52d5\u5316\u3059\u308bMCP\u30b5\u30fc\u30d0\u30fc\u3002\u7533\u8acb\u7a2e\u5225\u5224\u5b9a\u3001\u5fc5\u8981\u66f8\u985e\u30ea\u30b9\u30c8\u3001\u671f\u9650\u8a08\u7b97\u3001\u30c7\u30fc\u30bf\u691c\u8a3c\u306b\u5bfe\u5fdc\u3002\n\n **\u65e5\u672c\u306e\u7279\u5b9a\u6280\u80fd\uff08SSW\uff09\u30d3\u30b6\u7533\u8acb\u696d\u52d9\u3092\u3001AI\u30c1\u30e3\u30c3\u30c8\u3060\u3051\u3067\u5b8c\u7d50\u3055\u305b\u308b\u696d\u754c\u552f\u4e00\u306eMCP\u30b5\u30fc\u30d0\u30fc\u3002**\n\n\u884c\u653f\u66f8\u58eb\u30fb\u767b\u9332\u652f\u63f4\u6a5f\u95a2\u30fb\u53d7\u5165\u308c\u6a5f\u95a2\u304c\u65e5\u5e38\u7684\u306b\u884c\u3046\u30d3\u30b6\u7533\u8acb\u696d\u52d9\u2014\u2014\u7533\u8acb\u7a2e\u5225\u306e\u5224\u5b9a\u3001\u5fc5\u8981\u66f8\u985e\u306e\u6d17\u3044\u51fa\u3057\u3001\u671f\u9650\u7ba1\u7406\u3001\u66f8\u985e\u751f\u6210\u2014\u2014\u3092 **18\u7a2e\u306eAI\u30c4\u30fc\u30eb** \u3067\u81ea\u52d5\u5316\u3002Claude\u3001ChatGPT\u3001Cursor\u3001Windsurf \u7b49\u306eAI\u30a2\u30b7\u30b9\u30bf\u30f3\u30c8\u306b\u76f4\u63a5\u7d44\u307f\u8fbc\u3093\u3067\u4f7f\u3048\u307e\u3059\u3002\n\n### \u2728 \u3067\u304d\u308b\u3053\u3068\n\n- \ud83d\udd0d **\u7533\u8acb\u30d1\u30bf\u30fc\u30f3\u306e\u81ea\u52d5\u5224\u5b9a** \u2014 \u300c\u6280\u80fd\u5b9f\u7fd22\u53f7\u2192\u7279\u5b9a\u6280\u80fd1\u53f7\u300d\u306e\u3088\u3046\u306b\u73fe\u5728\u3068\u7533\u8acb\u5148\u306e\u30d3\u30b6\u3092\u4f1d\u3048\u308b\u3060\u3051\u3067\u3001\u6b63\u5f0f\u306a\u7533\u8acb\u7a2e\u5225\u30fb\u4f7f\u7528\u69d8\u5f0f\u30fb\u6a19\u6e96\u51e6\u7406\u671f\u9593\u30fb\u8a66\u9a13\u514d\u9664\u6761\u4ef6\u3092\u77ac\u6642\u306b\u7279\u5b9a\n- \ud83d\udccb **\u5fc5\u8981\u66f8\u985e\u30ea\u30b9\u30c8\u306e\u81ea\u52d5\u751f\u6210** \u2014 130\u4ee5\u4e0a\u306e\u7533\u8acb\u30d1\u30bf\u30fc\u30f3\u306b\u5bfe\u5fdc\u3002\u300c2\u5e74\u4ee5\u5185\u306e\u540c\u4e00\u6a5f\u95a2\u7533\u8acb\u3067\u7701\u7565\u53ef\u300d\u300c\u767b\u9332\u652f\u63f4\u6a5f\u95a2\u3078\u306e\u59d4\u8a17\u3067\u4e0d\u8981\u300d\u7b49\u306e\u7701\u7565\u6761\u4ef6\u3092\u81ea\u52d5\u9069\u7528\n- \u23f0 **\u671f\u9650\u8a08\u7b97** \u2014 \u968f\u6642\u5c4a\u51fa\u306e14\u65e5\u30eb\u30fc\u30eb\u3001\u66f4\u65b0\u7533\u8acb\u306e3\u30f6\u6708\u524d\u958b\u59cb\u65e5\u3001\u901a\u7b97\u5728\u75595\u5e74\u4e0a\u9650\u30c1\u30a7\u30c3\u30af\u3001\u8a8d\u5b9a\u8a3c\u660e\u66f8\u306e\u6709\u52b9\u671f\u9650\u3092\u81ea",
+        "applicationCategory": "ai-ml",
+        "operatingSystem": "Claude Code, Claude Desktop",
+        "url": "https://sugu-kuru.co.jp/",
+        "author": {
+            "@type": "Person",
+            "name": "a-kabe-1qio"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.0",
+            "ratingCount": "0"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "SkillsIndex",
+                "item": "https://skillsindex-dev.github.io/skills/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "MCP Servers",
+                "item": "https://skillsindex-dev.github.io/skills/?type=mcp"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "suguvisa-mcp",
+                "item": "https://skillsindex-dev.github.io/skills/item/22716d76c613/"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/skills/item.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/skills/" class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                <span>SkillsIndex</span>
+            </a>
+            <div class="nav-links">
+                <a href="/skills/catalog/">Catalog</a>
+                <a href="/skills/kits/">Kits</a>
+                <a href="/skills/docs/">Docs</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Back Link -->
+            <a href="/skills/catalog/" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Catalog
+            </a>
+
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/skills/">Home</a>
+                <span class="breadcrumb-sep">/</span>
+                <a href="/skills/catalog/?type=mcp">MCP Servers</a>
+                <span class="breadcrumb-sep">/</span>
+                <span>suguvisa-mcp</span>
+            </nav>
+
+            <!-- Item Header -->
+            <header class="item-header">
+                <span class="item-type-badge mcp">mcp</span>
+                <h1 class="item-title">suguvisa-mcp</h1>
+                <div class="item-meta">
+                    
+                    
+                    <span class="item-meta-item">by a-kabe-1qio</span>
+                    
+                    <span class="item-meta-item">ai-ml</span>
+                    
+                </div>
+            </header>
+
+            <!-- Description -->
+            <p class="item-description">日本の特定技能ビザ申請を自動化するMCPサーバー。申請種別判定、必要書類リスト、期限計算、データ検証に対応。
+
+ **日本の特定技能（SSW）ビザ申請業務を、AIチャットだけで完結させる業界唯一のMCPサーバー。**
+
+行政書士・登録支援機関・受入れ機関が日常的に行うビザ申請業務——申請種別の判定、必要書類の洗い出し、期限管理、書類生成——を **18種のAIツール** で自動化。Claude、ChatGPT、Cursor、Windsurf 等のAIアシスタントに直接組み込んで使えます。
+
+### ✨ できること
+
+- 🔍 **申請パターンの自動判定** — 「技能実習2号→特定技能1号」のように現在と申請先のビザを伝えるだけで、正式な申請種別・使用様式・標準処理期間・試験免除条件を瞬時に特定
+- 📋 **必要書類リストの自動生成** — 130以上の申請パターンに対応。「2年以内の同一機関申請で省略可」「登録支援機関への委託で不要」等の省略条件を自動適用
+- ⏰ **期限計算** — 随時届出の14日ルール、更新申請の3ヶ月前開始日、通算在留5年上限チェック、認定証明書の有効期限を自</p>
+
+            <!-- Tags -->
+            
+            <div class="tags">
+                
+                <a href="/skills/catalog/?q=chat" class="tag">chat</a>
+                
+                <a href="/skills/catalog/?q=claude" class="tag">claude</a>
+                
+                <a href="/skills/catalog/?q=document" class="tag">document</a>
+                
+                <a href="/skills/catalog/?q=excel" class="tag">excel</a>
+                
+            </div>
+            
+
+            <!-- Actions -->
+            <div class="actions">
+                
+                <a href="https://sugu-kuru.co.jp/" target="_blank" rel="noopener" class="btn btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                    </svg>
+                    View Source
+                </a>
+                
+                
+                <a href="https://sugu-kuru.co.jp/" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    Repository
+                </a>
+                
+                <button class="btn btn-secondary" onclick="toggleFavorite('22716d76c613')" id="fav-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                    </svg>
+                    <span id="fav-text">Favorite</span>
+                </button>
+            </div>
+
+            <!-- Info Card -->
+            <div class="info-card">
+                <h2 class="info-card-title">Details</h2>
+                <div class="info-row">
+                    <span class="info-label">Type</span>
+                    <span class="info-value">MCP Server</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Category</span>
+                    <span class="info-value">ai-ml</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Source</span>
+                    <span class="info-value">smithery</span>
+                </div>
+                
+                <div class="info-row">
+                    <span class="info-label">Author</span>
+                    <span class="info-value">a-kabe-1qio</span>
+                </div>
+                
+                
+                <div class="info-row">
+                    <span class="info-label">Repository</span>
+                    <span class="info-value"><a href="https://sugu-kuru.co.jp/" target="_blank" rel="noopener">a-kabe-1qio/suguvisa-mcp</a></span>
+                </div>
+                
+                
+                <div class="info-row">
+                    <span class="info-label">Last Updated</span>
+                    <span class="info-value">Apr 12, 2026</span>
+                </div>
+                
+                
+            </div>
+
+            <!-- Installation -->
+            <div class="install-section">
+                <h2 class="install-title">Installation</h2>
+                
+                <div class="install-method">
+                    <div class="install-label">Claude Code CLI</div>
+                    <code class="install-code">claude mcp add suguvisa-mcp</code>
+                </div>
+                <div class="install-method">
+                    <div class="install-label">Claude Desktop (claude_desktop_config.json)</div>
+                    <code class="install-code">{"mcpServers": {"suguvisa-mcp": {"command": "npx", "args": ["-y", "@suguvisa-mcp"]}}}</code>
+                </div>
+        
+            </div>
+
+            <!-- Share -->
+            <div class="share-section">
+                <div class="share-title">Share this mcp</div>
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareTwitter()">Twitter</button>
+                    <button class="share-btn" onclick="shareLinkedIn()">LinkedIn</button>
+                    <button class="share-btn" onclick="copyLink()">Copy Link</button>
+                </div>
+            </div>
+
+            <!-- Related Items -->
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <svg class="logo-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                <span>SkillsIndex</span>
+            </div>
+            <div class="footer-links">
+                <a href="/skills/">Catalog</a>
+                <a href="https://github.com/skillsindex-dev/data" target="_blank" rel="noopener">Data</a>
+                <a href="https://smithery.ai" target="_blank" rel="noopener">Smithery</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Item data for hydration
+        window.__ITEM__ = {"id": "22716d76c613", "type": "mcp", "name": "suguvisa-mcp", "description": "日本の特定技能ビザ申請を自動化するMCPサーバー。申請種別判定、必要書類リスト、期限計算、データ検証に対応。\n\n **日本の特定技能（SSW）ビザ申請業務を、AIチャットだけで完結させる業界唯一のMCPサーバー。**\n\n行政書士・登録支援機関・受入れ機関が日常的に行うビザ申請業務——申請種別の判定、必要書類の洗い出し、期限管理、書類生成——を **18種のAIツール** で自動化。Claude、ChatGPT、Cursor、Windsurf 等のAIアシスタントに直接組み込んで使えます。\n\n### ✨ できること\n\n- 🔍 **申請パターンの自動判定** — 「技能実習2号→特定技能1号」のように現在と申請先のビザを伝えるだけで、正式な申請種別・使用様式・標準処理期間・試験免除条件を瞬時に特定\n- 📋 **必要書類リストの自動生成** — 130以上の申請パターンに対応。「2年以内の同一機関申請で省略可」「登録支援機関への委託で不要」等の省略条件を自動適用\n- ⏰ **期限計算** — 随時届出の14日ルール、更新申請の3ヶ月前開始日、通算在留5年上限チェック、認定証明書の有効期限を自", "source": "smithery", "repo": "a-kabe-1qio/suguvisa-mcp", "path": "", "stars": 0, "last_commit": "2026-04-12T02:30:57.636Z", "category": "ai-ml", "tags": ["chat", "claude", "document", "excel"], "raw_url": "https://sugu-kuru.co.jp/", "repo_url": "https://sugu-kuru.co.jp/", "license": "", "author": "a-kabe-1qio", "verified": false, "scraped_at": "2026-04-12T07:40:16.886272+00:00"};
+
+        // Favorites
+        function getFavorites() {
+            return JSON.parse(localStorage.getItem('skillsindex_favorites') || '[]');
+        }
+
+        function toggleFavorite(id) {
+            const favs = getFavorites();
+            const idx = favs.indexOf(id);
+            if (idx === -1) {
+                favs.push(id);
+            } else {
+                favs.splice(idx, 1);
+            }
+            localStorage.setItem('skillsindex_favorites', JSON.stringify(favs));
+            updateFavButton(id);
+        }
+
+        function updateFavButton(id) {
+            const favs = getFavorites();
+            const isFav = favs.includes(id);
+            const btn = document.getElementById('fav-btn');
+            const text = document.getElementById('fav-text');
+            if (isFav) {
+                btn.style.borderColor = 'var(--accent)';
+                btn.style.color = 'var(--accent)';
+                text.textContent = 'Favorited';
+            } else {
+                btn.style.borderColor = '';
+                btn.style.color = '';
+                text.textContent = 'Favorite';
+            }
+        }
+
+        // Share functions
+        function shareTwitter() {
+            const text = encodeURIComponent('Check out suguvisa-mcp on SkillsIndex!');
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+        }
+
+        function shareLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = originalText, 2000);
+            });
+        }
+
+        // Init
+        updateFavButton('22716d76c613');
+    </script>
+</body>
+</html>
