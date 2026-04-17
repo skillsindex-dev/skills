@@ -7,8 +7,8 @@
     <!-- Primary Meta Tags -->
     <title>claude-api — Skill | SkillsIndex</title>
     <meta name="title" content="claude-api — Skill | SkillsIndex">
-    <meta name="description" content="Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. TRIGGER when: code imports...">
-    <meta name="keywords" content="claude-api, skill, ai-ml, agent, anthropic, claude, code, data">
+    <meta name="description" content="Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude...">
+    <meta name="keywords" content="claude-api, skill, ai-ml, agent, anthropic, claude, code, debug">
     <meta name="author" content="">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://skillsindex-dev.github.io/skills/item/eb7436e15bea/">
@@ -17,14 +17,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://skillsindex-dev.github.io/skills/item/eb7436e15bea/">
     <meta property="og:title" content="claude-api — Skill">
-    <meta property="og:description" content="Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. TRIGGER when: code imports...">
+    <meta property="og:description" content="Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude...">
     <meta property="og:site_name" content="SkillsIndex">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://skillsindex-dev.github.io/skills/item/eb7436e15bea/">
     <meta property="twitter:title" content="claude-api — Skill">
-    <meta property="twitter:description" content="Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. TRIGGER when: code imports...">
+    <meta property="twitter:description" content="Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude...">
 
     <!-- Structured Data: SoftwareApplication -->
     <script type="application/ld+json">
@@ -32,7 +32,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "claude-api",
-        "description": "Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. TRIGGER when: code imports anthropic/@anthropic-ai/sdk; user asks to use the Claude API, Anthropic SDKs, or Managed Agents (/v1/agents, /v1/sessions, /v1/environments). DO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks.",
+        "description": "Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 \u2192 4.6, 4.6 \u2192 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (Opus/Sonnet/Haiku) in a file; questions about prompt caching / cache hit rate in an Anthropic SDK project. SKIP: file imports `openai`/other-provider SDK, filename like `*-openai.py`/`*-generic.py`, provider-neutral code, general programming/ML.",
         "applicationCategory": "ai-ml",
         "operatingSystem": "Claude Code, Claude Desktop",
         "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/claude-api/SKILL.md",
@@ -43,7 +43,7 @@
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.5",
-            "ratingCount": "118392"
+            "ratingCount": "119182"
         },
         "offers": {
             "@type": "Offer",
@@ -136,7 +136,7 @@
                 <h1 class="item-title">claude-api</h1>
                 <div class="item-meta">
                     
-                    <span class="item-meta-item item-stars">★ 118.4K</span>
+                    <span class="item-meta-item item-stars">★ 119.2K</span>
                     
                     
                     <span class="item-meta-item">ai-ml</span>
@@ -145,7 +145,7 @@
             </header>
 
             <!-- Description -->
-            <p class="item-description">Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. TRIGGER when: code imports anthropic/@anthropic-ai/sdk; user asks to use the Claude API, Anthropic SDKs, or Managed Agents (/v1/agents, /v1/sessions, /v1/environments). DO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks.</p>
+            <p class="item-description">Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 → 4.6, 4.6 → 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (Opus/Sonnet/Haiku) in a file; questions about prompt caching / cache hit rate in an Anthropic SDK project. SKIP: file imports `openai`/other-provider SDK, filename like `*-openai.py`/`*-generic.py`, provider-neutral code, general programming/ML.</p>
 
             <!-- Tags -->
             
@@ -159,15 +159,11 @@
                 
                 <a href="/skills/catalog/?q=code" class="tag">code</a>
                 
-                <a href="/skills/catalog/?q=data" class="tag">data</a>
-                
                 <a href="/skills/catalog/?q=debug" class="tag">debug</a>
                 
                 <a href="/skills/catalog/?q=openai" class="tag">openai</a>
                 
                 <a href="/skills/catalog/?q=prompt" class="tag">prompt</a>
-                
-                <a href="/skills/catalog/?q=task" class="tag">task</a>
                 
             </div>
             
@@ -223,7 +219,7 @@
                 
                 <div class="info-row">
                     <span class="info-label">Last Updated</span>
-                    <span class="info-value">Apr 13, 2026</span>
+                    <span class="info-value">Apr 16, 2026</span>
                 </div>
                 
                 
@@ -278,7 +274,7 @@
 
     <script>
         // Item data for hydration
-        window.__ITEM__ = {"id": "eb7436e15bea", "type": "skill", "name": "claude-api", "description": "Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. TRIGGER when: code imports anthropic/@anthropic-ai/sdk; user asks to use the Claude API, Anthropic SDKs, or Managed Agents (/v1/agents, /v1/sessions, /v1/environments). DO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks.", "source": "github", "repo": "anthropics/skills", "path": "skills/claude-api/SKILL.md", "stars": 118392, "last_commit": "2026-04-13T20:37:42Z", "category": "ai-ml", "tags": ["agent", "anthropic", "claude", "code", "data", "debug", "openai", "prompt", "task"], "raw_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/claude-api/SKILL.md", "repo_url": "https://github.com/anthropics/skills", "license": "", "scraped_at": "2026-04-16T07:58:06.564485+00:00"};
+        window.__ITEM__ = {"id": "eb7436e15bea", "type": "skill", "name": "claude-api", "description": "Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 → 4.6, 4.6 → 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (Opus/Sonnet/Haiku) in a file; questions about prompt caching / cache hit rate in an Anthropic SDK project. SKIP: file imports `openai`/other-provider SDK, filename like `*-openai.py`/`*-generic.py`, provider-neutral code, general programming/ML.", "source": "github", "repo": "anthropics/skills", "path": "skills/claude-api/SKILL.md", "stars": 119182, "last_commit": "2026-04-16T19:12:59Z", "category": "ai-ml", "tags": ["agent", "anthropic", "claude", "code", "debug", "openai", "prompt"], "raw_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/claude-api/SKILL.md", "repo_url": "https://github.com/anthropics/skills", "license": "", "scraped_at": "2026-04-17T07:48:40.861340+00:00"};
 
         // Favorites
         function getFavorites() {
