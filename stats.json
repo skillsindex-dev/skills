@@ -1,36 +1,36 @@
 {
-  "scraped_at": "2026-06-29T10:30:29.974180+00:00",
-  "total_items": 5960,
+  "scraped_at": "2026-06-30T09:23:36.628063+00:00",
+  "total_items": 5961,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
-    "skill": 2865,
-    "mcp": 3061,
+    "skill": 2864,
+    "mcp": 3063,
     "a2a": 34
   },
   "by_source": {
-    "smithery": 552,
+    "smithery": 553,
     "github": 5408
   },
   "by_category": {
-    "ai-ml": 3591,
-    "general": 792,
-    "testing": 258,
+    "ai-ml": 3599,
+    "general": 787,
+    "testing": 255,
     "documents": 235,
+    "security": 186,
+    "code": 184,
     "devops": 184,
-    "security": 183,
-    "code": 183,
-    "backend": 166,
-    "frontend": 147,
-    "data": 121,
-    "productivity": 65,
-    "communication": 35
+    "backend": 163,
+    "frontend": 145,
+    "data": 123,
+    "productivity": 66,
+    "communication": 34
   },
   "by_source_type": {
     "smithery": {
-      "skill": 284,
-      "mcp": 268
+      "skill": 283,
+      "mcp": 270
     },
     "github": {
       "skill": 2581,
@@ -44,49 +44,49 @@
     "NVIDIA/skills": 153,
     "phuryn/pm-skills": 65,
     "LambdaTest/agent-skills": 48,
-    "anthropics/knowledge-work-plugins": 48,
+    "anthropics/knowledge-work-plugins": 47,
     "deanpeters/Product-Manager-Skills": 46,
     "zebbern/claude-code-guide": 46,
-    "openai/skills": 34,
+    "openai/skills": 33,
     "coreyhaines31/marketingskills": 32,
     "mrgoonie/claudekit-skills": 32,
+    "github/awesome-copilot": 31,
     "davila7/claude-code-templates": 31,
-    "github/awesome-copilot": 29,
     "google/skills": 19,
     "veniceai/skills": 19,
     "anthropics/skills": 17,
     "realkimbarrett/advertising-skills": 12,
     "openclaw/openclaw": 11,
-    "Shubhamsaboo/awesome-llm-apps": 11,
+    "Shubhamsaboo/awesome-llm-apps": 10,
     "anthropics/claude-code": 10
   },
   "top_authors": {
     "anthropics": 84,
-    "openai": 45,
+    "openai": 42,
+    "github": 32,
     "davila7": 31,
-    "github": 30,
     "openclaw": 11,
-    "shubhamsaboo": 11,
-    "vercel": 10,
     "pytorch": 10,
+    "shubhamsaboo": 10,
+    "vercel": 9,
     "cyanheads": 9,
     "cloudflare": 9,
     "vdineshk": 8,
-    "ruvnet": 5,
+    "ruvnet": 6,
     "affaan-m": 4,
-    "composiohq": 4,
     "wshobson": 4,
+    "bouch": 4,
+    "composiohq": 3,
     "code-yeongyu": 3,
-    "bouch": 3,
-    "benzsevern": 3,
-    "smithery-ai": 2,
-    "upstash": 2
+    "K-Dense-AI": 3,
+    "lobehub": 2,
+    "smithery-ai": 2
   },
   "stars_stats": {
     "max": 178203,
     "min": 0,
-    "avg": 17048.26,
-    "with_stars": 3137,
+    "avg": 17059.88,
+    "with_stars": 3138,
     "zero_stars": 2823
   },
   "top_items": [
@@ -133,12 +133,6 @@
       "source": "smithery"
     },
     {
-      "name": "spotify-player",
-      "type": "skill",
-      "stars": 178203,
-      "source": "smithery"
-    },
-    {
       "name": "summarize",
       "type": "skill",
       "stars": 178203,
@@ -157,6 +151,12 @@
       "source": "smithery"
     },
     {
+      "name": "weather",
+      "type": "skill",
+      "stars": 178203,
+      "source": "smithery"
+    },
+    {
       "name": "n8n-conventions",
       "type": "skill",
       "stars": 173703,
@@ -165,13 +165,13 @@
     {
       "name": "claude-api",
       "type": "skill",
-      "stars": 156471,
+      "stars": 156817,
       "source": "github"
     },
     {
       "name": "template-skill",
       "type": "skill",
-      "stars": 156471,
+      "stars": 156817,
       "source": "github"
     },
     {
@@ -195,7 +195,7 @@
     {
       "name": "Math-MCP",
       "type": "mcp",
-      "stars": 113901,
+      "stars": 113849,
       "source": "smithery"
     },
     {
@@ -235,19 +235,13 @@
       "source": "smithery"
     },
     {
-      "name": "pyrefly-type-coverage",
-      "type": "skill",
-      "stars": 97267,
-      "source": "smithery"
-    },
-    {
       "name": "triaging-issues",
       "type": "skill",
       "stars": 97267,
       "source": "smithery"
     },
     {
-      "name": "data-analyst",
+      "name": "academic-researcher",
       "type": "skill",
       "stars": 92956,
       "source": "smithery"
@@ -289,12 +283,6 @@
       "source": "smithery"
     },
     {
-      "name": "python-expert",
-      "type": "skill",
-      "stars": 92956,
-      "source": "smithery"
-    },
-    {
       "name": "strategy-advisor",
       "type": "skill",
       "stars": 92956,
@@ -315,25 +303,25 @@
     {
       "name": "everything",
       "type": "mcp",
-      "stars": 87826,
+      "stars": 87877,
       "source": "github"
     },
     {
       "name": "filesystem",
       "type": "mcp",
-      "stars": 87826,
+      "stars": 87877,
       "source": "github"
     },
     {
       "name": "memory",
       "type": "mcp",
-      "stars": 87826,
+      "stars": 87877,
       "source": "github"
     },
     {
       "name": "sequential-thinking",
       "type": "mcp",
-      "stars": 87826,
+      "stars": 87877,
       "source": "github"
     },
     {
@@ -349,6 +337,12 @@
       "source": "smithery"
     },
     {
+      "name": "microcopy",
+      "type": "skill",
+      "stars": 72111,
+      "source": "smithery"
+    },
+    {
       "name": "project-overview",
       "type": "skill",
       "stars": 72111,
@@ -357,13 +351,13 @@
     {
       "name": "United States Weather",
       "type": "mcp",
-      "stars": 69322,
+      "stars": 69022,
       "source": "smithery"
     },
     {
       "name": "SparkForge",
       "type": "mcp",
-      "stars": 67251,
+      "stars": 66503,
       "source": "smithery"
     },
     {
@@ -389,14 +383,20 @@
       "type": "skill",
       "stars": 66293,
       "source": "smithery"
+    },
+    {
+      "name": "docx",
+      "type": "skill",
+      "stars": 66293,
+      "source": "smithery"
     }
   ],
   "quality": {
-    "with_description": 5925,
-    "with_tags": 4978,
-    "with_repo": 5938,
+    "with_description": 5926,
+    "with_tags": 4984,
+    "with_repo": 5939,
     "with_license": 1987,
-    "verified": 32
+    "verified": 31
   },
   "errors": []
 }
