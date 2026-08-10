@@ -1,36 +1,36 @@
 {
-  "scraped_at": "2026-08-09T06:45:47.154496+00:00",
-  "total_items": 6854,
+  "scraped_at": "2026-08-10T07:19:47.768024+00:00",
+  "total_items": 6844,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
-    "mcp": 3620,
-    "skill": 3198,
+    "mcp": 3608,
+    "skill": 3200,
     "a2a": 36
   },
   "by_source": {
-    "smithery": 560,
+    "smithery": 550,
     "github": 6294
   },
   "by_category": {
-    "ai-ml": 4303,
-    "general": 818,
-    "testing": 287,
-    "documents": 255,
-    "code": 204,
-    "security": 200,
-    "devops": 196,
-    "backend": 182,
-    "frontend": 173,
+    "ai-ml": 4290,
+    "general": 819,
+    "testing": 284,
+    "documents": 256,
+    "code": 207,
+    "security": 199,
+    "devops": 195,
+    "backend": 180,
+    "frontend": 177,
     "data": 126,
-    "productivity": 76,
-    "communication": 34
+    "productivity": 75,
+    "communication": 36
   },
   "by_source_type": {
     "smithery": {
-      "mcp": 276,
-      "skill": 284
+      "mcp": 264,
+      "skill": 286
     },
     "github": {
       "skill": 2914,
@@ -44,49 +44,49 @@
     "NVIDIA/skills": 153,
     "phuryn/pm-skills": 65,
     "LambdaTest/agent-skills": 48,
+    "anthropics/knowledge-work-plugins": 47,
     "deanpeters/Product-Manager-Skills": 46,
     "zebbern/claude-code-guide": 46,
-    "anthropics/knowledge-work-plugins": 44,
-    "github/awesome-copilot": 33,
     "coreyhaines31/marketingskills": 32,
-    "openai/skills": 31,
+    "openai/skills": 32,
+    "github/awesome-copilot": 31,
     "mrgoonie/claudekit-skills": 31,
-    "davila7/claude-code-templates": 25,
+    "davila7/claude-code-templates": 24,
     "google/skills": 19,
     "veniceai/skills": 19,
     "anthropics/skills": 17,
     "Shubhamsaboo/awesome-llm-apps": 12,
     "realkimbarrett/advertising-skills": 12,
-    "openclaw/openclaw": 11,
+    "openclaw/openclaw": 10,
     "anthropics/claude-code": 10
   },
   "top_authors": {
-    "anthropics": 80,
-    "axel-belfort": 52,
-    "openai": 42,
-    "github": 33,
-    "davila7": 25,
-    "openclaw": 18,
+    "anthropics": 82,
+    "axel-belfort": 44,
+    "openai": 43,
+    "github": 31,
+    "davila7": 24,
+    "cyanheads": 18,
+    "openclaw": 17,
     "shubhamsaboo": 12,
-    "vercel": 10,
-    "pytorch": 9,
-    "cloudflare": 8,
+    "pytorch": 10,
+    "vercel": 9,
+    "nexgendata-apify": 9,
+    "cloudflare": 7,
+    "wshobson": 6,
     "vdineshk": 6,
-    "nexgendata-apify": 6,
-    "wshobson": 5,
-    "ruvnet": 5,
-    "heavysword1": 5,
-    "bouch": 3,
+    "ruvnet": 4,
+    "heavysword1": 4,
     "composiohq": 3,
+    "code-yeongyu": 3,
     "pipeworx": 2,
-    "upstash": 2,
-    "code-yeongyu": 2
+    "upstash": 2
   },
   "stars_stats": {
     "max": 419012,
     "min": 0,
-    "avg": 18176.93,
-    "with_stars": 3478,
+    "avg": 18201.82,
+    "with_stars": 3468,
     "zero_stars": 3376
   },
   "top_items": [
@@ -99,13 +99,7 @@
     {
       "name": "SparkForge",
       "type": "mcp",
-      "stars": 179537,
-      "source": "smithery"
-    },
-    {
-      "name": "blogwatcher",
-      "type": "skill",
-      "stars": 178203,
+      "stars": 180884,
       "source": "smithery"
     },
     {
@@ -121,13 +115,13 @@
       "source": "smithery"
     },
     {
-      "name": "imsg",
+      "name": "himalaya",
       "type": "skill",
       "stars": 178203,
       "source": "smithery"
     },
     {
-      "name": "local-places",
+      "name": "imsg",
       "type": "skill",
       "stars": 178203,
       "source": "smithery"
@@ -171,13 +165,13 @@
     {
       "name": "claude-api",
       "type": "skill",
-      "stars": 167101,
+      "stars": 167300,
       "source": "github"
     },
     {
       "name": "template-skill",
       "type": "skill",
-      "stars": 167101,
+      "stars": 167300,
       "source": "github"
     },
     {
@@ -253,6 +247,12 @@
       "source": "smithery"
     },
     {
+      "name": "academic-researcher",
+      "type": "skill",
+      "stars": 92956,
+      "source": "smithery"
+    },
+    {
       "name": "data-analyst",
       "type": "skill",
       "stars": 92956,
@@ -277,6 +277,12 @@
       "source": "smithery"
     },
     {
+      "name": "fact-checker",
+      "type": "skill",
+      "stars": 92956,
+      "source": "smithery"
+    },
+    {
       "name": "fullstack-developer",
       "type": "skill",
       "stars": 92956,
@@ -284,18 +290,6 @@
     },
     {
       "name": "meeting-notes",
-      "type": "skill",
-      "stars": 92956,
-      "source": "smithery"
-    },
-    {
-      "name": "project-planner",
-      "type": "skill",
-      "stars": 92956,
-      "source": "smithery"
-    },
-    {
-      "name": "python-expert",
       "type": "skill",
       "stars": 92956,
       "source": "smithery"
@@ -325,34 +319,34 @@
       "source": "smithery"
     },
     {
+      "name": "Brave Search",
+      "type": "mcp",
+      "stars": 89669,
+      "source": "smithery"
+    },
+    {
       "name": "everything",
       "type": "mcp",
-      "stars": 89356,
+      "stars": 89389,
       "source": "github"
     },
     {
       "name": "filesystem",
       "type": "mcp",
-      "stars": 89356,
+      "stars": 89389,
       "source": "github"
     },
     {
       "name": "memory",
       "type": "mcp",
-      "stars": 89356,
+      "stars": 89389,
       "source": "github"
     },
     {
       "name": "sequential-thinking",
       "type": "mcp",
-      "stars": 89356,
+      "stars": 89389,
       "source": "github"
-    },
-    {
-      "name": "Brave Search",
-      "type": "mcp",
-      "stars": 76767,
-      "source": "smithery"
     },
     {
       "name": "algorithmic-art",
@@ -389,12 +383,18 @@
       "type": "skill",
       "stars": 66293,
       "source": "smithery"
+    },
+    {
+      "name": "mcp-builder",
+      "type": "skill",
+      "stars": 66293,
+      "source": "smithery"
     }
   ],
   "quality": {
-    "with_description": 6831,
-    "with_tags": 5832,
-    "with_repo": 6844,
+    "with_description": 6823,
+    "with_tags": 5823,
+    "with_repo": 6834,
     "with_license": 2304,
     "verified": 13
   },
