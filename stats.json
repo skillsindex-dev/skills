@@ -1,92 +1,92 @@
 {
-  "scraped_at": "2026-09-27T11:11:27.816628+00:00",
-  "total_items": 7982,
+  "scraped_at": "2026-09-28T12:36:58.194525+00:00",
+  "total_items": 7974,
   "sources_scraped": 18,
   "sources_successful": 18,
   "sources_failed": 0,
   "by_type": {
     "mcp": 4338,
-    "skill": 3605,
+    "skill": 3597,
     "a2a": 39
   },
   "by_source": {
-    "smithery": 547,
-    "github": 7435
+    "smithery": 532,
+    "github": 7442
   },
   "by_category": {
-    "ai-ml": 5019,
-    "general": 937,
+    "ai-ml": 5021,
+    "general": 934,
     "security": 317,
-    "testing": 299,
-    "documents": 266,
-    "devops": 243,
+    "testing": 298,
+    "documents": 267,
+    "devops": 242,
     "code": 218,
-    "backend": 200,
+    "backend": 201,
     "frontend": 189,
-    "data": 153,
-    "productivity": 96,
-    "communication": 45
+    "data": 150,
+    "productivity": 94,
+    "communication": 43
   },
   "by_source_type": {
     "smithery": {
       "mcp": 262,
-      "skill": 285
+      "skill": 270
     },
     "github": {
-      "skill": 3320,
+      "skill": 3327,
       "mcp": 4076,
       "a2a": 39
     }
   },
   "top_repos": {
-    "sickn33/antigravity-awesome-skills": 2418,
+    "sickn33/antigravity-awesome-skills": 2422,
     "alirezarezvani/claude-skills": 324,
     "phuryn/pm-skills": 65,
     "LambdaTest/agent-skills": 48,
-    "anthropics/knowledge-work-plugins": 48,
     "deanpeters/Product-Manager-Skills": 46,
     "zebbern/claude-code-guide": 46,
-    "github/awesome-copilot": 34,
+    "anthropics/knowledge-work-plugins": 45,
+    "github/awesome-copilot": 33,
     "coreyhaines31/marketingskills": 31,
     "mrgoonie/claudekit-skills": 31,
-    "openai/skills": 30,
+    "openai/skills": 29,
     "anthropics/skills": 19,
     "google/skills": 19,
     "veniceai/skills": 19,
-    "davila7/claude-code-templates": 17,
     "openclaw/openclaw": 14,
+    "Shubhamsaboo/awesome-llm-apps": 13,
     "realkimbarrett/advertising-skills": 12,
-    "Shubhamsaboo/awesome-llm-apps": 11,
+    "davila7/claude-code-templates": 11,
     "anthropics/claude-code": 10,
-    "openclaw/skills": 10
+    "openclaw/skills": 9
   },
   "top_authors": {
-    "anthropics": 85,
-    "openai": 41,
-    "github": 35,
-    "cyanheads": 31,
-    "openclaw": 24,
-    "davila7": 17,
-    "shubhamsaboo": 11,
-    "vercel": 10,
-    "pytorch": 9,
-    "cloudflare": 8,
+    "anthropics": 80,
+    "openai": 39,
+    "github": 34,
+    "cyanheads": 32,
+    "openclaw": 23,
+    "shubhamsaboo": 13,
+    "davila7": 11,
+    "pytorch": 10,
+    "vercel": 9,
+    "cloudflare": 7,
+    "ruvnet": 5,
     "nexgendata-apify": 5,
-    "wshobson": 4,
-    "basedhardware": 3,
+    "bouch": 3,
+    "composiohq": 3,
+    "code-yeongyu": 3,
+    "wshobson": 3,
     "pipeworx": 2,
-    "bouch": 2,
-    "code-yeongyu": 2,
     "smithery-ai": 2,
-    "ruvnet": 2,
-    "iofficeai": 2,
-    "longbridge": 2
+    "longbridge": 2,
+    "hithereiamaliff": 2
   },
   "stars_stats": {
     "max": 419019,
     "min": 0,
-    "avg": 19137.5,
-    "with_stars": 3871,
+    "avg": 19179.88,
+    "with_stars": 3863,
     "zero_stars": 4111
   },
   "top_items": [
@@ -111,29 +111,29 @@
     {
       "name": "academy-guide",
       "type": "skill",
-      "stars": 178606,
+      "stars": 178751,
       "source": "github"
     },
     {
       "name": "claude-api",
       "type": "skill",
-      "stars": 178606,
+      "stars": 178751,
       "source": "github"
     },
     {
       "name": "discernment-nudge",
       "type": "skill",
-      "stars": 178606,
+      "stars": 178751,
       "source": "github"
     },
     {
       "name": "template-skill",
       "type": "skill",
-      "stars": 178606,
+      "stars": 178751,
       "source": "github"
     },
     {
-      "name": "blogwatcher",
+      "name": "apple-notes",
       "type": "skill",
       "stars": 178203,
       "source": "smithery"
@@ -163,12 +163,6 @@
       "source": "smithery"
     },
     {
-      "name": "imsg",
-      "type": "skill",
-      "stars": 178203,
-      "source": "smithery"
-    },
-    {
       "name": "nano-pdf",
       "type": "skill",
       "stars": 178203,
@@ -176,12 +170,6 @@
     },
     {
       "name": "obsidian",
-      "type": "skill",
-      "stars": 178203,
-      "source": "smithery"
-    },
-    {
-      "name": "ordercli",
       "type": "skill",
       "stars": 178203,
       "source": "smithery"
@@ -217,9 +205,15 @@
       "source": "smithery"
     },
     {
-      "name": "n8n-conventions",
+      "name": "weather",
       "type": "skill",
-      "stars": 173703,
+      "stars": 178203,
+      "source": "smithery"
+    },
+    {
+      "name": "bird",
+      "type": "skill",
+      "stars": 143701,
       "source": "smithery"
     },
     {
@@ -283,6 +277,12 @@
       "source": "smithery"
     },
     {
+      "name": "academic-researcher",
+      "type": "skill",
+      "stars": 92956,
+      "source": "smithery"
+    },
+    {
       "name": "data-analyst",
       "type": "skill",
       "stars": 92956,
@@ -314,6 +314,12 @@
     },
     {
       "name": "fullstack-developer",
+      "type": "skill",
+      "stars": 92956,
+      "source": "smithery"
+    },
+    {
+      "name": "meeting-notes",
       "type": "skill",
       "stars": 92956,
       "source": "smithery"
@@ -351,37 +357,31 @@
     {
       "name": "everything",
       "type": "mcp",
-      "stars": 90617,
+      "stars": 90642,
       "source": "github"
     },
     {
       "name": "filesystem",
       "type": "mcp",
-      "stars": 90617,
+      "stars": 90642,
       "source": "github"
     },
     {
       "name": "memory",
       "type": "mcp",
-      "stars": 90617,
+      "stars": 90642,
       "source": "github"
     },
     {
       "name": "sequential-thinking",
       "type": "mcp",
-      "stars": 90617,
+      "stars": 90642,
       "source": "github"
     },
     {
       "name": "Brave Search",
       "type": "mcp",
       "stars": 87579,
-      "source": "smithery"
-    },
-    {
-      "name": "writing-dev-server-tests",
-      "type": "skill",
-      "stars": 87189,
       "source": "smithery"
     },
     {
@@ -392,10 +392,10 @@
     }
   ],
   "quality": {
-    "with_description": 7966,
-    "with_tags": 6700,
-    "with_repo": 7970,
-    "with_license": 2792,
+    "with_description": 7958,
+    "with_tags": 6690,
+    "with_repo": 7962,
+    "with_license": 2795,
     "verified": 16
   },
   "errors": []
