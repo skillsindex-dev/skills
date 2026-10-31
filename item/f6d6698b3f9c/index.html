@@ -7,8 +7,8 @@
     <!-- Primary Meta Tags -->
     <title>markdown-html-orchestrator — Skill | SkillsIndex</title>
     <meta name="title" content="markdown-html-orchestrator — Skill | SkillsIndex">
-    <meta name="description" content="Use when a user wants to convert any markdown file in their Claude project into a single-file, lightly-interactive HTML — long-form documents (specs, plans,...">
-    <meta name="keywords" content="markdown-html-orchestrator, skill, ai-ml, anthropic, claude, code, document, html">
+    <meta name="description" content="Use when the user wants a markdown file turned into a single-file interactive HTML page (document, code review or slide deck). Classifies it with...">
+    <meta name="keywords" content="markdown-html-orchestrator, skill, documents, code, document, html, markdown">
     <meta name="author" content="">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://skillsindex-dev.github.io/skills/item/f6d6698b3f9c/">
@@ -17,14 +17,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://skillsindex-dev.github.io/skills/item/f6d6698b3f9c/">
     <meta property="og:title" content="markdown-html-orchestrator — Skill">
-    <meta property="og:description" content="Use when a user wants to convert any markdown file in their Claude project into a single-file, lightly-interactive HTML — long-form documents (specs, plans,...">
+    <meta property="og:description" content="Use when the user wants a markdown file turned into a single-file interactive HTML page (document, code review or slide deck). Classifies it with...">
     <meta property="og:site_name" content="SkillsIndex">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://skillsindex-dev.github.io/skills/item/f6d6698b3f9c/">
     <meta property="twitter:title" content="markdown-html-orchestrator — Skill">
-    <meta property="twitter:description" content="Use when a user wants to convert any markdown file in their Claude project into a single-file, lightly-interactive HTML — long-form documents (specs, plans,...">
+    <meta property="twitter:description" content="Use when the user wants a markdown file turned into a single-file interactive HTML page (document, code review or slide deck). Classifies it with...">
 
     <!-- Structured Data: SoftwareApplication -->
     <script type="application/ld+json">
@@ -32,8 +32,8 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "markdown-html-orchestrator",
-        "description": "Use when a user wants to convert any markdown file in their Claude project into a single-file, lightly-interactive HTML \u2014 long-form documents (specs, plans, RFCs, reports, explainers), code reviews with diffs and severity-tagged annotations, or slide decks. Triggers on \"convert this markdown to HTML\", \"make this an HTML file\", \"turn this into an interactive document\", \"render this report as HTML\", \"PR writeup as HTML\", \"slides from this markdown\". Forks context to route to one of three converter sub-skills (md-document, md-review, md-slides) based on a deterministic doctype classifier, after the user has run the design-system onboarding once. Refuses if input is under 100 lines (per Shihipar \u2014 markdown still wins below the threshold) or design-system isn't onboarded. Distinct from Anthropic's official Playground plugin (which is interactive prompt-tuning controls with sliders/knobs/prompt-copy-back) and from marketing/landing/ (which is a landing-page generator).",
-        "applicationCategory": "ai-ml",
+        "description": "Use when the user wants a markdown file turned into a single-file interactive HTML page (document, code review or slide deck). Classifies it with doctype_classifier.py and routes to md-document, md-review or md-slides.",
+        "applicationCategory": "documents",
         "operatingSystem": "Claude Code, Claude Desktop",
         "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/markdown-html/skills/markdown-html-orchestrator/SKILL.md",
         "author": {
@@ -43,7 +43,7 @@
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.5",
-            "ratingCount": "29007"
+            "ratingCount": "29048"
         },
         "offers": {
             "@type": "Offer",
@@ -139,21 +139,17 @@
                     <span class="item-meta-item item-stars">★ 29.0K</span>
                     
                     
-                    <span class="item-meta-item">ai-ml</span>
+                    <span class="item-meta-item">documents</span>
                     
                 </div>
             </header>
 
             <!-- Description -->
-            <p class="item-description">Use when a user wants to convert any markdown file in their Claude project into a single-file, lightly-interactive HTML — long-form documents (specs, plans, RFCs, reports, explainers), code reviews with diffs and severity-tagged annotations, or slide decks. Triggers on &quot;convert this markdown to HTML&quot;, &quot;make this an HTML file&quot;, &quot;turn this into an interactive document&quot;, &quot;render this report as HTML&quot;, &quot;PR writeup as HTML&quot;, &quot;slides from this markdown&quot;. Forks context to route to one of three converter sub-skills (md-document, md-review, md-slides) based on a deterministic doctype classifier, after the user has run the design-system onboarding once. Refuses if input is under 100 lines (per Shihipar — markdown still wins below the threshold) or design-system isn&#x27;t onboarded. Distinct from Anthropic&#x27;s official Playground plugin (which is interactive prompt-tuning controls with sliders/knobs/prompt-copy-back) and from marketing/landing/ (which is a landing-page generator).</p>
+            <p class="item-description">Use when the user wants a markdown file turned into a single-file interactive HTML page (document, code review or slide deck). Classifies it with doctype_classifier.py and routes to md-document, md-review or md-slides.</p>
 
             <!-- Tags -->
             
             <div class="tags">
-                
-                <a href="/skills/catalog/?q=anthropic" class="tag">anthropic</a>
-                
-                <a href="/skills/catalog/?q=claude" class="tag">claude</a>
                 
                 <a href="/skills/catalog/?q=code" class="tag">code</a>
                 
@@ -162,8 +158,6 @@
                 <a href="/skills/catalog/?q=html" class="tag">html</a>
                 
                 <a href="/skills/catalog/?q=markdown" class="tag">markdown</a>
-                
-                <a href="/skills/catalog/?q=prompt" class="tag">prompt</a>
                 
             </div>
             
@@ -203,7 +197,7 @@
                 </div>
                 <div class="info-row">
                     <span class="info-label">Category</span>
-                    <span class="info-value">ai-ml</span>
+                    <span class="info-value">documents</span>
                 </div>
                 <div class="info-row">
                     <span class="info-label">Source</span>
@@ -219,7 +213,7 @@
                 
                 <div class="info-row">
                     <span class="info-label">Last Updated</span>
-                    <span class="info-value">Oct 29, 2026</span>
+                    <span class="info-value">Oct 31, 2026</span>
                 </div>
                 
                 
@@ -279,7 +273,7 @@
 
     <script>
         // Item data for hydration
-        window.__ITEM__ = {"id": "f6d6698b3f9c", "type": "skill", "name": "markdown-html-orchestrator", "description": "Use when a user wants to convert any markdown file in their Claude project into a single-file, lightly-interactive HTML — long-form documents (specs, plans, RFCs, reports, explainers), code reviews with diffs and severity-tagged annotations, or slide decks. Triggers on \"convert this markdown to HTML\", \"make this an HTML file\", \"turn this into an interactive document\", \"render this report as HTML\", \"PR writeup as HTML\", \"slides from this markdown\". Forks context to route to one of three converter sub-skills (md-document, md-review, md-slides) based on a deterministic doctype classifier, after the user has run the design-system onboarding once. Refuses if input is under 100 lines (per Shihipar — markdown still wins below the threshold) or design-system isn't onboarded. Distinct from Anthropic's official Playground plugin (which is interactive prompt-tuning controls with sliders/knobs/prompt-copy-back) and from marketing/landing/ (which is a landing-page generator).", "source": "github", "repo": "alirezarezvani/claude-skills", "path": "markdown-html/skills/markdown-html-orchestrator/SKILL.md", "stars": 29007, "last_commit": "2026-10-29T07:44:34Z", "category": "ai-ml", "tags": ["anthropic", "claude", "code", "document", "html", "markdown", "prompt"], "raw_url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/markdown-html/skills/markdown-html-orchestrator/SKILL.md", "repo_url": "https://github.com/alirezarezvani/claude-skills", "license": "MIT", "scraped_at": "2026-10-30T11:58:48.851211+00:00"};
+        window.__ITEM__ = {"id": "f6d6698b3f9c", "type": "skill", "name": "markdown-html-orchestrator", "description": "Use when the user wants a markdown file turned into a single-file interactive HTML page (document, code review or slide deck). Classifies it with doctype_classifier.py and routes to md-document, md-review or md-slides.", "source": "github", "repo": "alirezarezvani/claude-skills", "path": "markdown-html/skills/markdown-html-orchestrator/SKILL.md", "stars": 29048, "last_commit": "2026-10-31T11:28:59Z", "category": "documents", "tags": ["code", "document", "html", "markdown"], "raw_url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/markdown-html/skills/markdown-html-orchestrator/SKILL.md", "repo_url": "https://github.com/alirezarezvani/claude-skills", "license": "MIT", "scraped_at": "2026-10-31T11:31:28.352170+00:00"};
 
         // Favorites
         function getFavorites() {

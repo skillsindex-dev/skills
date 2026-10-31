@@ -7,8 +7,8 @@
     <!-- Primary Meta Tags -->
     <title>agent-launcher-orchestrator — Skill | SkillsIndex</title>
     <meta name="title" content="agent-launcher-orchestrator — Skill | SkillsIndex">
-    <meta name="description" content="Use when a user wants to build, launch, grade, or schedule a Claude Managed Agent (CMA) in their own Anthropic account — &quot;build me an agent&quot;, &quot;launch this...">
-    <meta name="keywords" content="agent-launcher-orchestrator, skill, ai-ml, agent, anthropic, auth, claude, code">
+    <meta name="description" content="Use when someone wants to build, launch, grade or schedule a Claude Managed Agent in their own Anthropic account (&#x27;build me an agent&#x27;, &#x27;run this nightly&#x27;)....">
+    <meta name="keywords" content="agent-launcher-orchestrator, skill, ai-ml, agent, anthropic, claude">
     <meta name="author" content="">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://skillsindex-dev.github.io/skills/item/7b3a1f5cf79b/">
@@ -17,14 +17,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://skillsindex-dev.github.io/skills/item/7b3a1f5cf79b/">
     <meta property="og:title" content="agent-launcher-orchestrator — Skill">
-    <meta property="og:description" content="Use when a user wants to build, launch, grade, or schedule a Claude Managed Agent (CMA) in their own Anthropic account — &quot;build me an agent&quot;, &quot;launch this...">
+    <meta property="og:description" content="Use when someone wants to build, launch, grade or schedule a Claude Managed Agent in their own Anthropic account (&#x27;build me an agent&#x27;, &#x27;run this nightly&#x27;)....">
     <meta property="og:site_name" content="SkillsIndex">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://skillsindex-dev.github.io/skills/item/7b3a1f5cf79b/">
     <meta property="twitter:title" content="agent-launcher-orchestrator — Skill">
-    <meta property="twitter:description" content="Use when a user wants to build, launch, grade, or schedule a Claude Managed Agent (CMA) in their own Anthropic account — &quot;build me an agent&quot;, &quot;launch this...">
+    <meta property="twitter:description" content="Use when someone wants to build, launch, grade or schedule a Claude Managed Agent in their own Anthropic account (&#x27;build me an agent&#x27;, &#x27;run this nightly&#x27;)....">
 
     <!-- Structured Data: SoftwareApplication -->
     <script type="application/ld+json">
@@ -32,7 +32,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "agent-launcher-orchestrator",
-        "description": "Use when a user wants to build, launch, grade, or schedule a Claude Managed Agent (CMA) in their own Anthropic account \u2014 \"build me an agent\", \"launch this as a managed agent\", \"run this on a schedule\", \"grade my agent against a rubric\", \"set up a nightly worker\". Reads the per-session goal (./my-agent/goal.json), routes deterministically to one of five phase sub-skills (interview \u2192 stage-launch \u2192 grade-iterate \u2192 run-without-you \u2192 wrap-up) via goal_router.py, and compiles the goal+phase into an execution shape (single-pass workflow / bounded grade\u2192iterate loop / recurring cron deployment loop) via loop_compiler.py. Forks context so heavy intake (build sheets, payloads, eval cases) stays out of the parent thread. All launches are emitted as BYOK curl the user runs with their own key; no tool makes API calls. Inspired by anthropics/launch-your-agent (Apache-2.0). Distinct from engineering/agent-harness (generic domain loop) and engineering/write-a-skill (authors Claude Code skills, not CMAs).",
+        "description": "Use when someone wants to build, launch, grade or schedule a Claude Managed Agent in their own Anthropic account ('build me an agent', 'run this nightly'). Reads the session goal, routes with goal_router.py and compiles the loop with loop_compiler.py.",
         "applicationCategory": "ai-ml",
         "operatingSystem": "Claude Code, Claude Desktop",
         "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/agent-launcher/skills/agent-launcher-orchestrator/SKILL.md",
@@ -43,7 +43,7 @@
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.5",
-            "ratingCount": "29007"
+            "ratingCount": "29048"
         },
         "offers": {
             "@type": "Offer",
@@ -145,7 +145,7 @@
             </header>
 
             <!-- Description -->
-            <p class="item-description">Use when a user wants to build, launch, grade, or schedule a Claude Managed Agent (CMA) in their own Anthropic account — &quot;build me an agent&quot;, &quot;launch this as a managed agent&quot;, &quot;run this on a schedule&quot;, &quot;grade my agent against a rubric&quot;, &quot;set up a nightly worker&quot;. Reads the per-session goal (./my-agent/goal.json), routes deterministically to one of five phase sub-skills (interview → stage-launch → grade-iterate → run-without-you → wrap-up) via goal_router.py, and compiles the goal+phase into an execution shape (single-pass workflow / bounded grade→iterate loop / recurring cron deployment loop) via loop_compiler.py. Forks context so heavy intake (build sheets, payloads, eval cases) stays out of the parent thread. All launches are emitted as BYOK curl the user runs with their own key; no tool makes API calls. Inspired by anthropics/launch-your-agent (Apache-2.0). Distinct from engineering/agent-harness (generic domain loop) and engineering/write-a-skill (authors Claude Code skills, not CMAs).</p>
+            <p class="item-description">Use when someone wants to build, launch, grade or schedule a Claude Managed Agent in their own Anthropic account (&#x27;build me an agent&#x27;, &#x27;run this nightly&#x27;). Reads the session goal, routes with goal_router.py and compiles the loop with loop_compiler.py.</p>
 
             <!-- Tags -->
             
@@ -155,13 +155,7 @@
                 
                 <a href="/skills/catalog/?q=anthropic" class="tag">anthropic</a>
                 
-                <a href="/skills/catalog/?q=auth" class="tag">auth</a>
-                
                 <a href="/skills/catalog/?q=claude" class="tag">claude</a>
-                
-                <a href="/skills/catalog/?q=code" class="tag">code</a>
-                
-                <a href="/skills/catalog/?q=deploy" class="tag">deploy</a>
                 
             </div>
             
@@ -217,7 +211,7 @@
                 
                 <div class="info-row">
                     <span class="info-label">Last Updated</span>
-                    <span class="info-value">Oct 29, 2026</span>
+                    <span class="info-value">Oct 31, 2026</span>
                 </div>
                 
                 
@@ -277,7 +271,7 @@
 
     <script>
         // Item data for hydration
-        window.__ITEM__ = {"id": "7b3a1f5cf79b", "type": "skill", "name": "agent-launcher-orchestrator", "description": "Use when a user wants to build, launch, grade, or schedule a Claude Managed Agent (CMA) in their own Anthropic account — \"build me an agent\", \"launch this as a managed agent\", \"run this on a schedule\", \"grade my agent against a rubric\", \"set up a nightly worker\". Reads the per-session goal (./my-agent/goal.json), routes deterministically to one of five phase sub-skills (interview → stage-launch → grade-iterate → run-without-you → wrap-up) via goal_router.py, and compiles the goal+phase into an execution shape (single-pass workflow / bounded grade→iterate loop / recurring cron deployment loop) via loop_compiler.py. Forks context so heavy intake (build sheets, payloads, eval cases) stays out of the parent thread. All launches are emitted as BYOK curl the user runs with their own key; no tool makes API calls. Inspired by anthropics/launch-your-agent (Apache-2.0). Distinct from engineering/agent-harness (generic domain loop) and engineering/write-a-skill (authors Claude Code skills, not CMAs).", "source": "github", "repo": "alirezarezvani/claude-skills", "path": "agent-launcher/skills/agent-launcher-orchestrator/SKILL.md", "stars": 29007, "last_commit": "2026-10-29T07:44:34Z", "category": "ai-ml", "tags": ["agent", "anthropic", "auth", "claude", "code", "deploy"], "raw_url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/agent-launcher/skills/agent-launcher-orchestrator/SKILL.md", "repo_url": "https://github.com/alirezarezvani/claude-skills", "license": "MIT", "scraped_at": "2026-10-30T11:58:48.851211+00:00"};
+        window.__ITEM__ = {"id": "7b3a1f5cf79b", "type": "skill", "name": "agent-launcher-orchestrator", "description": "Use when someone wants to build, launch, grade or schedule a Claude Managed Agent in their own Anthropic account ('build me an agent', 'run this nightly'). Reads the session goal, routes with goal_router.py and compiles the loop with loop_compiler.py.", "source": "github", "repo": "alirezarezvani/claude-skills", "path": "agent-launcher/skills/agent-launcher-orchestrator/SKILL.md", "stars": 29048, "last_commit": "2026-10-31T11:28:59Z", "category": "ai-ml", "tags": ["agent", "anthropic", "claude"], "raw_url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/agent-launcher/skills/agent-launcher-orchestrator/SKILL.md", "repo_url": "https://github.com/alirezarezvani/claude-skills", "license": "MIT", "scraped_at": "2026-10-31T11:31:28.352170+00:00"};
 
         // Favorites
         function getFavorites() {

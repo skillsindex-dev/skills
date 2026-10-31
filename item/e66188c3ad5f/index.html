@@ -7,8 +7,8 @@
     <!-- Primary Meta Tags -->
     <title>grade-iterate — Skill | SkillsIndex</title>
     <meta name="title" content="grade-iterate — Skill | SkillsIndex">
-    <meta name="description" content="Phase 3 of building a Claude Managed Agent — the bounded grade→iterate loop. Define a CMA outcome (a required markdown rubric graded by an isolated grader),...">
-    <meta name="keywords" content="grade-iterate, skill, ai-ml, agent, claude, markdown">
+    <meta name="description" content="Use when a launched managed agent needs grading against a rubric and improving (&#x27;grade my agent&#x27;, &#x27;is it good enough&#x27;). Builds the outcome with...">
+    <meta name="keywords" content="grade-iterate, skill, ai-ml, agent">
     <meta name="author" content="">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://skillsindex-dev.github.io/skills/item/e66188c3ad5f/">
@@ -17,14 +17,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://skillsindex-dev.github.io/skills/item/e66188c3ad5f/">
     <meta property="og:title" content="grade-iterate — Skill">
-    <meta property="og:description" content="Phase 3 of building a Claude Managed Agent — the bounded grade→iterate loop. Define a CMA outcome (a required markdown rubric graded by an isolated grader),...">
+    <meta property="og:description" content="Use when a launched managed agent needs grading against a rubric and improving (&#x27;grade my agent&#x27;, &#x27;is it good enough&#x27;). Builds the outcome with...">
     <meta property="og:site_name" content="SkillsIndex">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://skillsindex-dev.github.io/skills/item/e66188c3ad5f/">
     <meta property="twitter:title" content="grade-iterate — Skill">
-    <meta property="twitter:description" content="Phase 3 of building a Claude Managed Agent — the bounded grade→iterate loop. Define a CMA outcome (a required markdown rubric graded by an isolated grader),...">
+    <meta property="twitter:description" content="Use when a launched managed agent needs grading against a rubric and improving (&#x27;grade my agent&#x27;, &#x27;is it good enough&#x27;). Builds the outcome with...">
 
     <!-- Structured Data: SoftwareApplication -->
     <script type="application/ld+json">
@@ -32,7 +32,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "grade-iterate",
-        "description": "Phase 3 of building a Claude Managed Agent \u2014 the bounded grade\u2192iterate loop. Define a CMA outcome (a required markdown rubric graded by an isolated grader), read each verdict, decide the next move (sharpen / re-run / promote to schedule), and once a version passes, run held-back eval cases in parallel. Use when the user says \"grade my agent\", \"make it pass the rubric\", \"iterate until it's good\", \"is it good enough\", or when the orchestrator routes phase=grade-iterate. outcome_builder.py builds the user.define_outcome payload (rubric required, max_iterations clamped 1..20 \u2014 never unbounded); verdict_reader.py reads the grader result and recommends the next move; eval_scaffold.py generates held-back cases + a parallel run plan (capped at the 25-thread CMA ceiling). Distinct from stage-launch (first launch) and run-without-you (scheduling).",
+        "description": "Use when a launched managed agent needs grading against a rubric and improving ('grade my agent', 'is it good enough'). Builds the outcome with outcome_builder.py, reads verdicts with verdict_reader.py and runs held-back evals from eval_scaffold.py.",
         "applicationCategory": "ai-ml",
         "operatingSystem": "Claude Code, Claude Desktop",
         "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/agent-launcher/skills/grade-iterate/SKILL.md",
@@ -43,7 +43,7 @@
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.5",
-            "ratingCount": "29007"
+            "ratingCount": "29048"
         },
         "offers": {
             "@type": "Offer",
@@ -145,17 +145,13 @@
             </header>
 
             <!-- Description -->
-            <p class="item-description">Phase 3 of building a Claude Managed Agent — the bounded grade→iterate loop. Define a CMA outcome (a required markdown rubric graded by an isolated grader), read each verdict, decide the next move (sharpen / re-run / promote to schedule), and once a version passes, run held-back eval cases in parallel. Use when the user says &quot;grade my agent&quot;, &quot;make it pass the rubric&quot;, &quot;iterate until it&#x27;s good&quot;, &quot;is it good enough&quot;, or when the orchestrator routes phase=grade-iterate. outcome_builder.py builds the user.define_outcome payload (rubric required, max_iterations clamped 1..20 — never unbounded); verdict_reader.py reads the grader result and recommends the next move; eval_scaffold.py generates held-back cases + a parallel run plan (capped at the 25-thread CMA ceiling). Distinct from stage-launch (first launch) and run-without-you (scheduling).</p>
+            <p class="item-description">Use when a launched managed agent needs grading against a rubric and improving (&#x27;grade my agent&#x27;, &#x27;is it good enough&#x27;). Builds the outcome with outcome_builder.py, reads verdicts with verdict_reader.py and runs held-back evals from eval_scaffold.py.</p>
 
             <!-- Tags -->
             
             <div class="tags">
                 
                 <a href="/skills/catalog/?q=agent" class="tag">agent</a>
-                
-                <a href="/skills/catalog/?q=claude" class="tag">claude</a>
-                
-                <a href="/skills/catalog/?q=markdown" class="tag">markdown</a>
                 
             </div>
             
@@ -211,7 +207,7 @@
                 
                 <div class="info-row">
                     <span class="info-label">Last Updated</span>
-                    <span class="info-value">Oct 29, 2026</span>
+                    <span class="info-value">Oct 31, 2026</span>
                 </div>
                 
                 
@@ -271,7 +267,7 @@
 
     <script>
         // Item data for hydration
-        window.__ITEM__ = {"id": "e66188c3ad5f", "type": "skill", "name": "grade-iterate", "description": "Phase 3 of building a Claude Managed Agent — the bounded grade→iterate loop. Define a CMA outcome (a required markdown rubric graded by an isolated grader), read each verdict, decide the next move (sharpen / re-run / promote to schedule), and once a version passes, run held-back eval cases in parallel. Use when the user says \"grade my agent\", \"make it pass the rubric\", \"iterate until it's good\", \"is it good enough\", or when the orchestrator routes phase=grade-iterate. outcome_builder.py builds the user.define_outcome payload (rubric required, max_iterations clamped 1..20 — never unbounded); verdict_reader.py reads the grader result and recommends the next move; eval_scaffold.py generates held-back cases + a parallel run plan (capped at the 25-thread CMA ceiling). Distinct from stage-launch (first launch) and run-without-you (scheduling).", "source": "github", "repo": "alirezarezvani/claude-skills", "path": "agent-launcher/skills/grade-iterate/SKILL.md", "stars": 29007, "last_commit": "2026-10-29T07:44:34Z", "category": "ai-ml", "tags": ["agent", "claude", "markdown"], "raw_url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/agent-launcher/skills/grade-iterate/SKILL.md", "repo_url": "https://github.com/alirezarezvani/claude-skills", "license": "MIT", "scraped_at": "2026-10-30T11:58:48.851211+00:00"};
+        window.__ITEM__ = {"id": "e66188c3ad5f", "type": "skill", "name": "grade-iterate", "description": "Use when a launched managed agent needs grading against a rubric and improving ('grade my agent', 'is it good enough'). Builds the outcome with outcome_builder.py, reads verdicts with verdict_reader.py and runs held-back evals from eval_scaffold.py.", "source": "github", "repo": "alirezarezvani/claude-skills", "path": "agent-launcher/skills/grade-iterate/SKILL.md", "stars": 29048, "last_commit": "2026-10-31T11:28:59Z", "category": "ai-ml", "tags": ["agent"], "raw_url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/agent-launcher/skills/grade-iterate/SKILL.md", "repo_url": "https://github.com/alirezarezvani/claude-skills", "license": "MIT", "scraped_at": "2026-10-31T11:31:28.352170+00:00"};
 
         // Favorites
         function getFavorites() {

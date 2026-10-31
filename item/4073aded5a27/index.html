@@ -7,8 +7,8 @@
     <!-- Primary Meta Tags -->
     <title>run-without-you — Skill | SkillsIndex</title>
     <meta name="title" content="run-without-you — Skill | SkillsIndex">
-    <meta name="description" content="Phase 4 of building a Claude Managed Agent — make it run without you. Turn a graded agent into a recurring scheduled deployment (POSIX-cron), an...">
-    <meta name="keywords" content="run-without-you, skill, ai-ml, agent, claude, deploy, note">
+    <meta name="description" content="Use when a graded managed agent should run on a schedule, on an event trigger or on demand (&#x27;run it every morning&#x27;). Validates cron with cron_validator.py...">
+    <meta name="keywords" content="run-without-you, skill, ai-ml, agent, deploy">
     <meta name="author" content="">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://skillsindex-dev.github.io/skills/item/4073aded5a27/">
@@ -17,14 +17,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://skillsindex-dev.github.io/skills/item/4073aded5a27/">
     <meta property="og:title" content="run-without-you — Skill">
-    <meta property="og:description" content="Phase 4 of building a Claude Managed Agent — make it run without you. Turn a graded agent into a recurring scheduled deployment (POSIX-cron), an...">
+    <meta property="og:description" content="Use when a graded managed agent should run on a schedule, on an event trigger or on demand (&#x27;run it every morning&#x27;). Validates cron with cron_validator.py...">
     <meta property="og:site_name" content="SkillsIndex">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://skillsindex-dev.github.io/skills/item/4073aded5a27/">
     <meta property="twitter:title" content="run-without-you — Skill">
-    <meta property="twitter:description" content="Phase 4 of building a Claude Managed Agent — make it run without you. Turn a graded agent into a recurring scheduled deployment (POSIX-cron), an...">
+    <meta property="twitter:description" content="Use when a graded managed agent should run on a schedule, on an event trigger or on demand (&#x27;run it every morning&#x27;). Validates cron with cron_validator.py...">
 
     <!-- Structured Data: SoftwareApplication -->
     <script type="application/ld+json">
@@ -32,7 +32,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "run-without-you",
-        "description": "Phase 4 of building a Claude Managed Agent \u2014 make it run without you. Turn a graded agent into a recurring scheduled deployment (POSIX-cron), an event-driven curl trigger, or confirmed on-demand use, then finalize the versioned roadmap. Use when the user says \"run it every morning\", \"put it on a schedule\", \"nightly\", \"weekly\", \"automate this\", \"make it recurring\", or when the orchestrator routes phase=run-without-you. deployment_builder.py builds the POST /v1/deployments payload (initial_events must include user.message; optionally nests a user.define_outcome so each firing self-grades); cron_validator.py validates the 5-field cron + IANA timezone and prints the wall-clock DST note; next_directions_writer.py writes NEXT-DIRECTIONS.md. No tool makes API calls \u2014 the deployment is created via BYOK curl. Distinct from grade-iterate (the in-session loop) and wrap-up (closeout).",
+        "description": "Use when a graded managed agent should run on a schedule, on an event trigger or on demand ('run it every morning'). Validates cron with cron_validator.py and builds the deployment with deployment_builder.py.",
         "applicationCategory": "ai-ml",
         "operatingSystem": "Claude Code, Claude Desktop",
         "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/agent-launcher/skills/run-without-you/SKILL.md",
@@ -43,7 +43,7 @@
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.5",
-            "ratingCount": "29007"
+            "ratingCount": "29048"
         },
         "offers": {
             "@type": "Offer",
@@ -145,7 +145,7 @@
             </header>
 
             <!-- Description -->
-            <p class="item-description">Phase 4 of building a Claude Managed Agent — make it run without you. Turn a graded agent into a recurring scheduled deployment (POSIX-cron), an event-driven curl trigger, or confirmed on-demand use, then finalize the versioned roadmap. Use when the user says &quot;run it every morning&quot;, &quot;put it on a schedule&quot;, &quot;nightly&quot;, &quot;weekly&quot;, &quot;automate this&quot;, &quot;make it recurring&quot;, or when the orchestrator routes phase=run-without-you. deployment_builder.py builds the POST /v1/deployments payload (initial_events must include user.message; optionally nests a user.define_outcome so each firing self-grades); cron_validator.py validates the 5-field cron + IANA timezone and prints the wall-clock DST note; next_directions_writer.py writes NEXT-DIRECTIONS.md. No tool makes API calls — the deployment is created via BYOK curl. Distinct from grade-iterate (the in-session loop) and wrap-up (closeout).</p>
+            <p class="item-description">Use when a graded managed agent should run on a schedule, on an event trigger or on demand (&#x27;run it every morning&#x27;). Validates cron with cron_validator.py and builds the deployment with deployment_builder.py.</p>
 
             <!-- Tags -->
             
@@ -153,11 +153,7 @@
                 
                 <a href="/skills/catalog/?q=agent" class="tag">agent</a>
                 
-                <a href="/skills/catalog/?q=claude" class="tag">claude</a>
-                
                 <a href="/skills/catalog/?q=deploy" class="tag">deploy</a>
-                
-                <a href="/skills/catalog/?q=note" class="tag">note</a>
                 
             </div>
             
@@ -213,7 +209,7 @@
                 
                 <div class="info-row">
                     <span class="info-label">Last Updated</span>
-                    <span class="info-value">Oct 29, 2026</span>
+                    <span class="info-value">Oct 31, 2026</span>
                 </div>
                 
                 
@@ -273,7 +269,7 @@
 
     <script>
         // Item data for hydration
-        window.__ITEM__ = {"id": "4073aded5a27", "type": "skill", "name": "run-without-you", "description": "Phase 4 of building a Claude Managed Agent — make it run without you. Turn a graded agent into a recurring scheduled deployment (POSIX-cron), an event-driven curl trigger, or confirmed on-demand use, then finalize the versioned roadmap. Use when the user says \"run it every morning\", \"put it on a schedule\", \"nightly\", \"weekly\", \"automate this\", \"make it recurring\", or when the orchestrator routes phase=run-without-you. deployment_builder.py builds the POST /v1/deployments payload (initial_events must include user.message; optionally nests a user.define_outcome so each firing self-grades); cron_validator.py validates the 5-field cron + IANA timezone and prints the wall-clock DST note; next_directions_writer.py writes NEXT-DIRECTIONS.md. No tool makes API calls — the deployment is created via BYOK curl. Distinct from grade-iterate (the in-session loop) and wrap-up (closeout).", "source": "github", "repo": "alirezarezvani/claude-skills", "path": "agent-launcher/skills/run-without-you/SKILL.md", "stars": 29007, "last_commit": "2026-10-29T07:44:34Z", "category": "ai-ml", "tags": ["agent", "claude", "deploy", "note"], "raw_url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/agent-launcher/skills/run-without-you/SKILL.md", "repo_url": "https://github.com/alirezarezvani/claude-skills", "license": "MIT", "scraped_at": "2026-10-30T11:58:48.851211+00:00"};
+        window.__ITEM__ = {"id": "4073aded5a27", "type": "skill", "name": "run-without-you", "description": "Use when a graded managed agent should run on a schedule, on an event trigger or on demand ('run it every morning'). Validates cron with cron_validator.py and builds the deployment with deployment_builder.py.", "source": "github", "repo": "alirezarezvani/claude-skills", "path": "agent-launcher/skills/run-without-you/SKILL.md", "stars": 29048, "last_commit": "2026-10-31T11:28:59Z", "category": "ai-ml", "tags": ["agent", "deploy"], "raw_url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/agent-launcher/skills/run-without-you/SKILL.md", "repo_url": "https://github.com/alirezarezvani/claude-skills", "license": "MIT", "scraped_at": "2026-10-31T11:31:28.352170+00:00"};
 
         // Favorites
         function getFavorites() {

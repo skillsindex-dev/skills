@@ -7,8 +7,8 @@
     <!-- Primary Meta Tags -->
     <title>stage-launch — Skill | SkillsIndex</title>
     <meta name="title" content="stage-launch — Skill | SkillsIndex">
-    <meta name="description" content="Phase 2 of building a Claude Managed Agent — turn a validated build sheet into exact API payloads and a resumable BYOK curl launch script, then launch...">
-    <meta name="keywords" content="stage-launch, skill, ai-ml, agent, anthropic, claude, deploy">
+    <meta name="description" content="Use when a managed-agent build sheet is ready to launch (&#x27;launch it&#x27;, &#x27;deploy the agent&#x27;). Generates and validates API payloads with payload_generator.py...">
+    <meta name="keywords" content="stage-launch, skill, ai-ml, agent, deploy">
     <meta name="author" content="">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://skillsindex-dev.github.io/skills/item/bc4d58605512/">
@@ -17,14 +17,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://skillsindex-dev.github.io/skills/item/bc4d58605512/">
     <meta property="og:title" content="stage-launch — Skill">
-    <meta property="og:description" content="Phase 2 of building a Claude Managed Agent — turn a validated build sheet into exact API payloads and a resumable BYOK curl launch script, then launch...">
+    <meta property="og:description" content="Use when a managed-agent build sheet is ready to launch (&#x27;launch it&#x27;, &#x27;deploy the agent&#x27;). Generates and validates API payloads with payload_generator.py...">
     <meta property="og:site_name" content="SkillsIndex">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://skillsindex-dev.github.io/skills/item/bc4d58605512/">
     <meta property="twitter:title" content="stage-launch — Skill">
-    <meta property="twitter:description" content="Phase 2 of building a Claude Managed Agent — turn a validated build sheet into exact API payloads and a resumable BYOK curl launch script, then launch...">
+    <meta property="twitter:description" content="Use when a managed-agent build sheet is ready to launch (&#x27;launch it&#x27;, &#x27;deploy the agent&#x27;). Generates and validates API payloads with payload_generator.py...">
 
     <!-- Structured Data: SoftwareApplication -->
     <script type="application/ld+json">
@@ -32,7 +32,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "stage-launch",
-        "description": "Phase 2 of building a Claude Managed Agent \u2014 turn a validated build sheet into exact API payloads and a resumable BYOK curl launch script, then launch (environment \u2192 agent \u2192 session \u2192 kickoff) using the founder's OWN Anthropic key. Use when the user says \"launch it\", \"deploy the agent\", \"create the agent now\", or when the orchestrator routes phase=stage-launch. payload_generator.py emits the four ordered payloads; launch_script_writer.py writes launch.sh that reads $ANTHROPIC_API_KEY at runtime and never embeds it; payload_validator.py runs a pre-launch check including an API-key-leak scan. No tool in this skill makes network calls \u2014 the user runs launch.sh themselves. Distinct from interview (planning) and grade-iterate (the outcome loop).",
+        "description": "Use when a managed-agent build sheet is ready to launch ('launch it', 'deploy the agent'). Generates and validates API payloads with payload_generator.py and payload_validator.py and writes a resumable curl script with launch_script_writer.py that uses the user's own key.",
         "applicationCategory": "ai-ml",
         "operatingSystem": "Claude Code, Claude Desktop",
         "url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/agent-launcher/skills/stage-launch/SKILL.md",
@@ -43,7 +43,7 @@
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.5",
-            "ratingCount": "29007"
+            "ratingCount": "29048"
         },
         "offers": {
             "@type": "Offer",
@@ -145,17 +145,13 @@
             </header>
 
             <!-- Description -->
-            <p class="item-description">Phase 2 of building a Claude Managed Agent — turn a validated build sheet into exact API payloads and a resumable BYOK curl launch script, then launch (environment → agent → session → kickoff) using the founder&#x27;s OWN Anthropic key. Use when the user says &quot;launch it&quot;, &quot;deploy the agent&quot;, &quot;create the agent now&quot;, or when the orchestrator routes phase=stage-launch. payload_generator.py emits the four ordered payloads; launch_script_writer.py writes launch.sh that reads $ANTHROPIC_API_KEY at runtime and never embeds it; payload_validator.py runs a pre-launch check including an API-key-leak scan. No tool in this skill makes network calls — the user runs launch.sh themselves. Distinct from interview (planning) and grade-iterate (the outcome loop).</p>
+            <p class="item-description">Use when a managed-agent build sheet is ready to launch (&#x27;launch it&#x27;, &#x27;deploy the agent&#x27;). Generates and validates API payloads with payload_generator.py and payload_validator.py and writes a resumable curl script with launch_script_writer.py that uses the user&#x27;s own key.</p>
 
             <!-- Tags -->
             
             <div class="tags">
                 
                 <a href="/skills/catalog/?q=agent" class="tag">agent</a>
-                
-                <a href="/skills/catalog/?q=anthropic" class="tag">anthropic</a>
-                
-                <a href="/skills/catalog/?q=claude" class="tag">claude</a>
                 
                 <a href="/skills/catalog/?q=deploy" class="tag">deploy</a>
                 
@@ -213,7 +209,7 @@
                 
                 <div class="info-row">
                     <span class="info-label">Last Updated</span>
-                    <span class="info-value">Oct 29, 2026</span>
+                    <span class="info-value">Oct 31, 2026</span>
                 </div>
                 
                 
@@ -273,7 +269,7 @@
 
     <script>
         // Item data for hydration
-        window.__ITEM__ = {"id": "bc4d58605512", "type": "skill", "name": "stage-launch", "description": "Phase 2 of building a Claude Managed Agent — turn a validated build sheet into exact API payloads and a resumable BYOK curl launch script, then launch (environment → agent → session → kickoff) using the founder's OWN Anthropic key. Use when the user says \"launch it\", \"deploy the agent\", \"create the agent now\", or when the orchestrator routes phase=stage-launch. payload_generator.py emits the four ordered payloads; launch_script_writer.py writes launch.sh that reads $ANTHROPIC_API_KEY at runtime and never embeds it; payload_validator.py runs a pre-launch check including an API-key-leak scan. No tool in this skill makes network calls — the user runs launch.sh themselves. Distinct from interview (planning) and grade-iterate (the outcome loop).", "source": "github", "repo": "alirezarezvani/claude-skills", "path": "agent-launcher/skills/stage-launch/SKILL.md", "stars": 29007, "last_commit": "2026-10-29T07:44:34Z", "category": "ai-ml", "tags": ["agent", "anthropic", "claude", "deploy"], "raw_url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/agent-launcher/skills/stage-launch/SKILL.md", "repo_url": "https://github.com/alirezarezvani/claude-skills", "license": "MIT", "scraped_at": "2026-10-30T11:58:48.851211+00:00"};
+        window.__ITEM__ = {"id": "bc4d58605512", "type": "skill", "name": "stage-launch", "description": "Use when a managed-agent build sheet is ready to launch ('launch it', 'deploy the agent'). Generates and validates API payloads with payload_generator.py and payload_validator.py and writes a resumable curl script with launch_script_writer.py that uses the user's own key.", "source": "github", "repo": "alirezarezvani/claude-skills", "path": "agent-launcher/skills/stage-launch/SKILL.md", "stars": 29048, "last_commit": "2026-10-31T11:28:59Z", "category": "ai-ml", "tags": ["agent", "deploy"], "raw_url": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/agent-launcher/skills/stage-launch/SKILL.md", "repo_url": "https://github.com/alirezarezvani/claude-skills", "license": "MIT", "scraped_at": "2026-10-31T11:31:28.352170+00:00"};
 
         // Favorites
         function getFavorites() {
